@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageStreamWinForms", "ImageStreamWinForms\ImageStreamWinForms.csproj", "{358E1D3B-3E54-4A7F-BCE5-A79B5E5CD7A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadTopicsSample", "ReadTopicsSample\ReadTopicsSample.csproj", "{E6BDC4C7-D917-40E8-AB61-C93BEC865C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointCloudSample", "PointCloudSample\PointCloudSample.csproj", "{867ECABC-C864-4ED8-963C-1915CFDA2564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageStreamWpf", "ImageStreamWpf\ImageStreamWpf.csproj", "{08E7C7BA-FE71-4684-92BD-9433349677D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf3dPointCloud", "Wpf3dPointCloud\Wpf3dPointCloud.csproj", "{C0E9E9DD-E147-4A43-AD1A-8A569B5769EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFollowMe", "WpfFollowMe\WpfFollowMe.csproj", "{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{358E1D3B-3E54-4A7F-BCE5-A79B5E5CD7A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358E1D3B-3E54-4A7F-BCE5-A79B5E5CD7A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358E1D3B-3E54-4A7F-BCE5-A79B5E5CD7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358E1D3B-3E54-4A7F-BCE5-A79B5E5CD7A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6BDC4C7-D917-40E8-AB61-C93BEC865C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6BDC4C7-D917-40E8-AB61-C93BEC865C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6BDC4C7-D917-40E8-AB61-C93BEC865C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6BDC4C7-D917-40E8-AB61-C93BEC865C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867ECABC-C864-4ED8-963C-1915CFDA2564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867ECABC-C864-4ED8-963C-1915CFDA2564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867ECABC-C864-4ED8-963C-1915CFDA2564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867ECABC-C864-4ED8-963C-1915CFDA2564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E7C7BA-FE71-4684-92BD-9433349677D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E7C7BA-FE71-4684-92BD-9433349677D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E7C7BA-FE71-4684-92BD-9433349677D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E7C7BA-FE71-4684-92BD-9433349677D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E9E9DD-E147-4A43-AD1A-8A569B5769EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E9E9DD-E147-4A43-AD1A-8A569B5769EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E9E9DD-E147-4A43-AD1A-8A569B5769EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E9E9DD-E147-4A43-AD1A-8A569B5769EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D4F3C78-EAD6-42F0-BF8A-B2CF7890EB88}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1172 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rubedos.Viper.Net</name>
+    </assembly>
+    <members>
+        <member name="T:Rubedos.Viper.Net.DynamicReconfigure.ConfigParameterAddedEventArgs">
+            <summary> Additional information for configuration parameter added events. </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.ConfigParameterAddedEventArgs.NewParameter">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the new parameter. </summary>
+            
+             <value> The new parameter. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Rubedos.Viper.Net.DynamicReconfigure.ConfigNodeAddedEventArgs">
+            -------------------------------------------------------------------------------------------------
+             <summary> Additional information for configuration node added events. </summary>
+            
+             <seealso cref="T:System.EventArgs"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.ConfigNodeAddedEventArgs.NewNode">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the new node. </summary>
+            
+             <value> The new node. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1">
+            -------------------------------------------------------------------------------------------------
+             <summary> The dynamic configuration parameter. </summary>
+            
+             <typeparam name="T">  Generic type parameter. </typeparam>
+            
+             <seealso cref="T:Rubedos.Viper.Net.Iface.IDynamicConfigParameter"/>
+             <seealso cref="T:System.Xml.Serialization.IXmlSerializable"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.propValue">
+            <summary> The actual property value storage. </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.ItemChanged">
+            <summary> Event queue for all listeners interested in ItemChanged events. </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.ValueChanged">
+            <summary> Event queue for all listeners interested in ValueChanged events. </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.Description">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the human readable description of parameter. </summary>
+            
+             <value> The description. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.Description"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.Name">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the name of the parameter. </summary>
+            
+             <value> The name. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.Name"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.ValueType">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the type of the value. </summary>
+            
+             <value> The type of the value. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.ValueType"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.Value">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the value. </summary>
+            
+             <value> The value. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.Min">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the minimum. </summary>
+            
+             <value> The minimum value. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.Max">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the maximum. </summary>
+            
+             <value> The maximum value. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.Default">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the default. </summary>
+            
+             <value> The default. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.Compare(System.Object)">
+            <summary>
+            Compares values of this parameter to the other parameter. Returns true if they are equal
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.ReadXml(System.Xml.XmlReader)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Generates an object from its XML representation. </summary>
+            
+             <exception cref="T:System.Xml.XmlException"> Thrown when an XML error condition occurs. </exception>
+            
+             <param name="reader"> The <see cref="T:System.Xml.XmlReader" /> stream from which the object is
+                                   deserialized. </param>
+            
+             <seealso cref="M:System.Xml.Serialization.IXmlSerializable.ReadXml(XmlReader)"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.CreateParameterObjectFromXml(System.Xml.XmlReader)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Creates parameter object from XML. </summary>
+            
+             <exception cref="T:System.Xml.XmlException"> Thrown when an XML error condition occurs. </exception>
+            
+             <param name="reader"> The <see cref="T:System.Xml.XmlReader" /> stream from which the object is
+                                   deserialized. </param>
+            
+             <returns> The new parameter object from XML. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.WriteXml(System.Xml.XmlWriter)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Converts an object into its XML representation. </summary>
+            
+             <param name="writer"> The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is
+                                   serialized. </param>
+            
+             <seealso cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(XmlWriter)"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.SetValueAction(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Sets value action. Invoked by ROS subsystem when value received from ROS </summary>
+            
+             <remarks>Required for action binding. HSI, 2018.10.22. </remarks>
+            
+             <param name="value">  The value. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.ValueObject">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the value as object (performs internal cast) </summary>
+            
+             <value> The value object. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.ValueObject"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.MaxObject">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the maximum value as object (performs internal cast) </summary>
+            
+             <value> The maximum object. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.MaxObject"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.DefaultObject">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the default value as object (performs internal cast) </summary>
+            
+             <value> The default object. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.DefaultObject"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.MinObject">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the minimum value as object (performs internal cast) </summary>
+            
+             <value> The minimum object. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.MinObject"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDynamicConfigParameter`1.ValueFromString(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Value from string. </summary>
+            
+             <exception cref="T:System.InvalidOperationException">  Thrown when the requested operation is invalid. </exception>
+            
+             <param name="value">  The value. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration">
+            -------------------------------------------------------------------------------------------------
+             <summary> ROS device configuration. </summary>
+            
+             <remarks> HSI, 2018.10.24. </remarks>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.GetNodeConfigMux">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets node configuration mutext. Must be used because deserializers do not call field
+                       initializers </summary>
+            
+             <returns> The node configuration mutext. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.ConfigNodeAdded">
+            <summary> Event queue for all listeners interested in NodeAdded events. </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.nodeConfigurations">
+            <summary> The node configurations. Key - node name, value - configuration </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.NodeConfigurations">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the node configurations specified in a dictionary, where the key is 
+                       ROS node name and value - its configuration </summary>
+            
+             <value> The node configurations. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.CreateNodeConfiguration(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Creates node configuration (factory). </summary>
+            
+             <param name="nodeName"> Name of the node. </param>
+            
+             <returns> The new empty node configuration. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.RemoveConfiguration(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Removes the configuration described by nodeName. </summary>
+            
+             <param name="nodeName"> Name of the node. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.CheckIfCompatible(Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Query if 'otherConfig' has the same description structure, i.e. if configurations are compatible.
+                       Default, Min/Max and Description is not checked </summary>
+            
+             <param name="otherConfig">  The other configuration. </param>
+            
+             <returns> True if the same description, false if not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.CompareSubset(Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration)">
+            <summary>
+            Compares this configuration to the other configuration (possibly a subset only) and returns true if given values are equal
+            </summary>
+            <param name="otherConfig"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.Equals(System.Object)">
+            <summary>
+            Compares contents to other RosDeviceConfiguration
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration.GetHashCode">
+            <summary>
+            Gets hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rubedos.Viper.Net.DeviceConfigManager">
+            <summary>
+            Represents dynamic configuration of the device and its services
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.DeviceConfigManager.DeviceConfiguration">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the device configuration (CVM) </summary>
+            
+             <value> The device configuration. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Rubedos.Viper.Net.DeviceConfigManager.ConfigurationUpdated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.DeviceConfigManager.DescriptionsReceived">
+            <summary> Returns true if all configuration descriptions have been received. </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.#ctor">
+            <summary>
+            Call Dispose() when ROS is done.
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.ResetConfiguration">
+            <summary> Removes the node configuration described by nodeName. </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.SubscribeParameter``1(System.String,System.String,System.Action{``0})">
+            <summary>
+            Subscribe to specific device parameter updates
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="config"></param>
+            <param name="parameter"></param>
+            <param name="cb"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.GetParameter(System.String,System.String,System.String)">
+            <summary>
+            Gets parameter of specified configuration node
+            </summary>
+            <param name="configurableNode"></param>
+            <param name="parameter"></param>
+            <param name="groupName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.GetParameterValue(System.String,System.String,System.String)">
+            <summary>
+            Gets specified configuration item
+            </summary>
+            <param name="configurableNode"></param>
+            <param name="groupName"></param>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.SetParameterValueSync(System.String,System.String,System.Object,System.TimeSpan,System.String)">
+            <summary>
+            Sets specified dynamic reconfigure parameter synchronously, i.e. blocks method execution until value is set remotely
+            </summary>
+            <param name="configurableNode">The name of the node that needs to be configured</param>
+            <param name="parameter">barameter name</param>
+            <param name="value">parameter value</param>
+            <param name="timeout">Thros TimeoutException if parameter does not change in specified amount of time</param>
+            <param name="groupName">parameter group</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.SetParameterValue(System.String,System.String,System.Object,System.String)">
+            <summary>
+            Sets specified parameter of dynamic reconfigure
+            </summary>
+            <param name="configurableNode">The name of the node that needs to be configured</param>
+            <param name="groupName">parameter group</param>
+            <param name="parameter">barameter name</param>
+            <param name="value">value</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.TopicsChanged(System.Collections.Generic.IEnumerable{Ros.Net.TopicInfo},System.Collections.Generic.IEnumerable{Ros.Net.TopicInfo})">
+            <summary>
+            Invoked when topics are updated
+            </summary>
+            <param name="newTopics"></param>
+            <param name="removedTopics"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.HasDescriptions">
+            -------------------------------------------------------------------------------------------------
+             <summary> Query if this configuration has received descriptions </summary>
+            
+             <remarks> HSI, 2018.10.19. </remarks>
+            
+             <returns> True if descriptions, false if not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.CreateDynamicReconfigureInterface(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Creates dynamic reconfigure interface. </summary>
+            
+             <remarks> HSI, 2018.10.22. </remarks>
+            
+             <param name="nodeName"> The name of the node that has dynamic configuration. </param>
+            
+             <returns> The new dynamic reconfigure interface. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.CreateNodeHandle">
+            -------------------------------------------------------------------------------------------------
+             <summary> Creates node handle. </summary>
+            
+             <remarks> HSI, 2018.10.22. </remarks>
+            
+             <returns> The new node handle. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.AddConfiguration(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Adds a configuration from DynamicReconfigure topics </summary>
+            
+             <remarks> HSI, 2018.10.22. </remarks>
+            
+             <param name="nodeName"> The name of the node that has dynamic configuration </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.RemoveConfiguration(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Removes the node configuration described by nodeName. </summary>
+            
+             <remarks> HSI, 2018.10.23. </remarks>
+            
+             <param name="nodeName"> The name of the node that has dynamic configuration. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.ToXmlString">
+            -------------------------------------------------------------------------------------------------
+             <summary> Converts dynamic configuration to an XML string. </summary>
+            
+             <remarks> HSI, 2018.10.22. </remarks>
+            
+             <returns> This object as a string. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.FormatXml(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Formats XML represented in string. </summary>
+            
+             <param name="xml">  The XML containing dynamic configuration of the device. </param>
+            
+             <returns> The formatted XML. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.FromXmlString(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Sets configuration values from Xml string </summary>
+            
+             <remarks> HSI, 2018.10.22. </remarks>
+            
+             <param name="xml">  The XML containing dynamic configuration of the device </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.ReadFromXmlString(System.String)">
+            <summary>
+            Reads configurtation from string and creates configuration object
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.FromXmlFile(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Initializes this instance from the given XML file. </summary>
+            
+             <param name="fileName"> Filename of the file. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.ReadFromXmlFile(System.String)">
+            <summary>
+            Reads configuration from xml file and returns ROS configuration object
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.ApplyConfigurationValues(Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Applies the configuration values described by devConfig to the remote device.
+                       Must be the same description or it shall throw an exception </summary>
+            
+             <remarks> HSI, 2018.10.24. </remarks>
+            
+             <param name="devConfig">  The development configuration. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.ToString">
+            <summary>
+            Returns object definition as string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.ImageResolution">
+            <summary>
+            Enumerates supported resolutionszsa
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.ImageResolution.HD">
+            <summary>
+            HD Resolution, one image is 1280x720 px
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.ImageResolution.NHD">
+            <summary>
+            nHD Resolution, one image is 640x360 px
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.ImageResolution.QVGA">
+            <summary>
+            QVGA resolutio, one image is 320x240 px
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.PerceptionApps.CoreApp">
+            <summary>
+            This class represents core functionality application
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.CoreApp.#ctor(Rubedos.Viper.Net.CvmDevice)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="device">CvmDevice</param>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.CoreApp.Description">
+            <summary>
+            App description
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.CoreApp.IsActivated">
+            <summary>
+            True if activated on device
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.CoreApp.Name">
+            <summary>
+            App name
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.CoreApp.Activate(System.Boolean)">
+            <summary>
+            Activate/deactivate the app
+            </summary>
+            <param name="activate"></param>
+        </member>
+        <member name="T:Rubedos.Viper.Net.PerceptionApps.FollowMeApp">
+            -------------------------------------------------------------------------------------------------
+             <summary> A follow me application. </summary>
+            
+             <seealso cref="T:Rubedos.Viper.Net.Iface.IPerceptionApp"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.TargetPositionChanged">
+            <summary> Event queue for all listeners interested in TargetPositionChanged events. </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.DetectedPersons">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the detected persons collection </summary>
+            
+             <value> The detected persons. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.StartTracking(Rubedos.Viper.Net.PerceptionApps.Person)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Starts a tracking. </summary>
+            
+             <param name="person"> The person. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.#ctor(Rubedos.Viper.Net.CvmDevice)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Constructor. </summary>
+            
+             <param name="cvm">  The cvm. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.IsActivated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Gets or sets a value indicating whether the perception application is activated.
+             </summary>
+            
+             <value> True if activated, false if not. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Activated"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Description">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the description. </summary>
+            
+             <value> The description. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Description"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.TypeName">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the name. </summary>
+            
+             <value> The name. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Name"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Name">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the name. </summary>
+            
+             <value> The name. </value>
+            
+             <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Name"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Activate(System.Boolean)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Activates the application. </summary>
+            
+             <param name="activate"> True to activate. </param>
+            
+             <seealso cref="M:Rubedos.Viper.Net.Iface.IPerceptionApp.Activate(bool)"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Rubedos.Viper.Net.PerceptionApps.Person">
+            <summary> A person recognized by device. </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.Person.Rectangle">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the rectangle. </summary>
+            
+             <value> The rectangle. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Rubedos.Viper.Net.PerceptionApps.PersonPositionChangedEventArgs">
+            -------------------------------------------------------------------------------------------------
+             <summary> Additional information for person position changed events. </summary>
+            
+             <seealso cref="T:System.EventArgs"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.PersonPositionChangedEventArgs.SelectedPerson">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the selected person. </summary>
+            
+             <value> The selected person. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Rubedos.Viper.Net.FilterTopicsOptionsEnum">
+            <summary> Values that represent filter topics options enums. </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.AllTopics">
+            <summary> An enum constant representing all topics option. </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.ExceptDynamicReconfigure">
+            <summary>
+            Returns all topics except dynamic reconfigure topics
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.DynamicReconfigure">
+            <summary>
+            Returns only Dynamic reongfigure topics
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.SpecificType">
+            <summary>
+            Filters topics that have specific type
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.ImageType">
+            <summary>
+            Filters topics that are images
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.CvmDevice">
+            <summary>
+            This class is the main interface to CVM device.
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.CvmDevice.timer">
+            <summary>
+            Timer runs regular triggers
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.CvmDevice.timerMux">
+            <summary>
+            Mutex for timer access
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.CvmDevice.timerBusy">
+            <summary>
+            Specifies if timer trigger is being currently processed
+            </summary>
+        </member>
+        <member name="F:Rubedos.Viper.Net.CvmDevice.DynamicConfigurationReceived">
+            <summary> True if dynamic configuration received after connection. </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.TransformManager">
+            <summary>
+            Transformation manager, montiors Tf messages and caches latest transform information of the frames
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.CvmUri">
+            <summary>
+            Each CVM instance is uniquely identified by uri. Usuall it has a format like "http://192.168.1.100:11311
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.ClientIp">
+            <summary>
+            IP address of this machine. If this machine has multiple adapters, specify IP
+            of the one that shall be used to communicate with ROS Master
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.RosNode">
+            <summary>
+            Under this name this node instance shall appear in ROS Master
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.DeviceInfo">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets information describing the device. </summary>
+            
+             <value> Information describing the device. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.SoftwareUpdateManager">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the manager for software update. </summary>
+            
+             <value> The software update manager. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.GetLicenseInfo">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets device license information. </summary>
+            
+             <remarks> HSI, 2018.10.18. </remarks>
+            
+             <returns> The license information. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.CurrentTopics">
+            -------------------------------------------------------------------------------------------------
+             <summary>  Gets the current topics./ </summary>
+            
+             <exception cref="T:System.InvalidOperationException"> Thrown when not connected </exception>
+            
+             <value>  The current topics collection. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.TopicUpdateInterval">
+            <summary>
+            Specifies interval how often topics should be fetched from the master, in ms
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.IsConnected">
+            <summary>
+            Returns true if connection to the deivce is established and is alive
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.DeviceVersion">
+            <summary>
+            Returns version of currently connected device
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDevice.CvmConfigManager">
+            <summary>
+            Configuration of current device instance
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.CvmDevice.Connected">
+            <summary>
+            Event emitted after connection to the device has been established
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.CvmDevice.Connecting">
+            <summary>
+            Event emitted after connection is initiation has started
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.CvmDevice.Disconnected">
+            <summary>
+            Event emitted when connection is closed
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.CvmDevice.Disconnecting">
+            <summary>
+            Event emitted when connection is about to close
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.CvmDevice.Restarting">
+            <summary>
+            Event emitted after connection to the device has been established
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.CvmDevice.ShuttingDown">
+            <summary>
+            Event emitted after connection to the device has been established
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.CvmDevice.TopicsUpdated">
+            <summary>
+            Emitted when new topics are available
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.CvmDevice.RosoutMessaged">
+            <summary>
+            Emitted on each rosout message
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.CvmDevice.DeviceInfoChaged">
+            <summary>
+            Event raised when device info changes
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.#ctor(System.Uri,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="uri">Device URI in, e.g. http://192.168.1.100:11311</param>
+            <param name="thisIp">IP address of this machine endpoint, used to communicate with device, e.g. "192.168.1.100"</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="uri">Device URI in, e.g. http://192.168.1.100:11311</param>
+            <param name="thisIp">IP address of this machine endpoint, used to communicate with device, e.g. "192.168.1.100"</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.#ctor">
+            <summary> Default constructor. </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.Timer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Handle timer event
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.PostRosLog(System.String)">
+            <summary>
+            Sends log message to /rosout log
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.FetchTopic``1(System.String,System.TimeSpan)">
+            <summary>
+            This method blocks and waits for a message from specified topic. Topic is returned or timeout exception is thrown
+            </summary>
+            <param name="topic">topic to subscribe</param>
+            <param name="timeout">time interval to wait for the topic</param>
+            <returns>First message arrived on the topic</returns>
+            <exception cref="T:System.TimeoutException">Thrown if topic does not arrive in specified amount of time</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if not connected or handle not initialized</exception>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.GetListOfImageTopics">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the list of image topics provided by device</summary>
+            
+             <returns>
+             An enumerator that allows foreach to be used to process the list of topics in this collection.
+             </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.GetPerceptionApps">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the perception apps in this collection. </summary>
+            
+             <returns>
+             An enumerator that allows foreach to be used to process the perception apps in this collection.
+             </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.FilterTopics(System.Collections.Generic.IEnumerable{Ros.Net.TopicInfo},Rubedos.Viper.Net.FilterTopicsOptionsEnum,System.String)">
+            <summary>
+            Filters topic list
+            </summary>
+            <param name="filter"></param>
+            <param name="msgType"></param>
+            <param name="topics"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.Connect(System.Uri,System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Connects to the device. </summary>
+            
+             <param name="cvmUri"> Each CVM instance is uniquely identified by uri. Usuall it has a format
+                                   like "http://192.168.1.100:11311. </param>
+             <param name="thisIp"> (Optional) IP address of this machine endpoint, used to communicate with
+                                   device, e.g. "192.168.1.100". </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.Connect">
+            <summary>
+            Connects to the device
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.Disconnect">
+            <summary>
+            Closes connection to the device
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.Restart">
+            <summary>
+            This method restarts CVM camera
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.Shutdown">
+            <summary>
+            Shutds down CVM camera
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.ChangeImageResolution(Rubedos.Viper.Net.ImageResolution)">
+            <summary>
+            Changes resolution of the image videostream
+            </summary>
+            <param name="resolution">new resolution</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.UpdateTopics(System.Object,System.EventArgs)">
+            <summary>
+            Queries ROS for new topics at regular intervals and emitts TopicsUpdated if new topics arrive
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.WaitForDynamicConfiguration">
+            -------------------------------------------------------------------------------------------------
+             <summary> Wait until dynamic configuration from CVM device is received </summary>
+            
+             <remarks> HSI, 2018.10.19. </remarks>
+            
+             <returns> True if it succeeds, false if it fails or timeouts. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.WaitForDynamicConfiguration(System.TimeSpan)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Wait until dynamic configuration from CVM device is received </summary>
+            
+             <remarks> HSI, 2018.10.19. </remarks>
+            
+             <param name="timeout">  time interval to wait for the arrival. </param>
+            
+             <returns> True if it succeeds, false if it fails or timeouts. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.ToString">
+            <summary>
+            Returns the string that represents the current object
+            </summary>
+            <returns>the string that represents the current object</returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDevice.Dispose">
+            <summary>
+            This code added to correctly implement the disposable pattern.
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.CvmDeviceException">
+            <summary>
+            Generic CvmDevice Exception
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDeviceException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDeviceException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDeviceException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDeviceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:Rubedos.Viper.Net.RosNodeConfiguration">
+            <summary>
+            Dynamic configuration of the node. It consists of bool, int, double or string parameters
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.RosNodeConfiguration.Name">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the name of this node </summary>
+            
+             <value> The name. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Rubedos.Viper.Net.RosNodeConfiguration.ConfigParameterAdded">
+            <summary> Event queue for all listeners interested in ConfigParameterAdded events. </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.RosNodeConfiguration.Parameters">
+            -------------------------------------------------------------------------------------------------
+             <summary> A dictionary of parameters, where the key is parameter name and value - parameter description and value</summary>
+            
+             <value> The parameters. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.RosNodeConfiguration.Description">
+            <summary>
+            Configuration descriptor
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.RosNodeConfiguration.#ctor(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Constructor. </summary>
+            
+             <param name="name"> The name of the node. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.RosNodeConfiguration.#ctor">
+            <summary> Default constructor. </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.RosNodeConfiguration.DescriptionUpdated">
+            <summary> Event queue for all listeners interested in DescriptionUpdated events. </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.RosNodeConfiguration.OnDynamicConfigurationUpdate(Ros.Net.Messages.dynamic_reconfigure.ConfigDescription,Ros.Net.DynamicReconfigure.IDynamicReconfigureInterface)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Executes the dynamic configuration description update. 
+                       Usually performed when configuration description arrives from ROS device.
+                       Also susbscribes each parameter for updates
+                         </summary>
+            
+             <param name="msg">      The description message. </param>
+             <param name="drIface">  The DynamicReconfigure interface. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.RosNodeConfiguration.GetSchema">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             This method is reserved and should not be used. When implementing the IXmlSerializable
+             interface, you should return null (Nothing in Visual Basic) from this method, and instead, if
+             specifying a custom schema is required, apply the
+             <see cref="T:System.Xml.Serialization.XmlSchemaProviderAttribute" /> to the class.
+             </summary>
+            
+             <returns>
+             An <see cref="T:System.Xml.Schema.XmlSchema" /> that describes the XML representation of the
+             object that is produced by the
+             <see cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)" />
+             method and consumed by the
+             <see cref="M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)" /> method.
+             </returns>
+            
+             <seealso cref="M:System.Xml.Serialization.IXmlSerializable.GetSchema()"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.RosNodeConfiguration.ReadXml(System.Xml.XmlReader)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Generates an object from its XML representation. </summary>
+            
+             <exception cref="T:System.Xml.XmlException"> Thrown when an XML error condition occurs. </exception>
+            
+             <param name="reader"> The <see cref="T:System.Xml.XmlReader" /> stream from which the object is
+                                   deserialized. </param>
+            
+             <seealso cref="M:System.Xml.Serialization.IXmlSerializable.ReadXml(XmlReader)"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.RosNodeConfiguration.WriteXml(System.Xml.XmlWriter)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Converts an object into its XML representation. </summary>
+            
+             <param name="writer"> The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is
+                                   serialized. </param>
+            
+             <seealso cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(XmlWriter)"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Rubedos.Viper.Net.Tf.TfFrame">
+            <summary>
+            ROS Tf frame
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Tf.TfFrame.FrameId">
+            <summary>
+            Id of this frame
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Tf.TfFrame.ParentFrame">
+            <summary>
+            Parent frame back reference
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Tf.TfFrame.ChildFrames">
+            <summary>
+            Collection of Child frames
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Tf.TfFrame.lastMessage">
+            <summary>
+            Last message received from ROS master associated with this frame
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.FindFrame(System.String)">
+            <summary>
+            Recursivelly finds specified frame
+            </summary>
+            <param name="frameId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.ToTreeString">
+            <summary>
+            Returns tree structure of the frames in string representation
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rubedos.Viper.Net.Tf.TfManager">
+            <summary>
+            This class serves as an interface to ROS Tf transforms mechanisms - finds transform topics, lookups transforms
+            publishes transforms etc.
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfManager.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Tf.TfManager.TfTransformer">
+            <summary>
+            ROS Tf Transformer class
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Tf.TfManager.RootFrame">
+            <summary>
+            The root frame of the scene
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.Tf.TfManager.FramesUpdated">
+            <summary>
+            Emitted when frames are updated - either added/removed or transformation changed
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.Tf.TfManager.FrameTreeChanged">
+            <summary>
+            Raised when new frames in the tree are inserted or deleted
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Tf.TfManager.Frames">
+            <summary>
+            Returns an array of frames that have been published in ROS
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Tf.TfManager.CvmTransform">
+            <summary>
+            Gets transformaction of this camera
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfManager.GetTransform(System.String)">
+            <summary>
+            Gets transformation for the specified frame
+            </summary>
+            <param name="frame">name of the frame</param>
+            <returns>Transformation message as received from ROS</returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfManager.Initialize">
+            <summary>
+            Initialization routines after ROS has been connected
+            </summary>
+        </member>
+    </members>
+</doc>

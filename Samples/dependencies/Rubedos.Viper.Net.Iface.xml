@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rubedos.Viper.Net.Iface</name>
+    </assembly>
+    <members>
+        <member name="T:Rubedos.Viper.Net.CvmDeviceInfo">
+            -------------------------------------------------------------------------------------------------
+             <summary> Information about the cvm device: version, optical parameters etc.</summary>
+             Some of the information is device instance specific and some depends on device class
+             <remarks> H Simonavicius, 2018.10.18. </remarks>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.DeviceVersion">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the device version. </summary>
+            
+             <value> The device version. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.SerialNumber">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the serial number. </summary>
+            
+             <value> The serial number. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.TopicPrefix">
+            <summary>
+            Prefix attached to each topic of the device
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.ExternalRosMaster">
+            <summary>
+            The external ROS master set that uses CVM devise as a sensor
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.Baseline">
+            -------------------------------------------------------------------------------------------------
+             <summary> Distance between optical centers of the camera, m </summary>
+            
+             <value> The baseline, m </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.FocalPoint">
+            <summary>
+            Camera focal point in pixels
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.FovH">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the fov h, degrees </summary>
+            
+             <value> The horizontal Field of View, degrees</value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.FovV">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the fov, degrees </summary>
+            
+             <value> The vertical Field of View, degrees  </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.FovD">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the fov d, degrees </summary>
+            
+             <value> The diagonal Field of View, degrees </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.ProcessingUnit">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the device processing unit, e.g. "NVIDIA® Jetson™ TX2 Module" </summary>
+            
+             <value> The processing unit running on the device </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.CvmSoftwareVersion">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the cvm software version. </summary>
+            
+             <value> The cvm software version string </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.SupportedImageFormats">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the list of supported image formats. 
+                       Each line represents image format defined as:
+                       [Width]x[Height]@[FrameRate]@[Channels]@[BitsPerChannel]
+                       </summary>
+            
+             <value> The supported image formats. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDeviceInfo.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.CvmDeviceInfo.SetCamInfo(Ros.Net.Messages.sensor_msgs.CameraInfo)">
+            <summary>
+            
+            </summary>
+            <param name="camInfo"></param>
+        </member>
+        <member name="T:Rubedos.Viper.Net.Iface.IDynamicConfigParameter">
+            <summary> Interface for dynamic configuration parameter. </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.ValueChanged">
+            <summary> Event queue for all listeners interested in ValueChanged events. </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.ValueType">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the type of the value. </summary>
+            
+             <value> The type of the value. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.Name">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the name of the parameter </summary>
+            
+             <value> The name. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.Description">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the human readable description of parameter </summary>
+            
+             <value> The description. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.ValueObject">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the value as object (performs internal cast) </summary>
+            
+             <value> The value object. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.DefaultObject">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the default value as object (performs internal cast) </summary>
+            
+             <value> The default object. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.MinObject">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the minimum value as object (performs internal cast) </summary>
+            
+             <value> The minimum object. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.MaxObject">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the maximum value as object (performs internal cast) </summary>
+            
+             <value> The maximum object. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Writes Xml formatted config to the writer
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads xml from reader source
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.ValueFromString(System.String)">
+            <summary>
+            Gets config value from string
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.IDynamicConfigParameter.Compare(System.Object)">
+            <summary>
+            Compare if parameter values are equal. Difference from Equals is that Default/Min/Max are ignored
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rubedos.Viper.Net.Iface.IPerceptionApp">
+            -------------------------------------------------------------------------------------------------
+             <summary> Interface for perception application. </summary>
+            
+             <remarks> HSI, 2018.10.18. </remarks>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Name">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the name. </summary>
+            
+             <value> The name. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Description">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the description. </summary>
+            
+             <value> The description. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IPerceptionApp.IsActivated">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets a value indicating whether the perception application is activated. </summary>
+            
+             <value> True if activated, false if not. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.IPerceptionApp.Activate(System.Boolean)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Activates the application. </summary>
+            
+             <param name="activate"> True to activate. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Rubedos.Viper.Net.Iface.ISoftwareUpdateManager">
+            -------------------------------------------------------------------------------------------------
+             <summary> Interface for software update manager - a unit that can install any available software 
+                       version </summary>
+            
+             <remarks> HSI, 2018.10.18. </remarks>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.ISoftwareUpdateManager.GetListOfVersions(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the list of versions in this collection. </summary>
+            
+             <param name="scope">  The scope defines what versions should be included: 
+                                   official, stable, development etc. </param>
+            
+             <returns>
+             An enumerator that allows foreach to be used to process the list of versions in this collection.
+             </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.ISoftwareUpdateManager.UpdateToVersion(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> Updates to version described by version. </summary>
+            
+             <param name="version">  The version. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.ISoftwareUpdateManager.ResetToFactoryVersion">
+            <summary> Resets to factory version. </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.ISoftwareUpdateManager.AllowAutoUpdate">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets a value indicating whether we allow automatic update. </summary>
+            
+             <value> True if allow automatic update, false if not. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Rubedos.Viper.Net.Iface.RectangleOfInterest">
+            <summary>
+            Wrapps tracked bounding box to keep information between frames
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.RectangleOfInterest.SeqId">
+            <summary>
+            Sequential Id, resets on restart of application
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.RectangleOfInterest.Id">
+            <summary>
+            Unique Id
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.RectangleOfInterest.Depth">
+            <summary>
+            Z coordinate of the tracked object
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.RectangleOfInterest.IsTheSame(Rubedos.Viper.Net.Iface.RectangleOfInterest)">
+            <summary>
+            Checks if two Rectangles of interest are the same by checking overlap area
+            </summary>
+            <param name="newRoi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.RectangleOfInterest.IdleTime">
+            <summary>
+            Calculates how long this roi has been w/o update, in seconds
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.RectangleOfInterest.UpdateRoi(Rubedos.Viper.Net.Iface.RectangleOfInterest)">
+            <summary>
+            Updates to the new data
+            </summary>
+            <param name="newRoi"></param>
+        </member>
+        <member name="T:Rubedos.Viper.Net.Iface.RosoutMessagedEventArgs">
+            <summary>
+            This event args class transport Rosout topic messages
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.RosoutMessagedEventArgs.Message">
+            <summary>
+            The message received on /rosout topic
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.Iface.TopicsUpdatedEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.TopicsUpdatedEventArgs.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.TopicsUpdatedEventArgs.NewTopics">
+            <summary>
+            Specifies new topics
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.TopicsUpdatedEventArgs.RemovedTopics">
+            <summary>
+            Specifies old topics
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.TopicsUpdatedEventArgs.AllTopics">
+            <summary>
+            All current topics
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.LicenseInfo">
+            -------------------------------------------------------------------------------------------------
+             <summary> Information about the CVM licenses. </summary>
+            
+             <remarks> HSI, 2018.10.18. </remarks>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Rubedos.Viper.Net.LicenseInfo.LicenseItems">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets the license items. </summary>
+            
+             <value> The license items. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+    </members>
+</doc>
