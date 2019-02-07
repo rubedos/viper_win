@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfFollowMe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:RosImageWpf="clr-namespace:Ros.Net.Wpf;assembly=Ros.Net.Wpf"
+        xmlns:RosAppBase="clr-namespace:Rubedos.RosToolsApplicationBase;assembly=Rubedos.RosToolsApplicationBase"
+        xmlns:p="clr-namespace:WpfFollowMe.Properties"
+        mc:Ignorable="d"
+        Title="WPF FollowMe sample" Height="510" Width="770">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="500"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <!-- ROS Toolbar -->
+    <RosAppBase:RosWindowBase x:Name="rosControlBase" Grid.Column="0" Grid.Row="0"  Grid.ColumnSpan="2"/>
+    <!--ROS ImageControl-->
+    <Canvas x:Name="TrackingImage" Grid.Column="0" Grid.Row="1" Background="Black" Margin="55,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+      <RosImageWpf:ImageControl x:Name="DetectionImage" x:FieldModifier="public" Topic="{Binding Source={x:Static p:Settings.Default}, Path=DetectionImage, Mode=TwoWay}" Visibility="Hidden" MouseDown="DetectionImage_MouseDown"/>
+      <Path Stroke="Yellow" StrokeThickness="1">
+        <Path.Data>
+          <GeometryGroup x:Name="allDetections">
+          </GeometryGroup>
+        </Path.Data>
+      </Path>
+      <Path Stroke="Gray" StrokeThickness="1">
+        <Path.Data>
+          <GeometryGroup x:Name="lostDetections">
+          </GeometryGroup>
+        </Path.Data>
+      </Path>
+      <Path Stroke="Red" StrokeThickness="2" x:Name="TargetPath" Visibility="Hidden">
+        <Path.Data>
+          <GeometryGroup x:Name="targets">
+          </GeometryGroup>
+        </Path.Data>
+      </Path>
+    </Canvas>
+    <!--Follow me start / stop button-->
+    <Button x:Name="enableDisableFollowMeButton" IsEnabled="False" Content="Start" ToolTip="Starts or stops follow me" Click="EnableDisableFollowMeButtonClick" Width="50" Margin="228,68,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" />
+    <Label x:Name="targetLabel" Content="Target: --m." Margin="280,64,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" />
+  </Grid>
+</Window>

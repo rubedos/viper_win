@@ -1,0 +1,11 @@
+﻿<Application x:Class="ImageStreamWpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:windowViewModels="clr-namespace:ImageStreamWpf.ViewModels.Windows"
+             xmlns:helpers="clr-namespace:ImageStreamWpf.Helpers"
+             StartupUri="Views/Windows/MainWindow.xaml">
+  <Application.Resources>
+    <helpers:ImageConverter x:Key="ImageConverter" />
+    <windowViewModels:MainWindowViewModel x:Key="MainWindowViewModel" />
+  </Application.Resources>
+</Application>

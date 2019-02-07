@@ -1,0 +1,50 @@
+﻿<Window x:Class="ImageStreamWpf.Views.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        DataContext="{StaticResource MainWindowViewModel}"
+        Title="Viper WPF MVVM sample" Height="500" Width="950">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="50"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="25"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="240" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="10" />
+    </Grid.ColumnDefinitions>
+    <!-- Device status-->
+    <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top">
+      <Label.Content>
+        <Binding Path="DeviceStatus"/>
+      </Label.Content>
+      <Label.ContentStringFormat>Status: {0}.</Label.ContentStringFormat>
+    </Label>
+    <!-- IP address && Connect button -->
+    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0">
+      <TextBox Text="{Binding Path=CameraIpAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding IsCameraIpAddressEnabled}"  Margin="5,0,0,0" Width="155" Height="23" />
+      <Button Content="{Binding ConnectDisconnectButtonContent, Mode=OneWay}" Command="{Binding ConnectButtonClickCommand}" IsEnabled="{Binding IsConnectDisconnectButtonEnabled, Mode=OneWay}" Width="75" Height="23"/>
+    </StackPanel>
+    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" >
+      <Label Content="Topic" />
+      <ComboBox Width="230" Height="25"
+                ItemsSource="{Binding Path=TopicsList}"
+                SelectedValue="{Binding Path=SelectedTopic}"
+                SelectedIndex="0"/>
+    </StackPanel>
+    <!-- Image-->
+    <Label Grid.Row="0" Grid.Column="1" Content="Image" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Medium" FontSize="20" />
+    <Border Grid.Row="1" Grid.Column="1" Width="{Binding DeviceImage.Size.Width, FallbackValue=640}" Height="{Binding DeviceImage.Size.Height, FallbackValue=360}"  BorderBrush="Black" BorderThickness="2">
+      <Image Source="{Binding DeviceImage, Converter={StaticResource ImageConverter}}"/>
+    </Border>
+    <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal">
+      <Label Content="{Binding DeviceImage.Size.Width, FallbackValue=0}" ToolTip="Width" />
+      <Label Content="x" />
+      <Label Content="{Binding DeviceImage.Size.Height, FallbackValue=0}" ToolTip="Height" />
+    </StackPanel>
+  </Grid>
+</Window>
