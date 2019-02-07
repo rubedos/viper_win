@@ -6,6 +6,10 @@ using System.Collections.Generic;
 using Ros.Net;
 using Ros.Net.utilities;
 using Rubedos.Viper.Net.Iface;
+using Rubedos.Viper.Net;
+using Rubedos.Viper.Net.PerceptionApps;
+using System.Linq;
+using System.Threading;
 
 namespace WpfFollowMe
 {
@@ -32,25 +36,16 @@ namespace WpfFollowMe
     {
       ConfigurationHelper.RegisterSettings(Properties.Settings.Default);
 
-      EnableTopic = Properties.Settings.Default.EnableTopic;
-      BoundingBoxesTopic = Properties.Settings.Default.BoundingBoxesTopic;
-      TargetBoundingBoxTopic = Properties.Settings.Default.TargetBoundingBoxTopic;
-      TargetPositionTopic = Properties.Settings.Default.TargetPositionTopic;
-      SetTargetTopic = Properties.Settings.Default.SetTargetTopic;
-
       DataContext = this;
+
       rosControlBase.RosConnected += RosControlBase_RosConnected;
       rosControlBase.RosDisconnecting += RosControlBase_RosDisconnecting;
       DetectionImage.ImageSink.Updated += ImageSink_Updated;
       Closing += MainWindow_Closing;
 
-      trackedBoxes = new List<RectangleOfInterest>();
-      targets.Children.Add(targetRoi.Geom);
-
-      var timer = new DispatcherTimer();
-      timer.Interval = TimeSpan.FromSeconds(0.3);
-      timer.Tick += (s,e) => UpdateRectanglesVisibility();
-      timer.Start();
+      dispatcherTimer = new DispatcherTimer();
+      dispatcherTimer.Interval = TimeSpan.FromSeconds(0.3);
+      dispatcherTimer.Tick += (s, e) => UpdateRectanglesVisibility();
     }
 
     #endregion
@@ -58,20 +53,9 @@ namespace WpfFollowMe
     #region Fields
 
     private bool firstUpdate = true;
-    private bool isFollowMeEnabled = false;
+    private FollowMeApp followMeApp;
+    private DispatcherTimer dispatcherTimer;
 
-    private string EnableTopic;
-    private string BoundingBoxesTopic;
-    private string TargetBoundingBoxTopic;
-    private string TargetPositionTopic;
-    private string SetTargetTopic;
-
-    private NodeHandle mainHandle;
-    private List<RectangleOfInterest> trackedBoxes;
-    private RectangleOfInterest targetRoi = new RectangleOfInterest();
-
-    private Publisher<Ros.Net.Messages.std_msgs.Bool> isEnabledPublisher;
-    private Publisher<Ros.Net.Messages.cvm_msgs.BoundingBox> setTargetPublisher;
 
     #endregion
 
@@ -94,28 +78,16 @@ namespace WpfFollowMe
     /// <param name="e">Arguments</param>
     private void RosControlBase_RosConnected(object sender, EventArgs e)
     {
+      followMeApp = new FollowMeApp(rosControlBase.ViperDevice);
+      followMeApp.OnTargetDistanceChanged += FollowMeApp_OnTargetDistanceChanged;
+
       DetectionImage.Visibility = Visibility.Visible;
-
-      mainHandle = new NodeHandle();
-
-      // Enable / Disable follow me topic
-      isEnabledPublisher = mainHandle.advertise<Ros.Net.Messages.std_msgs.Bool>(EnableTopic, 1, false);
-
-      // Followed bounding boxes
-      mainHandle.subscribe<Ros.Net.Messages.cvm_msgs.BoundingBoxes>(BoundingBoxesTopic, 1, (boundingBoxes) => ReDrawRectangles(boundingBoxes));
       DetectionImage.Subscribe();
-
-      // Set target
-      setTargetPublisher = mainHandle.advertise<Ros.Net.Messages.cvm_msgs.BoundingBox>(SetTargetTopic, 1, true);
-
-      // Target Bounding Box
-      mainHandle.subscribe<Ros.Net.Messages.cvm_msgs.BoundingBox>(TargetBoundingBoxTopic, 1, (boundingBox) => ReDrawTargetRectangle(boundingBox));
-
-      // Target distance
-      mainHandle.subscribe<Ros.Net.Messages.geometry_msgs.Point>(TargetPositionTopic, 1, (targetPosition) => UpdateTargetDistance(targetPosition));
 
       // Enabling button
       enableDisableFollowMeButton.IsEnabled = true;
+
+      dispatcherTimer.Start();
     }
 
     /// <summary>
@@ -125,16 +97,23 @@ namespace WpfFollowMe
     /// <param name="e">Arguments</param>
     private void RosControlBase_RosDisconnecting(object sender, EventArgs e)
     {
+      // Unsubscribing from image stream
       DetectionImage.Visibility = Visibility.Hidden;
+      DetectionImage.Unsubscribe();
 
       // In case follow me is left working, user is asked if he wants it be shutdown
       AskToDisableFollowMe();
 
+      // Destroying application
+      followMeApp.OnTargetDistanceChanged -= FollowMeApp_OnTargetDistanceChanged;
+      followMeApp.Dispose();
+
       // Disabling button
       enableDisableFollowMeButton.IsEnabled = false;
 
-      // Disconnecting
-      mainHandle.Dispose();
+      firstUpdate = true;
+
+      dispatcherTimer.Stop();
     }
 
     /// <summary>
@@ -144,13 +123,12 @@ namespace WpfFollowMe
     /// <param name="e">Arguments.</param>
     private void ImageSink_Updated(object sender, EventArgs e)
     {
+      if (!firstUpdate) return;
+
       Dispatcher.Invoke(new Action(() =>
       {
-        if (firstUpdate)
-        {
-          firstUpdate = false;
-          DetectionImage.SetActualSize();
-        }
+        firstUpdate = false;
+        DetectionImage.SetActualSize();
       }));
     }
 
@@ -162,19 +140,16 @@ namespace WpfFollowMe
     private void DetectionImage_MouseDown(object sender, MouseButtonEventArgs e)
     {
       var point = e.GetPosition(DetectionImage);
-      foreach (var roi in trackedBoxes)
+      var person = followMeApp.DetectedPersons.FirstOrDefault(i => i.Rectangle.Rect.Contains(point));
+
+      if (person == null)
       {
-        if (roi.Rect.Contains(point))
-        {
-          System.Diagnostics.Debug.WriteLine("Contained by roi #{0}", roi.SeqId);
-          var bboxMsg = new Ros.Net.Messages.cvm_msgs.BoundingBox();
-          bboxMsg.xmin = (uint)roi.Rect.X;
-          bboxMsg.ymin = (uint)roi.Rect.Y;
-          bboxMsg.xmax = (uint)(roi.Rect.X + roi.Rect.Width);
-          bboxMsg.ymax = (uint)(roi.Rect.Y + roi.Rect.Height);
-          setTargetPublisher.publish(bboxMsg);
-        }
+        followMeApp.StopTracking();
+        TargetPath.Visibility = Visibility.Hidden;
+        targetLabel.Content = "Distance: -- m";
+        return;
       }
+      followMeApp.StartTracking(person);
     }
 
     /// <summary>
@@ -184,11 +159,35 @@ namespace WpfFollowMe
     /// <param name="e"></param>
     private void EnableDisableFollowMeButtonClick(object sender, RoutedEventArgs e)
     {
-      isFollowMeEnabled = !isFollowMeEnabled;
-      isEnabledPublisher?.publish(new Ros.Net.Messages.std_msgs.Bool() { data = isFollowMeEnabled });
+      if (followMeApp.IsEnabled)
+      {
+        followMeApp.Stop();
+        enableDisableFollowMeButton.Content = "Start";
 
-      if (isFollowMeEnabled) enableDisableFollowMeButton.Content = "Stop";
-      else enableDisableFollowMeButton.Content = "Start";
+        allDetections.Children.Clear();
+        lostDetections.Children.Clear();
+        targets.Children.Clear();
+
+        TargetPath.Visibility = Visibility.Hidden;
+        targetLabel.Content = "Distance: -- m";
+        return;
+      }
+
+      followMeApp.Start();
+      enableDisableFollowMeButton.Content = "Stop";
+    }
+
+    /// <summary>
+    /// Event handler is triggered when target (<see cref="Person"/>) distance changes.
+    /// </summary>
+    /// <param name="sender">Sender.</param>
+    /// <param name="e">Arguments.</param>
+    private void FollowMeApp_OnTargetDistanceChanged(object sender, Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonDistanceChangedEventArgs e)
+    {
+      Dispatcher.Invoke(new Action(() =>
+      {
+        targetLabel.Content = string.Format("Distance: {0:0.00} m", e.Distance);
+      }));
     }
 
     #endregion
@@ -206,6 +205,8 @@ namespace WpfFollowMe
       rosControlBase.RosConnected -= RosControlBase_RosConnected;
       rosControlBase.RosDisconnecting -= RosControlBase_RosDisconnecting;
       if (DetectionImage != null && DetectionImage.ImageSink != null) DetectionImage.ImageSink.Updated -= ImageSink_Updated;
+
+      followMeApp.OnTargetDistanceChanged -= FollowMeApp_OnTargetDistanceChanged;
     }
 
     /// <summary>
@@ -213,7 +214,7 @@ namespace WpfFollowMe
     /// </summary>
     private void AskToDisableFollowMe()
     {
-      if (!isFollowMeEnabled) return;
+      if (!followMeApp.IsEnabled) return;
 
       var answer = MessageBox.Show("Follow me is in progress, would you like to stop it?", "Follow me", MessageBoxButton.YesNo, MessageBoxImage.Question);
       if (answer == MessageBoxResult.Yes)
@@ -223,112 +224,46 @@ namespace WpfFollowMe
     }
 
     /// <summary>
-    /// Checks if provided rectangle of interest belongs to target
-    /// </summary>
-    /// <param name="roi">Rectangle of interest</param>
-    /// <returns>True if equals, otherwise - false.</returns>
-    private bool IsRectangleOfInterestIsTarget(RectangleOfInterest roi)
-    {
-      if (TargetPath.Visibility == Visibility.Hidden) return false;
-
-      var target = new Rect(targetRoi.Rect.Location, targetRoi.Rect.Size);
-      target.Intersect(roi.Rect);
-      if (target.IsEmpty) return false;
-
-      double intersectionPercent = 0.3;
-      if (Math.Abs(1 - target.Width / targetRoi.Rect.Width) > intersectionPercent || Math.Abs(1 - target.Height / targetRoi.Rect.Height) > intersectionPercent) return false;
-
-      return true;
-    }
-
-    /// <summary>
-    /// Updates target rectangle within View
-    /// </summary>
-    /// <param name="boundingBox">Bounding boxes of rectangle.</param>
-    private void ReDrawTargetRectangle(Ros.Net.Messages.cvm_msgs.BoundingBox boundingBox)
-    {
-      if (boundingBox == null) return;
-      Dispatcher.Invoke(new Action(() => targetRoi.UpdateRoi(new RectangleOfInterest(boundingBox))));
-    }
-
-    /// <summary>
-    /// Updates distance label of target.
-    /// </summary>
-    /// <param name="targetPosition">Distance.</param>
-    private void UpdateTargetDistance(Ros.Net.Messages.geometry_msgs.Point targetPosition)
-    {
-      if (targetPosition == null) return;
-
-      Dispatcher.Invoke(new Action(() =>
-      {
-        targetRoi.Depth = targetPosition.z;
-        targetLabel.Content = string.Format("Distance: {0:0.00} m", targetPosition.z);
-      }));
-    }
-
-    /// <summary>
     /// Updates rectangles visibility in case they are expired or new
     /// </summary>
     private void UpdateRectanglesVisibility()
     {
-      var toRemove = new List<RectangleOfInterest>();
-      allDetections.Children.Clear();
-      lostDetections.Children.Clear();
-      foreach (var item in trackedBoxes)
+      if (!Dispatcher.CheckAccess())
       {
-        double idle = item.IdleTime();
-        if (idle > 1.0) toRemove.Add(item);
-        else if (idle > 0.3)
-        {
-          lostDetections.Children.Add(item.Geom);
-        }
-        else
-        {
-          allDetections.Children.Add(item.Geom);
-        }
+        Dispatcher.Invoke(new Action(() => UpdateRectanglesVisibility()));
+        return;
       }
 
-      if (targetRoi.IdleTime() > 2.0)
+      // Cleaning rectangles
+      targets.Children.Clear();
+      allDetections.Children.Clear();
+      lostDetections.Children.Clear();
+
+      if (!followMeApp.IsEnabled) return;
+
+      // Adding new rectangles
+      foreach (var person in followMeApp.DetectedPersons.Where(i => !i.IsTarget))
+      {
+        var idle = person.Rectangle.IdleTime();
+
+        var rectangle = new System.Windows.Media.RectangleGeometry(person.Rectangle.Rect, 0, 0);
+        if (idle > 0.3 && idle < 2.0) lostDetections.Children.Add(rectangle);
+        else if (idle <= 0.3) allDetections.Children.Add(rectangle);
+      }
+
+      // Showing / hiding target
+      if (!followMeApp.IsTracking || followMeApp.Target == null) return;
+
+      if (followMeApp.Target.Rectangle.IdleTime() > 2.0)
       {
         TargetPath.Visibility = Visibility.Hidden;
         targetLabel.Content = "Distance: -- m";
+        return;
       }
-      else
-      {
-        TargetPath.Visibility = Visibility.Visible;
-      }
-    }
 
-    /// <summary>
-    /// Updates rectangles within View
-    /// </summary>
-    /// <param name="boundingBoxes">Bounding boxes of Rectangles</param>
-    private void ReDrawRectangles(Ros.Net.Messages.cvm_msgs.BoundingBoxes boundingBoxes)
-    {
-      if (boundingBoxes == null || boundingBoxes.boundingBoxes == null) return;
-
-      Dispatcher.Invoke(new Action(() =>
-      {
-        foreach (var boundingBox in boundingBoxes.boundingBoxes)
-        {
-          var updated = false;
-          var rectangleOfInterest = new RectangleOfInterest(boundingBox);
-          foreach (var currentBox in trackedBoxes)
-          {
-            if (currentBox.IsTheSame(rectangleOfInterest))
-            {
-              currentBox.UpdateRoi(rectangleOfInterest);
-              updated = true;
-              break;
-            }
-          }
-
-          if (!updated && !IsRectangleOfInterestIsTarget(rectangleOfInterest))
-          {
-            trackedBoxes.Add(rectangleOfInterest);
-          }
-        }
-      }));
+      var targetRectangle = new System.Windows.Media.RectangleGeometry(followMeApp.Target.Rectangle.Rect, 0, 0);
+      targets.Children.Add(targetRectangle);
+      TargetPath.Visibility = Visibility.Visible;
     }
 
     #endregion

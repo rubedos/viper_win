@@ -1,0 +1,1117 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rubedos.RosToolsApplicationBase</name>
+    </assembly>
+    <members>
+        <member name="T:Rubedos.RosToolsApplicationBase.AutoCompleteEntry">
+            <summary>
+            Single entry for autocomplete control
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.AutoCompleteEntry.KeywordStrings">
+            <summary>
+            List of keywords
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.AutoCompleteEntry.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteEntry.#ctor(System.String,System.String[])">
+            <summary>
+            Ctor
+            </summary>
+            <param name="name"></param>
+            <param name="keywords"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteEntry.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.Tokenize">
+            <summary>
+            Defines function which splits given string into keywords
+            </summary>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox">
+            <summary>
+            Interaction logic for AutoCompleteTextBox.xaml
+            </summary>    
+            <summary>
+            AutoCompleteTextBox
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.TextBox">
+            <summary>
+            Returns actual text box 
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.Tokenizer">
+            <summary>
+            Tokenization function. Used to tokenize items retrieved from registry
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.UrlTokenizer">
+            <summary>
+            Convenience tokenizer, parses url strings and returns keyword array
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.Text">
+            <summary>
+            Text value
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.TextProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.HistoryContext">
+            <summary>
+            Context is used for identifying which list of entries to access in registry
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.HistoryContextProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.DelayTime">
+            <summary>
+            Delay before showing hints list
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.Threshold">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.AddItem(System.String)">
+            <summary>
+            Adds item to the list
+            </summary>
+            <param name="entry"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.AddItem(Rubedos.RosToolsApplicationBase.AutoCompleteEntry)">
+            <summary>
+            Add entry to the list
+            </summary>
+            <param name="entry"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.StoreEntries">
+            <summary>
+            Stores autocomplete entries in windows registry under context folder
+            Hint: use same context to share entries between applications
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.LoadEntries">
+            <summary>
+            Restores autocomplete entries from windows registry from context folder.
+            Hint: use same context to share entries between applications
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="arrangeSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.GetVisualChild(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.VisualChildrenCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.AutoCompleteTextBox.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel">
+            <summary>
+            Base ViewModel for Demo Applications?
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Orthographic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Perspective">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.SubTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.RenderTechnique">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.CameraModelCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.CameraModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Camera">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.EffectsManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.RenderTechniqueName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.defaultOrthographicCamera">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.defaultPerspectiveCamera">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.CameraModelChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.OnCameraModelChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.LoadFileToMemory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.PointCloud.ObservableObject">
+            <summary>
+            Base abstract class of the scene view model
+            </summary>
+        </member>
+        <member name="E:Rubedos.RosToolsApplicationBase.PointCloud.ObservableObject.PropertyChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.ObservableObject.OnPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.ObservableObject.SetValue``1(``0@,``0,System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="backingField"></param>
+            <param name="value"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView">
+            <summary>
+            Interaction logic for PointCloud3DView.xaml
+            </summary>
+            <summary>
+            PointCloud3DView
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.PointSize">
+            <summary>
+            Point cloud point size
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.PointSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for PointSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.CameraInfoTopic">
+            <summary>
+            The name of camera info topic
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.CameraInfoTopicProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for CameraInfoTopic.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.RgbTopic">
+            <summary>
+            The naem of RGB map topic
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.RgbTopicProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for RgbTopic.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.DisparityTopic">
+            <summary>
+            The name of disparity map topic
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.DisparityTopicProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DisparityTopic.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.MinimumZ">
+            <summary>
+            Mininum viewing range
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.MinimumZProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for MinimumZ.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.MaximumZ">
+            <summary>
+            Maximum viewing range
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.MaximumZProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for MaximumZ.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.BaseFrame">
+            <summary>
+            The frame which contains Tf frames and PointCloud as sibling nodes.
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.ViewModel">
+            <summary>
+            Implemented pointcloud logic in the model
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.TfTransformModel">
+            <summary>
+            ROS Tf transform model
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.Viewport">
+            <summary>
+            Main viewport
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.SpaceOfInterestGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.#ctor">
+            <summary>
+            Ctro
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.InitalizeScene">
+            <summary>
+            Initializes scene asets
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.SetFOVs(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="minZ">Minimum range</param>
+            <param name="maxZ">Maximum range</param>
+            <param name="baseline">Baseline</param>
+            <param name="fovv"></param>
+            <param name="fovh"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.InitializePipeLine(System.Boolean,System.Int32)">
+            <summary>
+            Forces pipeline filters to switch to CPU (if possible)
+            </summary>
+            <param name="forceCPU"></param>
+            <param name="sectionFilters"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel">
+            <summary>
+            View model of the point cloud
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.context">
+            <summary>
+            Context for synchronization (renderer)
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.imagingPipeline">
+            <summary>
+            Pipeline which transforms image data to point cloud
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ImagingPipeline">
+            <summary>
+            Imaging pipeline to be rendered in this view model
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SceneLabels">
+            <summary>
+            Model#3D which renders text
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.exitUpdateThread">
+            <summary>
+            Set to true to stop pointcloud updates
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.PointCloudGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ColorSchema">
+            <summary>
+            ColorSchema number
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.phase">
+            <summary>
+            For frame rate calculations
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.FPS">
+            <summary>
+            Pointcloud update rate
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridMajor">
+            <summary>
+            The Grid
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridMinor">
+            <summary>
+            The Grid
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridLongRange">
+            <summary>
+            The Grid
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridLongRangeMajor">
+            <summary>
+            The Grid
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.XAxis">
+            <summary>
+            View x axis
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.YAxis">
+            <summary>
+            View y axis
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ZAxis">
+            <summary>
+            View z axis
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Origin">
+            <summary>
+            Origin of the scene
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.OriginMaterial">
+            <summary>
+            Origin material
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.PointCloud">
+            <summary>
+            Point cloud geometry
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.LineThickness">
+            <summary>
+            Thickness of the Lines of the Grid
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.TriangulationThickness">
+            <summary>
+            Thickness of the Lines of the Triangulated Polygon
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridColor">
+            <summary>
+            Color of the Gridlines
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridTransform">
+            <summary>
+            Transform of the Grid
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridLRTransform">
+            <summary>
+            Transform of the Grid
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ViperBaseTransform">
+            <summary>
+            Transform of the VIPER camera
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.DirectionalLightDirection">
+            <summary>
+            Direction of the directional Light
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.DirectionalLightColor">
+            <summary>
+            Color of the directional Light
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.AmbientLightColor">
+            <summary>
+            Color of the ambient Light
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.mShowTriangleLines">
+            <summary>
+            Draw the Triangles or not
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ShowTriangleLines">
+            <summary>
+            Accessor to the Boolean
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.mMaterial">
+            <summary>
+            The Polygon-Material
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Material">
+            <summary>
+            Accessor to the Polygon-Material
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.RGBImage">
+            <summary>
+            RGB map
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.DepthMap">
+            <summary>
+            Set Disparity Map
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.RgbArray">
+            <summary>
+            RGB array
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.DisparityArray">
+            <summary>
+            Disparity array
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetSize(System.Drawing.Size)">
+            <summary>
+            Sets Pointcloud size (W x H). Reinitializes point cloud
+            </summary>
+            <param name="newSize"></param>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Size">
+            <summary>
+            Pointcloud size (W x H)
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.PointCount">
+            <summary>
+            Number of points in point cloud
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.#ctor(SharpDX.Size2)">
+            <summary>
+            Constructor of the MainViewModel
+            Sets up allProperties
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetCvmPosition(System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D)">
+            <summary>
+            
+            </summary>
+            <param name="pos">Position vector</param>
+            <param name="rotations">Rotations around x, y, z axis in angles</param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetCvmPosition(System.Windows.Media.Media3D.Matrix3D)">
+            <summary>
+            Sets CVM node position using transform matrix
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetOthogonalCamera(System.Boolean)">
+            <summary>
+            Changes current view camera between perspective and orthogonal
+            </summary>
+            <param name="ortho"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.StopUpdateThread">
+            <summary>
+            Stops render update thread
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.LoadSTLModel(HelixToolkit.Wpf.SharpDX.GroupModel3D,System.Windows.Media.Media3D.Vector3D,HelixToolkit.Wpf.SharpDX.Material)">
+            <summary>
+            Loads STL file into group model
+            </summary>
+            <param name="modelGroup">Specify where to load file model</param>
+            <param name="originOffset">offsets the model by given vector (if origin is different than specified in file)</param>
+            <param name="overrideMaterial">Override default material with this one. Leave null to keep original</param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SchedulePointcloudUpdate">
+            <summary>
+            Informs pc update thread that new data has arrived and needs to be reflected in the pointcloud
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.frameCount">
+            <summary>
+            Used for FPS calculation
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.UpdatePC">
+            <summary>
+            Performs pointcloud updates
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetFOVs(HelixToolkit.Wpf.SharpDX.GroupModel3D,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="fovGroup"></param>
+            <param name="minZ">Minimum range</param>
+            <param name="maxZ">Maximum range</param>
+            <param name="baseline">Baseline</param>
+            <param name="fovv"></param>
+            <param name="fovh"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.CreateFOV(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Add FOV volume to the camera model group
+            </summary>
+            <param name="minZ">Minimum range</param>
+            <param name="maxZ">Maximum range</param>
+            <param name="baseline">Baseline</param>
+            <param name="fovv"></param>
+            <param name="fovh"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.Configurator">
+            <summary>
+            Interaction logic for Configurator.xaml
+            </summary>
+            <summary>
+            Configurator
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Configurator.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Configurator.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.NetworkDiscoveryAgent">
+            <summary>
+            Interaction logic for NetworkDiscoveryAgent.xaml
+            </summary>
+            <summary>
+            NetworkDiscoveryAgent
+            </summary>
+        </member>
+        <member name="E:Rubedos.RosToolsApplicationBase.NetworkDiscoveryAgent.Selected">
+            <summary>
+            Raised when device is selected
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.NetworkDiscoveryAgent.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.NetworkDiscoveryAgent.Quit">
+            <summary>
+            Stop discovering because parent has quit
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.NetworkDiscoveryAgent.RefreshDevices">
+            <summary> Scan device list and remove devices with outdated timestamps </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.NetworkDiscoveryAgent.SelectedDevice">
+            <summary>
+            Returns selected device
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.NetworkDiscoveryAgent.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.Device">
+            <summary>
+            The device descriptor
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Device.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Device.IP">
+            <summary>
+            Device IP address
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Device.Master">
+            <summary>
+            Device ROS Master URI
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Device.Version">
+            <summary>
+            Device version
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Device.Id">
+            <summary>
+            Device unique id
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Device.Name">
+            <summary>
+            Device name
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Device.Serial">
+            <summary>
+            Serial number of the decvice
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Device.Date">
+            <summary>
+            Response timestamp
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Device.LastUpdate">
+            <summary>
+            Last response timestamp
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Device.Update(Rubedos.RosToolsApplicationBase.Device)">
+            <summary>
+            Device info updates
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.Range`1">
+            <summary>The Range class.</summary>
+            <typeparam name="T">Generic parameter.</typeparam>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Range`1.#ctor(`0,`0)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Range`1.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Range`1.Minimum">
+            <summary>Minimum value of the range.</summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Range`1.Maximum">
+            <summary>Maximum value of the range.</summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Range`1.Interval">
+            <summary>
+            Max - Min
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Range`1.Middle">
+            <summary>
+            (Max + Min) / 2
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Range`1.ToString">
+            <summary>Presents the Range in readable format.</summary>
+            <returns>String representation of the Range</returns>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Range`1.IsValid">
+            <summary>Determines if the range is valid.</summary>
+            <returns>True if range is valid, else false</returns>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Range`1.ContainsValue(`0)">
+            <summary>Determines if the provided value is inside the range.</summary>
+            <param name="value">The value to test</param>
+            <returns>True if the value is inside Range, else false</returns>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Range`1.IsInsideRange(Rubedos.RosToolsApplicationBase.Range{`0})">
+            <summary>Determines if this Range is inside the bounds of another range.</summary>
+            <param name="range">The parent range to test on</param>
+            <returns>True if range is inclusive, else false</returns>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.Range`1.ContainsRange(Rubedos.RosToolsApplicationBase.Range{`0})">
+            <summary>Determines if another range is inside the bounds of this range.</summary>
+            <param name="range">The child range to test</param>
+            <returns>True if range is inside, else false</returns>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.RangeFloat">
+            <summary>
+            Range of float type
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RangeFloat.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RangeFloat.#ctor(System.Single,System.Single)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="min">Range minimum</param>
+            <param name="max">Range maximum</param>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.RangeFloat.Interval">
+            <summary>
+            Max - Min
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.RangeFloat.Middle">
+            <summary>
+            (Max + Min) / 2
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RangeFloat.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.FilterTopicsOptionsEnum">
+            <summary>
+            Options for filtering out topics array
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.FilterTopicsOptionsEnum.AllTopics">
+            <summary>
+            Returns all topics
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.FilterTopicsOptionsEnum.ExceptDynamicReconfigure">
+            <summary>
+            Returns all topics except dynamic reconfigure topics
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.FilterTopicsOptionsEnum.DynamicReconfigure">
+            <summary>
+            Returns only Dynamic reongfigure topics
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.FilterTopicsOptionsEnum.SpecificType">
+            <summary>
+            Filters topics that have specific type
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.FilterTopicsOptionsEnum.ImageType">
+            <summary>
+            Filters topics that are images
+            </summary>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.RosWindowBase">
+            <summary>
+            Derive from RosWindowBase in your ROS-based WPF application
+            </summary>
+            <summary>
+            RosWindowBase
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.RosWindowBase.Topics">
+            <summary>
+            The list of current topics
+            </summary>
+        </member>
+        <member name="E:Rubedos.RosToolsApplicationBase.RosWindowBase.TopicsUpdated">
+            <summary>
+            Raised when new topics are received (or gone missing)
+            </summary>
+        </member>
+        <member name="E:Rubedos.RosToolsApplicationBase.RosWindowBase.RosConnecting">
+            <summary>
+            Emitted when about to connect to ROS master
+            </summary>
+        </member>
+        <member name="E:Rubedos.RosToolsApplicationBase.RosWindowBase.RosConnected">
+            <summary>
+            Emitted when connection to ROS master is established
+            </summary>
+        </member>
+        <member name="E:Rubedos.RosToolsApplicationBase.RosWindowBase.RosDisconnecting">
+            <summary>
+            Emitted when about to disconnect from ROS master
+            </summary>
+        </member>
+        <member name="E:Rubedos.RosToolsApplicationBase.RosWindowBase.RosDisconnected">
+            <summary>
+            Emitted when connection to ROS master is closed
+            </summary>
+        </member>
+        <member name="E:Rubedos.RosToolsApplicationBase.RosWindowBase.CvmDeviceInfoChaged">
+            <summary>
+            Event raised when device info changes
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.RosWindowBase.ViperDevice">
+            -------------------------------------------------------------------------------------------------
+             <summary> Gets or sets the viper device main object </summary>
+            
+             <value> The viper device. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.GetBaseToolar">
+            <summary>
+            Returns main toolbar
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.ConnectClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Bound to connect button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.ShutdownROS">
+            <summary>
+            Perform ROS shutdown routines
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.ConnectToROSMaster(System.String)">
+            <summary>
+            Establishes connection to ROS master. Must be called asynchronously
+            </summary>
+            <param name="uri">ROS Master URI</param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.FilterTopics(System.Collections.Generic.IEnumerable{Ros.Net.TopicInfo},Rubedos.RosToolsApplicationBase.FilterTopicsOptionsEnum,System.String)">
+            <summary>
+            Filters topic list
+            </summary>
+            <param name="topics">collection of tpopics</param>
+            <param name="filter"></param>
+            <param name="msgType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.SaveSettings">
+            <summary>
+            Saves settings to file
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.PauseUpdates(System.Boolean)">
+            <summary>
+            Pauses topic update. Note that device still produces topics, and when resumed the topics sall continue with the latest one.
+            </summary>
+            <param name="pause"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Properties.Settings.ROSUri">
+            <summary>
+            URI of the VIPER ROS or its ROS master
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Properties.Settings.ROSThisNode">
+            <summary>
+            Name of the this window apllication node
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Properties.Settings.ThisIP">
+            <summary>
+            IP of this machine, sent to ROS master for callback calls
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Properties.Settings.TopicPrefix">
+            <summary>
+            Topic prefix (namespace) of the viper you&apos;re connecting to
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Properties.Settings.BaseFrame">
+            <summary>
+            Frame that should be the origin of the scene
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Properties.Settings.PointCloudFrame">
+            <summary>
+            Name of the point cloud frame 
+            </summary>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.TfTransformModel3D">
+            <summary>
+            Reconstructs current Tf model as 3D hierarchy
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.TfTransformModel3D.CvmDevice">
+            <summary>
+            CVM Device camera
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.TfTransformModel3D.LabelsModel">
+            <summary>
+            The 3d model wich renders frame names. Must be set before initializing
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.TfTransformModel3D.Init">
+            <summary>
+            Initializes this model
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.TfTransformModel3D.GetArrow(SharpDX.Vector3,SharpDX.Color4)">
+            <summary>
+            
+            </summary>
+            <param name="direction"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.TfTransformModel3D.AddFrame(System.String,Ros.Net.Messages.geometry_msgs.Transform)">
+            <summary>
+            Adds bew frame
+            </summary>
+            <param name="name">Name of the frame</param>
+            <param name="t">Transform message</param>
+            <returns></returns>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>
