@@ -313,7 +313,7 @@
             <summary>
             Gets parameter of specified configuration node
             </summary>
-            <param name="configurableNode"></param>
+            <param name="configurableNode_"></param>
             <param name="parameter"></param>
             <param name="groupName"></param>
             <returns></returns>
@@ -341,7 +341,7 @@
             <summary>
             Sets specified parameter of dynamic reconfigure
             </summary>
-            <param name="configurableNode">The name of the node that needs to be configured</param>
+            <param name="configurableNode_">The name of the node that needs to be configured</param>
             <param name="groupName">parameter group</param>
             <param name="parameter">barameter name</param>
             <param name="value">value</param>
@@ -528,106 +528,231 @@
             <param name="activate"></param>
         </member>
         <member name="T:Rubedos.Viper.Net.PerceptionApps.FollowMeApp">
-            -------------------------------------------------------------------------------------------------
-             <summary> A follow me application. </summary>
-            
-             <seealso cref="T:Rubedos.Viper.Net.Iface.IPerceptionApp"/>
-            -------------------------------------------------------------------------------------------------
+            <summary> 
+            Follow me application. 
+            </summary>
+            <seealso cref="T:Rubedos.Viper.Net.Iface.IPerceptionApp"/>
         </member>
-        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.TargetPositionChanged">
-            <summary> Event queue for all listeners interested in TargetPositionChanged events. </summary>
+        <member name="F:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.logger">
+            <summary>
+            Logger
+            </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.DetectedPersons">
-            -------------------------------------------------------------------------------------------------
-             <summary> Gets the detected persons collection </summary>
-            
-             <value> The detected persons. </value>
-            -------------------------------------------------------------------------------------------------
+        <member name="F:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.enableDisablePublisher">
+            <summary>
+            Publisher for FollowMe enable / disable functionality. 
+            </summary>
         </member>
-        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.StartTracking(Rubedos.Viper.Net.PerceptionApps.Person)">
-            -------------------------------------------------------------------------------------------------
-             <summary> Starts a tracking. </summary>
-            
-             <param name="person"> The person. </param>
-            -------------------------------------------------------------------------------------------------
+        <member name="F:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.setTargetPublisher">
+            <summary>
+            Publisher for FollowMe target setter functionality.
+            </summary>
         </member>
-        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.#ctor(Rubedos.Viper.Net.CvmDevice)">
-            -------------------------------------------------------------------------------------------------
-             <summary> Constructor. </summary>
-            
-             <param name="cvm">  The cvm. </param>
-            -------------------------------------------------------------------------------------------------
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnTargetPositionChanged">
+            <summary>
+            Event is triggered when target (<see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>) position has changed.
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnTargetDistanceChanged">
+            <summary>
+            Event is triggered when target (<see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>) distance has changed.
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnPersonPositionChanged">
+            <summary>
+            Event is triggered when position for <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> has changed.
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnPersonDetected">
+            <summary>
+            Event is triggered when new <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> has been detected.
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnStarted">
+            <summary>
+            Event is triggered when FollowMe application has started detecting people.
+            </summary>
+        </member>
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnStopped">
+            <summary>
+            Event is triggered when FollowMe application has stopped detecting people.
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Target">
+            <summary>
+            Gets a value indicating tracked target - <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>.
+            </summary>
         </member>
         <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.IsActivated">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Gets or sets a value indicating whether the perception application is activated.
-             </summary>
-            
-             <value> True if activated, false if not. </value>
-            
-             <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Activated"/>
-            -------------------------------------------------------------------------------------------------
+            <summary>
+            Gets a value indicating whether the perception application is activated.
+            <value> True if activated, false if not. </value>
+            <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.IsActivated"/>
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.IsEnabled">
+            <summary>
+            Gets a value indicating whether application is enabled or disabled within application.
+            True if application has started and is running, otherwise - false.
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.IsTracking">
+            <summary>
+            Gets a value indicating whether application is tracking any person or not.
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.DetectedPersons">
+            <summary>
+            Gets a value indicating collection of <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>.
+            </summary>
         </member>
         <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Description">
-            -------------------------------------------------------------------------------------------------
-             <summary> Gets or sets the description. </summary>
-            
-             <value> The description. </value>
-            
-             <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Description"/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.TypeName">
-            -------------------------------------------------------------------------------------------------
-             <summary> Gets or sets the name. </summary>
-            
-             <value> The name. </value>
-            
-             <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Name"/>
-            -------------------------------------------------------------------------------------------------
+            <summary> 
+            Gets a value indication description of follow me application.
+            <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Description"/>
+            </summary>
         </member>
         <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Name">
-            -------------------------------------------------------------------------------------------------
-             <summary> Gets the name. </summary>
-            
-             <value> The name. </value>
-            
-             <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Name"/>
-            -------------------------------------------------------------------------------------------------
+            <summary> 
+            Gets a value indicating application name. 
+            <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Name"/>
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.TypeName">
+            <summary>
+            Gets a value indicating application type name.
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.#ctor(Rubedos.Viper.Net.CvmDevice)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="device">CVM device</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Dispose">
+            <summary>
+            Releases resources
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Start">
+            <summary>
+            Starts detecting persons within field of view.
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Stop">
+            <summary>
+            Stops detecting persons within field of view.
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.StartTracking(Rubedos.Viper.Net.PerceptionApps.Person)">
+            <summary>
+            Starts tracking a <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>.
+            </summary>
+            <param name="target"><see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> to track.</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.StopTracking">
+            <summary>
+            Stops tracking a <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>.
+            </summary>
         </member>
         <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Activate(System.Boolean)">
-            -------------------------------------------------------------------------------------------------
-             <summary> Activates the application. </summary>
-            
-             <param name="activate"> True to activate. </param>
-            
-             <seealso cref="M:Rubedos.Viper.Net.Iface.IPerceptionApp.Activate(bool)"/>
-            -------------------------------------------------------------------------------------------------
+            <summary> 
+            Activates the application. 
+            <param name="activate">True to activate or False to deactivate. </param>
+            <seealso cref="M:Rubedos.Viper.Net.Iface.IPerceptionApp.Activate(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnFollowMeEnabledDisabled(Ros.Net.Messages.std_msgs.Bool)">
+            <summary>
+            Invoked when follow me application was enabled or disabled within <see cref="T:Rubedos.Viper.Net.CvmDevice"/>.
+            </summary>
+            <param name="isFollowMeEnabled">True if enabled and false if disabled.</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnBoundingBoxesReceived(Ros.Net.Messages.cvm_msgs.BoundingBoxes)">
+            <summary>
+            Invoked when received <see cref="T:Ros.Net.Messages.cvm_msgs.BoundingBoxes"/>. 
+            For all visible <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>'s.
+            </summary>
+            <param name="boundingBoxes">Bounding boxes</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnTargetBoundingBoxReceived(Ros.Net.Messages.cvm_msgs.BoundingBox)">
+            <summary>
+            Invoked when received <see cref="T:Ros.Net.Messages.cvm_msgs.BoundingBox"/> for targeted <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>. 
+            </summary>
+            <param name="boundingBox">Bounding boxes</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnTargetDistanceReceived(Ros.Net.Messages.geometry_msgs.Point)">
+            <summary>
+            Invoked when received <see cref="T:Ros.Net.Messages.geometry_msgs.Point"/> for targeted <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>. 
+            </summary>
+            <param name="targetPosition">Position from which distance can be extracted.</param>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.Interfaces.EventArgs.IPersonChangedEventArgs.Person">
+            <summary>
+            Gets or sets a value indicating person.
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonChangedEventArgs">
+            <summary>
+            Event arguments when any parameter of person has changed.
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonChangedEventArgs.Person">
+            <summary>
+            Person
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonDistanceChangedEventArgs">
+            <summary>
+            Event arguments when <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> distance has changed.
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonDistanceChangedEventArgs.Distance">
+            <summary>
+            Gets a value indicating <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> distance from <see cref="T:Rubedos.Viper.Net.CvmDevice"/>.
+            Returns '-1' if distance is not set!
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonPositionChangedEventArgs">
+            <summary>
+            Event arguments of <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> when it's 2D position has changed.
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonPositionChangedEventArgs.Position">
+            <summary>
+            Gets a value indicating 2D position and rectangle height / width of person.
+            </summary>
+        </member>
+        <member name="T:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonDetectedEventArgs">
+            <summary>
+            New person detected event arguments.
+            </summary>
         </member>
         <member name="T:Rubedos.Viper.Net.PerceptionApps.Person">
-            <summary> A person recognized by device. </summary>
+            <summary>
+            Person recognized by <see cref="T:Rubedos.Viper.Net.CvmDevice"/>.
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.Person.IsTarget">
+            <summary>
+            Gets or sets a value indicating if person is selected as target or not.
+            </summary>
         </member>
         <member name="P:Rubedos.Viper.Net.PerceptionApps.Person.Rectangle">
-            -------------------------------------------------------------------------------------------------
-             <summary> Gets or sets the rectangle. </summary>
-            
-             <value> The rectangle. </value>
-            -------------------------------------------------------------------------------------------------
+            <summary>
+            Gets or sets a value indicating rectangle of interest.
+            </summary>
         </member>
-        <member name="T:Rubedos.Viper.Net.PerceptionApps.PersonPositionChangedEventArgs">
-            -------------------------------------------------------------------------------------------------
-             <summary> Additional information for person position changed events. </summary>
-            
-             <seealso cref="T:System.EventArgs"/>
-            -------------------------------------------------------------------------------------------------
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.Person.Position">
+            <summary>
+            Position of person in 3D space
+            </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.PerceptionApps.PersonPositionChangedEventArgs.SelectedPerson">
-            -------------------------------------------------------------------------------------------------
-             <summary> Gets or sets the selected person. </summary>
-            
-             <value> The selected person. </value>
-            -------------------------------------------------------------------------------------------------
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.Person.Distance">
+            <summary>
+            Distance of person.
+            <see cref="P:Rubedos.Viper.Net.PerceptionApps.Person.Position"/> has to be provided!
+            </summary>
         </member>
         <member name="T:Rubedos.Viper.Net.FilterTopicsOptionsEnum">
             <summary> Values that represent filter topics options enums. </summary>
@@ -1096,6 +1221,20 @@
             Ctor
             </summary>
         </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.GetTransformMatrix">
+            <summary>
+            Gets transformation matrix of this frame
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.FindTransformRecursively(System.Windows.Media.Media3D.Matrix3D,System.String)">
+            <summary>
+            Traverse tree of tf's and concatenate transformation matrix
+            </summary>
+            <param name="current"></param>
+            <param name="targetFrame"></param>
+            <returns></returns>
+        </member>
         <member name="M:Rubedos.Viper.Net.Tf.TfFrame.FindFrame(System.String)">
             <summary>
             Recursivelly finds specified frame
@@ -1162,6 +1301,14 @@
             </summary>
             <param name="frame">name of the frame</param>
             <returns>Transformation message as received from ROS</returns>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Tf.TfManager.GetTransformBetweenFrames(System.String,System.String)">
+            <summary>
+            Calculates transformation between two specified frames
+            </summary>
+            <param name="f1">ancestor frame</param>
+            <param name="f2">child (or descendant) frame</param>
+            <returns></returns>
         </member>
         <member name="M:Rubedos.Viper.Net.Tf.TfManager.Initialize">
             <summary>
