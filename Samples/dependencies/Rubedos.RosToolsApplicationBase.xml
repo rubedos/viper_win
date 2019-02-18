@@ -145,6 +145,30 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.CvMatView">
+            <summary>
+            Class for displaying OpenCV.Net.Mat 
+            </summary>
+            <summary>
+            CvMatView
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.CvMatView.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.CvMatView.SetMatImage(OpenCV.Net.Mat)">
+            <summary>
+            Set image to display
+            </summary>
+            <param name="mat"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.CvMatView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel">
             <summary>
             Base ViewModel for Demo Applications?
@@ -345,6 +369,11 @@
         <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.BaseFrame">
             <summary>
             The frame which contains Tf frames and PointCloud as sibling nodes.
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.SceneRoot">
+            <summary>
+            Main group node of the scene
             </summary>
         </member>
         <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.ViewModel">

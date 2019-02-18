@@ -4,53 +4,53 @@
  <Namespaces>
   <Namespace Name="Rubedos.Viper.Net">
    <Messages>
-    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rubedos' in namespace name 'Rubedos.Viper.Net'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Rubedos.Viper.Net.DynamicReconfigure">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Rubedos.Viper.Net.DynamicReconfigure' with another namespace.</Issue>
     </Message>
-    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rubedos' in namespace name 'Rubedos.Viper.Net.DynamicReconfigure'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Rubedos.Viper.Net.PerceptionApps">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Rubedos.Viper.Net.PerceptionApps' with another namespace.</Issue>
     </Message>
-    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rubedos' in namespace name 'Rubedos.Viper.Net.PerceptionApps'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Rubedos.Viper.Net.PerceptionApps.EventArgs">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Rubedos.Viper.Net.PerceptionApps.EventArgs' with another namespace.</Issue>
     </Message>
-    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rubedos' in namespace name 'Rubedos.Viper.Net.PerceptionApps.EventArgs'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="Rubedos.Viper.Net.Tf">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Rubedos.Viper.Net.Tf' with another namespace.</Issue>
     </Message>
-    <Message Id="Tf" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message Id="Tf" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'Tf' in namespace name 'Rubedos.Viper.Net.Tf' by changing it to 'TF'.</Issue>
     </Message>
-    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rubedos' in namespace name 'Rubedos.Viper.Net.Tf'.</Issue>
     </Message>
-    <Message Id="Tf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+    <Message Id="Tf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Tf' in namespace name 'Rubedos.Viper.Net.Tf'.</Issue>
     </Message>
    </Messages>
@@ -61,10 +61,10 @@
    <Modules>
     <Module Name="rubedos.viper.net.dll">
      <Messages>
-      <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+      <Message Id="Rubedos" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
        <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rubedos' in assembly name 'Rubedos.Viper.Net.dll'.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'Rubedos.Viper.Net.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
      </Messages>
@@ -73,208 +73,208 @@
        <Types>
         <Type Name="CvmDevice" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Cvm' in type name 'CvmDevice'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#.ctor(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="256">Replace method 'CvmDevice.CvmDevice(string, string)' with an overload that supplies all default arguments.</Issue>
             </Message>
-            <Message Id="Ip" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ip" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="256">In member 'CvmDevice.CvmDevice(string, string)', correct the casing of 'Ip' in parameter name 'thisIp' by changing it to 'IP'.</Issue>
             </Message>
-            <Message Id="Ip" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ip" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="256">In method 'CvmDevice.CvmDevice(string, string)', correct the spelling of 'Ip' in parameter name 'thisIp' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#.ctor(System.Uri,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Ip" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ip" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="48">In member 'CvmDevice.CvmDevice(Uri, string)', correct the casing of 'Ip' in parameter name 'thisIp' by changing it to 'IP'.</Issue>
             </Message>
-            <Message Id="Ip" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ip" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="48">In method 'CvmDevice.CvmDevice(Uri, string)', correct the spelling of 'Ip' in parameter name 'thisIp' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CallCvmApi(Ros.Net.Messages.cvm_web_panel.WebConfigAPI+Request)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="log4net.ILog.DebugFormat(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="log4net.ILog.DebugFormat(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="615">Because the behavior of 'ILog.DebugFormat(string, params object[])' could vary based on the current user's locale settings, replace this call in 'CvmDevice.CallCvmApi(WebConfigAPI.Request)' with a call to 'ILog.DebugFormat(IFormatProvider, string, params object[])'. If the result of 'ILog.DebugFormat(IFormatProvider, string, params object[])' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CameraTopic" Kind="Field" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning">Field 'CvmDevice.CameraTopic' is declared as 'static readonly' but is initialized with a constant value '${TopicPrefix}/cvm_v4l2_camera'. Mark this field as 'const' instead.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ClientIp" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Ip" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ip" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="89">Correct the casing of 'Ip' in member name 'CvmDevice.ClientIp' by changing it to 'IP'.</Issue>
             </Message>
-            <Message Id="Ip" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ip" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="89">Correct the spelling of 'Ip' in member name 'CvmDevice.ClientIp' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Connect()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="ClientIp" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="ClientIp" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="524">Correct the spelling of the unrecognized token 'ClientIp' in the literal '"ClientIp is null!"'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Connect(System.Uri,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="509">Replace method 'CvmDevice.Connect(Uri, string)' with an overload that supplies all default arguments.</Issue>
             </Message>
-            <Message Id="Ip" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ip" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="509">In member 'CvmDevice.Connect(Uri, string)', correct the casing of 'Ip' in parameter name 'thisIp' by changing it to 'IP'.</Issue>
             </Message>
-            <Message Id="Ip" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ip" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="509">In method 'CvmDevice.Connect(Uri, string)', correct the spelling of 'Ip' in parameter name 'thisIp' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message Id="cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="509">In method 'CvmDevice.Connect(Uri, string)', correct the spelling of 'cvm' in parameter name 'cvmUri' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CvmConfigManager" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="188">Correct the spelling of 'Cvm' in member name 'CvmDevice.CvmConfigManager' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CvmUri" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="83">Correct the spelling of 'Cvm' in member name 'CvmDevice.CvmUri' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Disconnect()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalError" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="578">Modify 'CvmDevice.Disconnect()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DisconnectAsync()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalError" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="658">Modify 'CvmDevice.DisconnectAsync()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="mainHandle" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="mainHandle" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="841">'CvmDevice' contains field 'CvmDevice.mainHandle' that is of IDisposable type: 'NodeHandle'. Change the Dispose method on 'CvmDevice' to call Dispose or Close on this field.</Issue>
             </Message>
-            <Message Id="timer" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="timer" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="841">'CvmDevice' contains field 'CvmDevice.timer' that is of IDisposable type: 'Timer'. Change the Dispose method on 'CvmDevice' to call Dispose or Close on this field.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FetchDeviceInfo()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalError" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="709">Modify 'CvmDevice.FetchDeviceInfo()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
              <Issue Certainty="95" Level="CriticalError" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="724">Modify 'CvmDevice.FetchDeviceInfo()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
-            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="688">Because the behavior of 'string.StartsWith(string)' could vary based on the current user's locale settings, replace this call in 'CvmDevice.FetchDeviceInfo()' with a call to 'string.StartsWith(string, StringComparison)'. If the result of 'string.StartsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FetchTopic`1(System.String,System.TimeSpan)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="408">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'CvmDevice.FetchTopic&lt;T&gt;(string, TimeSpan)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FilterTopics(System.Collections.Generic.IEnumerable`1&lt;Ros.Net.TopicInfo&gt;,Rubedos.Viper.Net.FilterTopicsOptionsEnum,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="475">Replace method 'CvmDevice.FilterTopics(IEnumerable&lt;TopicInfo&gt;, FilterTopicsOptionsEnum, string)' with an overload that supplies all default arguments.</Issue>
             </Message>
-            <Message Id="msg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="msg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="475">In method 'CvmDevice.FilterTopics(IEnumerable&lt;TopicInfo&gt;, FilterTopicsOptionsEnum, string)', correct the spelling of 'msg' in parameter name 'msgType' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message Id="msgType" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="msgType" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="475">Parameter 'msgType' of 'CvmDevice.FilterTopics(IEnumerable&lt;TopicInfo&gt;, FilterTopicsOptionsEnum, string)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetLicenseInfo()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="119">The 'this' parameter (or 'Me' in Visual Basic) of 'CvmDevice.GetLicenseInfo()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="119">Change 'CvmDevice.GetLicenseInfo()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetListOfImageTopics()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="433">Change 'CvmDevice.GetListOfImageTopics()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetPerceptionApps()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="463">Change 'CvmDevice.GetPerceptionApps()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PostRosLog(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="356">Correct the spelling of 'Ros' in member name 'CvmDevice.PostRosLog(string)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message Id="msg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="msg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="356">In method 'CvmDevice.PostRosLog(string)', correct the spelling of 'msg' in parameter name 'msg' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RosNode" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="94">Correct the spelling of 'Ros' in member name 'CvmDevice.RosNode' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#rosoutSubscriber" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'CvmDevice.rosoutSubscriber' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#rosoutTopic" Kind="Field" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning">Field 'CvmDevice.rosoutTopic' is declared as 'static readonly' but is initialized with a constant value '/rosout'. Mark this field as 'const' instead.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SendPing()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="783">Because the behavior of 'string.Format(string, object, object, object)' could vary based on the current user's locale settings, replace this call in 'CvmDevice.SendPing()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
@@ -283,7 +283,7 @@
            <Accessors>
             <Accessor Name="#set_SoftwareUpdateManager(Rubedos.Viper.Net.Iface.ISoftwareUpdateManager)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="108">'CvmDevice.SoftwareUpdateManager.set(ISoftwareUpdateManager)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -292,21 +292,21 @@
           </Member>
           <Member Name="#ToString()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net" File="CvmDevice.cs" Line="828">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'CvmDevice.ToString()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DeviceInfoChaged" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Chaged" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Chaged" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Chaged' in member name 'CvmDevice.DeviceInfoChaged' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RosoutMessaged" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Rosout" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Rosout" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rosout' in member name 'CvmDevice.RosoutMessaged' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
@@ -315,10 +315,10 @@
         </Type>
         <Type Name="CvmDeviceException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Cvm' in type name 'CvmDeviceException'.</Issue>
           </Message>
-          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Add [Serializable] to 'CvmDeviceException' as this type implements ISerializable.</Issue>
           </Message>
          </Messages>
@@ -327,107 +327,107 @@
          <Members>
           <Member Name="#Compare(System.Object,System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="166">The 'this' parameter (or 'Me' in Visual Basic) of 'DeviceConfigManager.Compare(object, object)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CreateDynamicReconfigureInterface(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="273">In method 'DeviceConfigManager.CreateDynamicReconfigureInterface(string)', call System.IDisposable.Dispose on object 'new DynamicReconfigureInterface(this.nHandle, nodeName, 0)' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CreateNodeHandle()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="286">In method 'DeviceConfigManager.CreateNodeHandle()', call System.IDisposable.Dispose on object 'new NodeHandle()' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="613">Change 'DeviceConfigManager.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FormatXml(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="409">In method 'DeviceConfigManager.FormatXml(string)', call System.IDisposable.Dispose on object 'XmlWriter.Create(stringBuilder, xmlWriterSettings)' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="404">The 'this' parameter (or 'Me' in Visual Basic) of 'DeviceConfigManager.FormatXml(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#FromXmlFile(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="461">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.FromXmlFile(string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetEnums(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="364">The 'this' parameter (or 'Me' in Visual Basic) of 'DeviceConfigManager.GetEnums(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="editMethod" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="editMethod" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="364">Parameter 'editMethod' of 'DeviceConfigManager.GetEnums(string)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetParameter(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="97">Replace method 'DeviceConfigManager.GetParameter(string, string, string)' with an overload that supplies all default arguments.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="97">In member 'DeviceConfigManager.GetParameter(string, string, string)', remove the underscores from parameter name 'configurableNode_'.</Issue>
             </Message>
-            <Message Id="groupName" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="groupName" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="97">Parameter 'groupName' of 'DeviceConfigManager.GetParameter(string, string, string)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="104">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.GetParameter(string, string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="106">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.GetParameter(string, string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetParameterValue(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="128">Replace method 'DeviceConfigManager.GetParameterValue(string, string, string)' with an overload that supplies all default arguments.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ReadFromXmlString(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="445">Object 'stringReader' can be disposed more than once in method 'DeviceConfigManager.ReadFromXmlString(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 445</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SetParameterValue(System.String,System.String,System.Object,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="182">Replace method 'DeviceConfigManager.SetParameterValue(string, string, object, string)' with an overload that supplies all default arguments.</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="182">In member 'DeviceConfigManager.SetParameterValue(string, string, object, string)', remove the underscores from parameter name 'configurableNode_'.</Issue>
             </Message>
-            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IncorrectParameterName" Certainty="95" Level="CriticalError" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="183">Method 'DeviceConfigManager.SetParameterValue(string, string, object, string)' passes 'configurableNode' as the 'paramName' argument to a 'ArgumentNullException' constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Issue>
             </Message>
-            <Message Id="groupName" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="groupName" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="182">Parameter 'groupName' of 'DeviceConfigManager.SetParameterValue(string, string, object, string)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="192">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.SetParameterValue(string, string, object, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="205">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.SetParameterValue(string, string, object, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
@@ -435,45 +435,45 @@
           </Member>
           <Member Name="#SetParameterValueSync(System.String,System.String,System.Object,System.TimeSpan,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="142">Replace method 'DeviceConfigManager.SetParameterValueSync(string, string, object, TimeSpan, string)' with an overload that supplies all default arguments.</Issue>
             </Message>
-            <Message Id="ms" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="ms" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="158">Correct the spelling of the unrecognized token 'ms' in the literal '" ms"'.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="151">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.SetParameterValueSync(string, string, object, TimeSpan, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="158">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.SetParameterValueSync(string, string, object, TimeSpan, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#SubscribeParameter`1(System.String,System.String,System.Action`1&lt;!!0&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="cb" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="cb" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="80">In method 'DeviceConfigManager.SubscribeParameter&lt;T&gt;(string, string, Action&lt;T&gt;)', correct the spelling of 'cb' in parameter name 'cb' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message Id="cb" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="cb" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="80">Parameter 'cb' of 'DeviceConfigManager.SubscribeParameter&lt;T&gt;(string, string, Action&lt;T&gt;)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
-            <Message Id="parameter" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="parameter" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="80">Parameter 'parameter' of 'DeviceConfigManager.SubscribeParameter&lt;T&gt;(string, string, Action&lt;T&gt;)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="82">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.SubscribeParameter&lt;T&gt;(string, string, Action&lt;T&gt;)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ToString()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Provide correct arguments to formatting methods" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message TypeName="Provide correct arguments to formatting methods" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Name="MissingFormatItem" Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="568">Method 'DeviceConfigManager.ToString()' calls 'string.Format(string, params object[])' and does not provide a format item for argument "4, 5". The provided format string is: '"{0}\n   -&gt; {1}: \'{2}\' (str, {5})"'</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="537">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.ToString()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="545">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.ToString()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="551">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.ToString()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="561">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.ToString()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
@@ -483,10 +483,10 @@
           </Member>
           <Member Name="#ToXmlString()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="388">Object 'stringWriter' can be disposed more than once in method 'DeviceConfigManager.ToXmlString()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 388</Issue>
             </Message>
-            <Message Id="System.IO.StringWriter.#ctor(System.Text.StringBuilder)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.IO.StringWriter.#ctor(System.Text.StringBuilder)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="DeviceConfigManager.cs" Line="380">Because the behavior of 'StringWriter.StringWriter(StringBuilder)' could vary based on the current user's locale settings, replace this call in 'DeviceConfigManager.ToXmlString()' with a call to 'StringWriter.StringWriter(StringBuilder, IFormatProvider)'. If the result of 'StringWriter.StringWriter(StringBuilder, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
@@ -495,7 +495,7 @@
         </Type>
         <Type Name="FilterTopicsOptionsEnum" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'FilterTopicsOptionsEnum' so that it does not end in 'Enum'.</Issue>
           </Message>
          </Messages>
@@ -504,14 +504,14 @@
          <Members>
           <Member Name="#NHD" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="NHD" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="NHD" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'NHD' in member name 'ImageResolution.NHD' by changing it to 'Nhd'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#QVGA" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="QVGA" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="QVGA" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'QVGA' in member name 'ImageResolution.QVGA' by changing it to 'Qvga'.</Issue>
             </Message>
            </Messages>
@@ -520,42 +520,42 @@
         </Type>
         <Type Name="RosNodeConfiguration" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Ros' in type name 'RosNodeConfiguration'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#AddParameter(Rubedos.Viper.Net.Iface.IDynamicConfigParameter)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosNodeConfiguration.cs" Line="49">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'RosNodeConfiguration.AddParameter(IDynamicConfigParameter)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#OnDynamicConfigurationUpdate(Ros.Net.Messages.dynamic_reconfigure.ConfigDescription,Ros.Net.DynamicReconfigure.IDynamicReconfigureInterface)" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalError" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosNodeConfiguration.cs" Line="179">Modify 'RosNodeConfiguration.OnDynamicConfigurationUpdate(ConfigDescription, IDynamicReconfigureInterface)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ReadXml(System.Xml.XmlReader)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosNodeConfiguration.cs" Line="223">In externally visible method 'RosNodeConfiguration.ReadXml(XmlReader)', validate parameter 'reader' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#WriteXml(System.Xml.XmlWriter)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosNodeConfiguration.cs" Line="264">In externally visible method 'RosNodeConfiguration.WriteXml(XmlWriter)', validate parameter 'writer' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ConfigParameterAdded" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'EventHandler&lt;ConfigParameterAddedEventArgs&gt;' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
             </Message>
            </Messages>
@@ -568,37 +568,37 @@
        <Types>
         <Type Name="ConfigParameterAddedEventArgs" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'ConfigParameterAddedEventArgs' so that it does not end in 'EventArgs'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="RosDeviceConfiguration" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Ros' in type name 'RosDeviceConfiguration'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#CheckIfCompatible(Rubedos.Viper.Net.DynamicReconfigure.RosDeviceConfiguration)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDeviceConfiguration.cs" Line="110">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'RosDeviceConfiguration.CheckIfCompatible(RosDeviceConfiguration)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDeviceConfiguration.cs" Line="116">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'RosDeviceConfiguration.CheckIfCompatible(RosDeviceConfiguration)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDeviceConfiguration.cs" Line="120">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'RosDeviceConfiguration.CheckIfCompatible(RosDeviceConfiguration)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDeviceConfiguration.cs" Line="106">In externally visible method 'RosDeviceConfiguration.CheckIfCompatible(RosDeviceConfiguration)', validate parameter 'otherConfig' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#log" Kind="Field" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'RosDeviceConfiguration.log' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
@@ -607,58 +607,58 @@
         </Type>
         <Type Name="RosDynamicConfigParameter`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message Id="Ros" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Ros' in type name 'RosDynamicConfigParameter&lt;T&gt;'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#CreateParameterObjectFromXml(System.Xml.XmlReader)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDynamicConfigParameter.cs" Line="217">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'RosDynamicConfigParameter&lt;T&gt;.CreateParameterObjectFromXml(XmlReader)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#log" Kind="Field" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">It appears that field 'RosDynamicConfigParameter&lt;T&gt;.log' is never used or is only ever assigned to. Use this field or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ReadXml(System.Xml.XmlReader)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDynamicConfigParameter.cs" Line="161">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'RosDynamicConfigParameter&lt;T&gt;.ReadXml(XmlReader)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDynamicConfigParameter.cs" Line="141">In externally visible method 'RosDynamicConfigParameter&lt;T&gt;.ReadXml(XmlReader)', validate parameter 'reader' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#System.Xml.Serialization.IXmlSerializable.GetSchema()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDynamicConfigParameter.cs" Line="263">Make 'RosDynamicConfigParameter&lt;T&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IXmlSerializable.GetSchema()' and is visible to derived classes.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ValueFromString(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDynamicConfigParameter.cs" Line="359">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'RosDynamicConfigParameter&lt;T&gt;.ValueFromString(string)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#WriteXml(System.Xml.XmlWriter)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.Xml.XmlWriter.WriteComment(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="System.Xml.XmlWriter.WriteComment(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDynamicConfigParameter.cs" Line="245">Method 'RosDynamicConfigParameter&lt;T&gt;.WriteXml(XmlWriter)' passes a literal string as parameter 'text' of a call to 'XmlWriter.WriteComment(string)'. Retrieve the following string(s) from a resource table instead: ". Default: \', \'. Min/Max: , /".</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDynamicConfigParameter.cs" Line="245">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'RosDynamicConfigParameter&lt;T&gt;.WriteXml(XmlWriter)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\DynamicReconfigure" File="RosDynamicConfigParameter.cs" Line="241">In externally visible method 'RosDynamicConfigParameter&lt;T&gt;.WriteXml(XmlWriter)', validate parameter 'writer' before using it.</Issue>
             </Message>
            </Messages>
@@ -673,7 +673,7 @@
          <Members>
           <Member Name="#.ctor(Rubedos.Viper.Net.CvmDevice)" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message Id="device" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="device" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\PerceptionApps" File="CoreApp.cs" Line="19">Parameter 'device' of 'CoreApp.CoreApp(CvmDevice)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
@@ -682,7 +682,7 @@
            <Accessors>
             <Accessor Name="#get_IsActivated()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
              <Messages>
-              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+              <Message TypeName="DoNotRaiseExceptionsInUnexpectedLocations" Category="Microsoft.Design" CheckId="CA1065" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
                <Issue Name="PropertyGetter" Certainty="90" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\PerceptionApps" File="CoreApp.cs" Line="39">'CoreApp.IsActivated.get()' creates an exception of type 'NotImplementedException', an exception type that should not be raised in a property. If this exception instance might be raised, use a different exception type, convert this property into a method, or change this property's logic so that it no longer raises an exception.</Issue>
               </Message>
              </Messages>
@@ -695,7 +695,7 @@
          <Members>
           <Member Name="#.ctor(Rubedos.Viper.Net.CvmDevice)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\PerceptionApps" File="FollowMeApp.cs" Line="156">'FollowMeApp.FollowMeApp(CvmDevice)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
             </Message>
            </Messages>
@@ -704,7 +704,7 @@
            <Accessors>
             <Accessor Name="#set_Description(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\PerceptionApps" File="FollowMeApp.cs" Line="118">'FollowMeApp.Description.set(string)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -713,7 +713,7 @@
           </Member>
           <Member Name="#DetectedPersons" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\PerceptionApps" File="FollowMeApp.cs" Line="112">Change 'List&lt;Person&gt;' in 'FollowMeApp.DetectedPersons' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
            </Messages>
@@ -722,7 +722,7 @@
            <Accessors>
             <Accessor Name="#set_IsActivated(System.Boolean)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\PerceptionApps" File="FollowMeApp.cs" Line="96">'FollowMeApp.IsActivated.set(bool)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -737,17 +737,17 @@
        <Types>
         <Type Name="TfFrame" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Tf" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message Id="Tf" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="85" Level="Error">Correct the casing of 'Tf' in type name 'TfFrame' by changing it to 'TF'.</Issue>
           </Message>
-          <Message Id="Tf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message Id="Tf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Tf' in type name 'TfFrame'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#FrameToString(System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfFrame.cs" Line="124">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'TfFrame.FrameToString(int)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfFrame.cs" Line="127">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'TfFrame.FrameToString(int)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
@@ -755,21 +755,21 @@
           </Member>
           <Member Name="#GetTransformMatrix()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfFrame.cs" Line="51">Change 'TfFrame.GetTransformMatrix()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#lastMessage" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="last" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="last" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfFrame.cs" Line="35">Correct the casing of 'last' in member name 'TfFrame.lastMessage' by changing it to 'Last'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ToString()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfFrame.cs" Line="110">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'TfFrame.ToString()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
@@ -778,34 +778,34 @@
         </Type>
         <Type Name="TfManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Tf" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message Id="Tf" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="85" Level="Error">Correct the casing of 'Tf' in type name 'TfManager' by changing it to 'TF'.</Issue>
           </Message>
-          <Message Id="Tf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+          <Message Id="Tf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Tf' in type name 'TfManager'.</Issue>
           </Message>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="DependsOnFix">
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="DependsOnFix">
            <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'TfManager' because it creates members of the following IDisposable types: 'NodeHandle'. If 'TfManager' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#CvmTransform" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Cvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfManager.cs" Line="102">Correct the spelling of 'Cvm' in member name 'TfManager.CvmTransform' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Frames" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfManager.cs" Line="91">Change 'TfManager.Frames' to return a collection or make it a method.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetTransformBetweenFrames(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="f" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="f" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfManager.cs" Line="128">In method 'TfManager.GetTransformBetweenFrames(string, string)', correct the spelling of 'f' in parameter name 'f1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfManager.cs" Line="128">In method 'TfManager.GetTransformBetweenFrames(string, string)', correct the spelling of 'f' in parameter name 'f2' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
@@ -813,17 +813,17 @@
           </Member>
           <Member Name="#TfTransformer" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Tf" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Tf" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfManager.cs" Line="67">Correct the casing of 'Tf' in member name 'TfManager.TfTransformer' by changing it to 'TF'.</Issue>
             </Message>
-            <Message Id="Tf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="Breaking">
+            <Message Id="Tf" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfManager.cs" Line="67">Correct the spelling of 'Tf' in member name 'TfManager.TfTransformer' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
            <Accessors>
             <Accessor Name="#set_TfTransformer(Ros.Net.Tf.Transformer)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
                <Issue Certainty="75" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfManager.cs" Line="67">'TfManager.TfTransformer.set(Transformer)' appears to have no upstream public or protected callers.</Issue>
               </Message>
              </Messages>
@@ -832,7 +832,7 @@
           </Member>
           <Member Name="#TopicsUpdated(System.Collections.Generic.IEnumerable`1&lt;Ros.Net.TopicInfo&gt;,System.Collections.Generic.IEnumerable`1&lt;Ros.Net.TopicInfo&gt;)" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
            <Messages>
-            <Message Id="removedTopics" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-07 13:51:44Z" FixCategory="NonBreaking">
+            <Message Id="removedTopics" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-02-14 23:06:31Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="E:\bamboo-home\xml-data\build-dir\131073\CVM-CNW-VIP\Viper.Net\Tf" File="TfManager.cs" Line="143">Parameter 'removedTopics' of 'TfManager.TopicsUpdated(IEnumerable&lt;TopicInfo&gt;, IEnumerable&lt;TopicInfo&gt;)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>

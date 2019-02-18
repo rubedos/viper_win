@@ -91,7 +91,7 @@ namespace Wpf3dPointCloud
 
       if (pointCloudViewModel.ImagingPipeline != null)
       {
-        pointCloudViewModel.ImagingPipeline.SetCameraInfo(B, f);
+        pointCloudViewModel.ImagingPipeline.SetCameraInfo(B, f, rosControlBase.ViperDevice.DeviceInfo.PrincipalPoint);
       }
       PointCloudView.SetFOVs(rosControlBase.ViperDevice.DeviceInfo.FovV, rosControlBase.ViperDevice.DeviceInfo.FovH, 1f, 10f, rosControlBase.ViperDevice.DeviceInfo.Baseline);
     }
@@ -109,7 +109,8 @@ namespace Wpf3dPointCloud
         PointCloudView.InitializePipeLine(Properties.Settings.Default.ForceCpuFiltering, 1);
         if (rosControlBase.ViperDevice.DeviceInfo != null)
         {
-          pointCloudViewModel.ImagingPipeline.SetCameraInfo(rosControlBase.ViperDevice.DeviceInfo.Baseline, rosControlBase.ViperDevice.DeviceInfo.FocalPoint);
+          pointCloudViewModel.ImagingPipeline.SetCameraInfo(rosControlBase.ViperDevice.DeviceInfo.Baseline, 
+            rosControlBase.ViperDevice.DeviceInfo.FocalPoint, rosControlBase.ViperDevice.DeviceInfo.PrincipalPoint);
         }
       }
       catch (Exception ex)

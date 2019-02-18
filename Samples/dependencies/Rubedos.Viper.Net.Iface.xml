@@ -47,6 +47,11 @@
             Camera focal point in pixels
             </summary>
         </member>
+        <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.PrincipalPoint">
+            <summary>
+            Principal point of camera (center point), in px
+            </summary>
+        </member>
         <member name="P:Rubedos.Viper.Net.CvmDeviceInfo.FovH">
             -------------------------------------------------------------------------------------------------
              <summary> Gets the fov h, degrees </summary>

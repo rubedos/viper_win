@@ -245,6 +245,11 @@
             Stereocamera baseline in m
             </summary>
         </member>
+        <member name="P:Rubedos.PointcloudProcessing.DisparityToDepthMap.PrincipalPoint">
+            <summary>
+            Image optical center point (after calibration)
+            </summary>
+        </member>
         <member name="P:Rubedos.PointcloudProcessing.DisparityToDepthMap.MaxDepth">
             <summary>
             Maximum depth value (to avoid infinities)
@@ -323,6 +328,11 @@
             Stereocamera baseline in m
             </summary>
         </member>
+        <member name="P:Rubedos.PointcloudProcessing.DisparityToDepthMapCpu.PrincipalPoint">
+            <summary>
+            Image optical center point (after calibration)
+            </summary>
+        </member>
         <member name="P:Rubedos.PointcloudProcessing.DisparityToDepthMapCpu.MaxDepth">
             <summary>
             Maximum depth value (to avoid infinities)
@@ -366,6 +376,80 @@
         <member name="M:Rubedos.PointcloudProcessing.DisparityToDepthMapCpu.Init">
             <summary>
             Initializes filter
+            </summary>
+        </member>
+        <member name="T:Rubedos.PointcloudProcessing.Exp.DetectedPlane">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rubedos.PointcloudProcessing.Exp.DetectedPlane.distance">
+            <summary>
+            Distance from origin to the plane 
+            </summary>
+        </member>
+        <member name="F:Rubedos.PointcloudProcessing.Exp.DetectedPlane.PhiAngle">
+            <summary>
+            Angle of the plane normal to the XY plane, degrees
+            </summary>
+        </member>
+        <member name="F:Rubedos.PointcloudProcessing.Exp.DetectedPlane.ThetaAngle">
+            <summary>
+            Angle on the XY plane of the normal projection, degrees
+            </summary>
+        </member>
+        <member name="T:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.RgbdIn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Plane">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.accumulator">
+            <summary>
+             Accumulator space is a 3D array, where index is calculated following:
+              
+                ix = rho * phi.w * theta.w + theta * phi.w + phi
+            
+                   +------------+
+                  /            /|
+                 /            / |
+                /            /  |
+               +------------+  /
+            rho|            | / theta
+               |            |/
+               +------------+
+                   phi   
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.FindEdges">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Apply">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Init">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:Rubedos.PointcloudProcessing.FilterBase">
@@ -514,12 +598,20 @@
             </summary>
             <param name="rgbSink"></param>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.SetCameraInfo(System.Double,System.Double)">
+        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.SetCameraInfo(System.Double,System.Double,System.Windows.Vector)">
             <summary>
             Sets camera information
             </summary>
             <param name="baseline">Camera baseline, m</param>
             <param name="focalpoint">Camera focal point, px</param>
+            <param name="principalPoint">Camera principal point (center), px</param>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.OverridePointCloud(OpenCV.Net.Mat,OpenCV.Net.Mat)">
+            <summary>
+            Function to override result of the processing, e.g. for showing pointcloud that was stored somewhere
+            </summary>
+            <param name="rgbd"></param>
+            <param name="rgb"></param>
         </member>
         <member name="P:Rubedos.PointcloudProcessing.ImagingPipeline.Baseline">
             <summary>
@@ -527,6 +619,11 @@
             </summary>
         </member>
         <member name="P:Rubedos.PointcloudProcessing.ImagingPipeline.FocalPoint">
+            <summary>
+            Camera focal point, px
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.ImagingPipeline.PrincipalPoint">
             <summary>
             Camera focal point, px
             </summary>
@@ -574,6 +671,11 @@
         <member name="P:Rubedos.PointcloudProcessing.IDisparityToDepthMap.Baseline">
             <summary>
             Stereocamera baseline in m
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.IDisparityToDepthMap.PrincipalPoint">
+            <summary>
+            Image optical center point (after calibration)
             </summary>
         </member>
         <member name="P:Rubedos.PointcloudProcessing.IDisparityToDepthMap.MaxDepth">
