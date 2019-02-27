@@ -662,6 +662,11 @@
             <seealso cref="M:Rubedos.Viper.Net.Iface.IPerceptionApp.Activate(System.Boolean)"/>
             </summary>
         </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Validate">
+            <summary>
+            Validates if <see cref="F:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.cvmDevice"/> is connected or not. 
+            </summary>
+        </member>
         <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnFollowMeEnabledDisabled(Ros.Net.Messages.std_msgs.Bool)">
             <summary>
             Invoked when follow me application was enabled or disabled within <see cref="T:Rubedos.Viper.Net.CvmDevice"/>.
@@ -686,6 +691,13 @@
             Invoked when received <see cref="T:Ros.Net.Messages.geometry_msgs.Point"/> for targeted <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>. 
             </summary>
             <param name="targetPosition">Position from which distance can be extracted.</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.CvmDevice_OnConnected(System.Object,System.EventArgs)">
+            <summary>
+            NodeHandle can only be created when connected to <see cref="F:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.cvmDevice"/>.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">Args.</param>
         </member>
         <member name="P:Rubedos.Viper.Net.PerceptionApps.Interfaces.EventArgs.IPersonChangedEventArgs.Person">
             <summary>

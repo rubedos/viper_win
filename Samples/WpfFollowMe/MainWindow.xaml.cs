@@ -1,15 +1,10 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
-using System.Collections.Generic;
-using Ros.Net;
 using Ros.Net.utilities;
-using Rubedos.Viper.Net.Iface;
-using Rubedos.Viper.Net;
 using Rubedos.Viper.Net.PerceptionApps;
-using System.Linq;
-using System.Threading;
 
 namespace WpfFollowMe
 {
@@ -37,6 +32,9 @@ namespace WpfFollowMe
       ConfigurationHelper.RegisterSettings(Properties.Settings.Default);
 
       DataContext = this;
+      followMeApp = new FollowMeApp(rosControlBase.ViperDevice);
+      
+      followMeApp.OnTargetDistanceChanged += FollowMeApp_OnTargetDistanceChanged;
 
       rosControlBase.RosConnected += RosControlBase_RosConnected;
       rosControlBase.RosDisconnecting += RosControlBase_RosDisconnecting;
@@ -78,9 +76,6 @@ namespace WpfFollowMe
     /// <param name="e">Arguments</param>
     private void RosControlBase_RosConnected(object sender, EventArgs e)
     {
-      followMeApp = new FollowMeApp(rosControlBase.ViperDevice);
-      followMeApp.OnTargetDistanceChanged += FollowMeApp_OnTargetDistanceChanged;
-
       DetectionImage.Visibility = Visibility.Visible;
       DetectionImage.Subscribe();
 
@@ -103,10 +98,6 @@ namespace WpfFollowMe
 
       // In case follow me is left working, user is asked if he wants it be shutdown
       AskToDisableFollowMe();
-
-      // Destroying application
-      followMeApp.OnTargetDistanceChanged -= FollowMeApp_OnTargetDistanceChanged;
-      followMeApp.Dispose();
 
       // Disabling button
       enableDisableFollowMeButton.IsEnabled = false;
@@ -139,6 +130,8 @@ namespace WpfFollowMe
     /// <param name="e">Arguments.</param>
     private void DetectionImage_MouseDown(object sender, MouseButtonEventArgs e)
     {
+      if (!followMeApp.IsEnabled) return;
+
       var point = e.GetPosition(DetectionImage);
       var person = followMeApp.DetectedPersons.FirstOrDefault(i => i.Rectangle.Rect.Contains(point));
 
@@ -207,6 +200,7 @@ namespace WpfFollowMe
       if (DetectionImage != null && DetectionImage.ImageSink != null) DetectionImage.ImageSink.Updated -= ImageSink_Updated;
 
       followMeApp.OnTargetDistanceChanged -= FollowMeApp_OnTargetDistanceChanged;
+      followMeApp.Dispose();
     }
 
     /// <summary>

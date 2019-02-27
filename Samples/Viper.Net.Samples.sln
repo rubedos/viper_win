@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2019
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageStreamWinForms", "ImageStreamWinForms\ImageStreamWinForms.csproj", "{358E1D3B-3E54-4A7F-BCE5-A79B5E5CD7A9}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf3dPointCloud", "Wpf3dPointCloud\Wpf3dPointCloud.csproj", "{C0E9E9DD-E147-4A43-AD1A-8A569B5769EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFollowMe", "WpfFollowMe\WpfFollowMe.csproj", "{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SceneBoundingBox", "SceneBoundingBox\SceneBoundingBox.csproj", "{70E810E8-6B3C-4903-99D3-B7926843CDC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E810E8-6B3C-4903-99D3-B7926843CDC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E810E8-6B3C-4903-99D3-B7926843CDC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E810E8-6B3C-4903-99D3-B7926843CDC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E810E8-6B3C-4903-99D3-B7926843CDC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

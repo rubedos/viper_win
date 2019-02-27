@@ -448,6 +448,11 @@
             Imaging pipeline to be rendered in this view model
             </summary>
         </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Context">
+            <summary>
+            Synchronization context for 3D scene graph updates
+            </summary>
+        </member>
         <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SceneLabels">
             <summary>
             Model#3D which renders text
@@ -634,6 +639,16 @@
             Constructor of the MainViewModel
             Sets up allProperties
             </summary>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.CreatePlane(SharpDX.Color4,System.Single,System.Single,SharpDX.Vector3)">
+            <summary>
+            Creates 3D plane model with specified color, w x h size.
+            </summary>
+            <param name="planeColor"></param>
+            <param name="w">Width</param>
+            <param name="h">Height</param>
+            <param name="normal">normal of the plane</param>
+            <returns></returns>
         </member>
         <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetCvmPosition(System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D)">
             <summary>
