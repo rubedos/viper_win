@@ -275,10 +275,36 @@
             Unique Id
             </summary>
         </member>
+        <member name="P:Rubedos.Viper.Net.Iface.RectangleOfInterest.ObjectClass">
+            <summary>
+            Object class identification number
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.RectangleOfInterest.Rect">
+            <summary>
+            Bounding rectangle in the image
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.RectangleOfInterest.BoundingBoxGeometry">
+            <summary>
+            Geometry of the bounding box
+            </summary>
+        </member>
         <member name="P:Rubedos.Viper.Net.Iface.RectangleOfInterest.Depth">
             <summary>
             Z coordinate of the tracked object
             </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.RectangleOfInterest.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.RectangleOfInterest.#ctor(Ros.Net.Messages.cvm_msgs.BoundingBox)">
+            <summary>
+            Ctor defining bounding box
+            </summary>
+            <param name="bbox"></param>
         </member>
         <member name="M:Rubedos.Viper.Net.Iface.RectangleOfInterest.IsTheSame(Rubedos.Viper.Net.Iface.RectangleOfInterest)">
             <summary>
@@ -297,6 +323,17 @@
             Updates to the new data
             </summary>
             <param name="newRoi"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.Iface.RectangleOfInterest.ToString">
+            <summary>
+            To string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Rubedos.Viper.Net.Iface.RectangleOfInterest.Geom">
+            <summary>
+            Geometry of bounding box
+            </summary>
         </member>
         <member name="T:Rubedos.Viper.Net.Iface.RosoutMessagedEventArgs">
             <summary>

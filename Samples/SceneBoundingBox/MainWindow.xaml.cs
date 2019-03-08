@@ -1,5 +1,5 @@
 ﻿using Ros.Net.utilities;
-using Rubedos.RosToolsApplicationBase.PointCloud;
+using Rubedos.RosToolsApplicationBase.Pointcloud;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +29,7 @@ namespace SceneBoundingBox
     /// <summary>
     /// View model of PointClout
     /// </summary>
-    private PointCloudViewModel pointCloudViewModel;
+    private PointcloudViewModel pointcloudViewModel;
 
     /// <summary>
     /// Distance from camera to the ground
@@ -81,10 +81,10 @@ namespace SceneBoundingBox
     public void InitializeBusinessLogic()
     {
       ConfigurationHelper.RegisterSettings(Properties.Settings.Default);
-      pointCloudViewModel = new PointCloudViewModel(new SharpDX.Size2(0, 0));
-      PointCloudView.ViewModel = pointCloudViewModel;
-      PointCloudView.InitalizeScene();
-      DataContext = pointCloudViewModel;
+      pointcloudViewModel = new PointcloudViewModel(new SharpDX.Size2(0, 0));
+      PointCloudView.ViewModel = pointcloudViewModel;
+      PointCloudView.InitializeScene();
+      DataContext = pointcloudViewModel;
 
       // Moving Camera vertically up and turning it to look down
       PointCloudView.ViewModel.SetCvmPosition(new System.Windows.Media.Media3D.Vector3D(0, 0, groundZ), 
@@ -92,7 +92,7 @@ namespace SceneBoundingBox
 
       var planeColor = System.Windows.Media.Color.FromArgb(20, 50, 255, 50).ToColor4();
       // Only points from this rectangular area are included and outliers are ignored
-      var scenePlane = PointCloudView.ViewModel.CreatePlane(planeColor, groundD, groundW, new SharpDX.Vector3(0, 0, 1f));
+      var scenePlane = PointcloudViewModel.CreatePlane(planeColor, groundD, groundW, new SharpDX.Vector3(0, 0, 1f));
       PointCloudView.SceneRoot.Children.Add(scenePlane);
 
       // For 3D texts
@@ -121,8 +121,8 @@ namespace SceneBoundingBox
       rosControlBase.RosConnected -= RosControlBase_RosConnected;
       rosControlBase.RosDisconnected -= RosControlBase_RosDisconnected;
       rosControlBase.CvmDeviceInfoChaged -= RosControlBase_CvmDeviceInfoChaged;
-      pointCloudViewModel.Dispose();
-      rosControlBase.ViperDevice.Dispose();
+      pointcloudViewModel.Dispose();
+      rosControlBase.Device.Dispose();
     }
 
     #endregion
@@ -136,14 +136,14 @@ namespace SceneBoundingBox
     /// <param name="e">Arguments</param>
     private void RosControlBase_CvmDeviceInfoChaged(object sender, EventArgs e)
     {
-      double f = rosControlBase.ViperDevice.DeviceInfo.FocalPoint;
-      double B = rosControlBase.ViperDevice.DeviceInfo.Baseline;
+      double f = rosControlBase.Device.DeviceInfo.FocalPoint;
+      double B = rosControlBase.Device.DeviceInfo.Baseline;
 
-      if (pointCloudViewModel.ImagingPipeline != null)
+      if (pointcloudViewModel.ImagingPipeline != null)
       {
-        pointCloudViewModel.ImagingPipeline.SetCameraInfo(B, f, rosControlBase.ViperDevice.DeviceInfo.PrincipalPoint);
+        pointcloudViewModel.ImagingPipeline.SetCameraInfo(B, f, rosControlBase.Device.DeviceInfo.PrincipalPoint);
       }
-      PointCloudView.SetFOVs(rosControlBase.ViperDevice.DeviceInfo.FovV, rosControlBase.ViperDevice.DeviceInfo.FovH, 1f, 10f, rosControlBase.ViperDevice.DeviceInfo.Baseline);
+      PointCloudView.AddFov(rosControlBase.Device.DeviceInfo.FovV, rosControlBase.Device.DeviceInfo.FovH, 1f, 10f, rosControlBase.Device.DeviceInfo.Baseline);
     }
 
     /// <summary>
@@ -156,13 +156,13 @@ namespace SceneBoundingBox
       try
       {
         // NOTE: GPU filters can be initialized only when View3D of HelixToolkit has been launched.
-        PointCloudView.InitializePipeLine(Properties.Settings.Default.ForceCpuFiltering, 1);
-        if (rosControlBase.ViperDevice.DeviceInfo != null)
+        PointCloudView.InitializePipeline(Properties.Settings.Default.ForceCpuFiltering, 1);
+        if (rosControlBase.Device.DeviceInfo != null)
         {
-          pointCloudViewModel.ImagingPipeline.SetCameraInfo(rosControlBase.ViperDevice.DeviceInfo.Baseline, 
-            rosControlBase.ViperDevice.DeviceInfo.FocalPoint, rosControlBase.ViperDevice.DeviceInfo.PrincipalPoint);
+          pointcloudViewModel.ImagingPipeline.SetCameraInfo(rosControlBase.Device.DeviceInfo.Baseline, 
+            rosControlBase.Device.DeviceInfo.FocalPoint, rosControlBase.Device.DeviceInfo.PrincipalPoint);
         }
-        pointCloudViewModel.ImagingPipeline.ImageDataProcessed += ImagingPipeline_ImageDataProcessed;
+        pointcloudViewModel.ImagingPipeline.ImageDataProcessed += ImagingPipeline_ImageDataProcessed;
       }
       catch (Exception ex)
       {
@@ -198,7 +198,7 @@ namespace SceneBoundingBox
     /// <param name="e"></param>
     private void ImagingPipeline_ImageDataProcessed(object sender, Rubedos.PointcloudProcessing.ImagingPipelineProcessedEventArgs e)
     {
-      var rgbd = pointCloudViewModel.ImagingPipeline.RgbdOut;
+      var rgbd = pointcloudViewModel.ImagingPipeline.RgbdOut;
       if (points == null)
       {
         points = new float[rgbd.Cols * rgbd.Rows * rgbd.Channels];
@@ -227,7 +227,7 @@ namespace SceneBoundingBox
         maxX, minX, maxY, minY, groundZ, minZ);
 
       // Synchronizing with 3D rendering thread
-      pointCloudViewModel.Context.Send((o) =>
+      pointcloudViewModel.Context.Send((o) =>
       {
         boundingBoxGroup.Children.Clear();
         MeshBuilder mb = new MeshBuilder();

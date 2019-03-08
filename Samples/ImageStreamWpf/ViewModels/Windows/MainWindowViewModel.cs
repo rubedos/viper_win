@@ -237,7 +237,7 @@ namespace ImageStreamWpf.ViewModels.Windows
       DeviceStatus = "Connecting..";
       IsCameraIpAddressEnabled = false;
 
-      viperDevice = new CvmDevice(cameraIpAddress);
+      viperDevice = new CvmDevice(cameraIpAddress, null);
       viperDevice.Connected += ViperDevice_Connected;
       viperDevice.Disconnected += ViperDevice_Disconnected;
 

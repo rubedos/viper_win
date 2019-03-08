@@ -1,5 +1,5 @@
 ﻿using Ros.Net.utilities;
-using Rubedos.RosToolsApplicationBase.PointCloud;
+using Rubedos.RosToolsApplicationBase.Pointcloud;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,10 +41,10 @@ namespace Wpf3dPointCloud
     public void InitializeBusinessLogic()
     {
       ConfigurationHelper.RegisterSettings(Properties.Settings.Default);
-      pointCloudViewModel = new PointCloudViewModel(new SharpDX.Size2(0, 0));
-      PointCloudView.ViewModel = pointCloudViewModel;
-      PointCloudView.InitalizeScene();
-      DataContext = pointCloudViewModel;
+      pointcloudViewModel = new PointcloudViewModel(new SharpDX.Size2(0, 0));
+      PointcloudView.ViewModel = pointcloudViewModel;
+      PointcloudView.InitializeScene();
+      DataContext = pointcloudViewModel;
 
       rosControlBase.RosConnected += RosControlBase_RosConnected;
       rosControlBase.RosDisconnected += RosControlBase_RosDisconnected;
@@ -58,7 +58,7 @@ namespace Wpf3dPointCloud
     /// <summary>
     /// View model of PointClout
     /// </summary>
-    private PointCloudViewModel pointCloudViewModel;
+    private PointcloudViewModel pointcloudViewModel;
 
     #endregion
 
@@ -72,7 +72,7 @@ namespace Wpf3dPointCloud
       rosControlBase.RosConnected -= RosControlBase_RosConnected;
       rosControlBase.RosDisconnected -= RosControlBase_RosDisconnected;
       rosControlBase.CvmDeviceInfoChaged -= RosControlBase_CvmDeviceInfoChaged;
-      pointCloudViewModel.Dispose();
+      pointcloudViewModel.Dispose();
     }
 
     #endregion
@@ -86,14 +86,14 @@ namespace Wpf3dPointCloud
     /// <param name="e">Arguments</param>
     private void RosControlBase_CvmDeviceInfoChaged(object sender, EventArgs e)
     {
-      double f = rosControlBase.ViperDevice.DeviceInfo.FocalPoint;
-      double B = rosControlBase.ViperDevice.DeviceInfo.Baseline;
+      double f = rosControlBase.Device.DeviceInfo.FocalPoint;
+      double B = rosControlBase.Device.DeviceInfo.Baseline;
 
-      if (pointCloudViewModel.ImagingPipeline != null)
+      if (pointcloudViewModel.ImagingPipeline != null)
       {
-        pointCloudViewModel.ImagingPipeline.SetCameraInfo(B, f, rosControlBase.ViperDevice.DeviceInfo.PrincipalPoint);
+        pointcloudViewModel.ImagingPipeline.SetCameraInfo(B, f, rosControlBase.Device.DeviceInfo.PrincipalPoint);
       }
-      PointCloudView.SetFOVs(rosControlBase.ViperDevice.DeviceInfo.FovV, rosControlBase.ViperDevice.DeviceInfo.FovH, 1f, 10f, rosControlBase.ViperDevice.DeviceInfo.Baseline);
+      PointcloudView.AddFov(rosControlBase.Device.DeviceInfo.FovV, rosControlBase.Device.DeviceInfo.FovH, 1f, 10f, rosControlBase.Device.DeviceInfo.Baseline);
     }
 
     /// <summary>
@@ -106,11 +106,11 @@ namespace Wpf3dPointCloud
       try
       {
         // NOTE: GPU filters can be initialized only when View3D of HelixToolkit has been launched.
-        PointCloudView.InitializePipeLine(Properties.Settings.Default.ForceCpuFiltering, 1);
-        if (rosControlBase.ViperDevice.DeviceInfo != null)
+        PointcloudView.InitializePipeline(Properties.Settings.Default.ForceCpuFiltering, 1);
+        if (rosControlBase.Device.DeviceInfo != null)
         {
-          pointCloudViewModel.ImagingPipeline.SetCameraInfo(rosControlBase.ViperDevice.DeviceInfo.Baseline, 
-            rosControlBase.ViperDevice.DeviceInfo.FocalPoint, rosControlBase.ViperDevice.DeviceInfo.PrincipalPoint);
+          pointcloudViewModel.ImagingPipeline.SetCameraInfo(rosControlBase.Device.DeviceInfo.Baseline, 
+            rosControlBase.Device.DeviceInfo.FocalPoint, rosControlBase.Device.DeviceInfo.PrincipalPoint);
         }
       }
       catch (Exception ex)

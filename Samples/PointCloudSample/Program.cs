@@ -22,7 +22,7 @@ namespace PointCloudSample
       try
       {
         // Specify VIPER IP here
-        using (CvmDevice module = new CvmDevice("http://192.168.1.170:11311"))
+        using (CvmDevice module = new CvmDevice("http://192.168.1.157:11311", null))
         {
           module.RosNode = "PointCloudSample";
           module.Connect();

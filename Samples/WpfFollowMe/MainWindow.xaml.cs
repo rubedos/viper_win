@@ -32,7 +32,7 @@ namespace WpfFollowMe
       ConfigurationHelper.RegisterSettings(Properties.Settings.Default);
 
       DataContext = this;
-      followMeApp = new FollowMeApp(rosControlBase.ViperDevice);
+      followMeApp = new FollowMeApp(rosControlBase.Device);
       
       followMeApp.OnTargetDistanceChanged += FollowMeApp_OnTargetDistanceChanged;
 

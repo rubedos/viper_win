@@ -66,7 +66,7 @@ namespace ImageStreamWinForms
       {
         try
         {
-          ViperDevice.Connect(new Uri(uriTextBox.Text));
+          ViperDevice.Connect(new Uri(uriTextBox.Text), null);
         }
         catch (Exception ex)
         {

@@ -169,126 +169,126 @@
             InitializeComponent
             </summary>
         </member>
-        <member name="T:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel">
+        <member name="T:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel">
             <summary>
             Base ViewModel for Demo Applications?
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Orthographic">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.Orthographic">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Perspective">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.Perspective">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Title">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.Title">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.SubTitle">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.Subtitle">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.RenderTechnique">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.RenderTechnique">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.CameraModelCollection">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.CameraModelCollection">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.CameraModel">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.CameraModel">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Camera">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.Camera">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.EffectsManager">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.EffectsManager">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.RenderTechniqueName">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.RenderTechniqueName">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.defaultOrthographicCamera">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.defaultOrthographicCamera">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.defaultPerspectiveCamera">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.defaultPerspectiveCamera">
             <summary>
             
             </summary>
         </member>
-        <member name="E:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.CameraModelChanged">
+        <member name="E:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.CameraModelChanged">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.#ctor">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.#ctor">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.OnCameraModelChanged">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.OnCameraModelChanged">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.LoadFileToMemory(System.String)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.LoadFileToMemory(System.String)">
             <summary>
             
             </summary>
             <param name="filePath"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Dispose(System.Boolean)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.Dispose(System.Boolean)">
             <summary>
             
             </summary>
             <param name="disposing"></param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Finalize">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.Finalize">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.BaseViewModel.Dispose">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.BaseViewModel.Dispose">
             <summary>
             
             </summary>
         </member>
-        <member name="T:Rubedos.RosToolsApplicationBase.PointCloud.ObservableObject">
+        <member name="T:Rubedos.RosToolsApplicationBase.Pointcloud.ObservableObject">
             <summary>
             Base abstract class of the scene view model
             </summary>
         </member>
-        <member name="E:Rubedos.RosToolsApplicationBase.PointCloud.ObservableObject.PropertyChanged">
+        <member name="E:Rubedos.RosToolsApplicationBase.Pointcloud.ObservableObject.PropertyChanged">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.ObservableObject.OnPropertyChanged(System.String)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.ObservableObject.OnPropertyChanged(System.String)">
             <summary>
             
             </summary>
             <param name="info"></param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.ObservableObject.SetValue``1(``0@,``0,System.String)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.ObservableObject.SetValue``1(``0@,``0,System.String)">
             <summary>
             
             </summary>
@@ -298,115 +298,115 @@
             <param name="propertyName"></param>
             <returns></returns>
         </member>
-        <member name="T:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView">
+        <member name="T:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView">
             <summary>
             Interaction logic for PointCloud3DView.xaml
             </summary>
             <summary>
-            PointCloud3DView
+            Pointcloud3DView
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.PointSize">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.PointSize">
             <summary>
             Point cloud point size
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.PointSizeProperty">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.PointSizeProperty">
             <summary>
             Using a DependencyProperty as the backing store for PointSize.  This enables animation, styling, binding, etc...
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.CameraInfoTopic">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.CameraInfoTopic">
             <summary>
             The name of camera info topic
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.CameraInfoTopicProperty">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.CameraInfoTopicProperty">
             <summary>
             Using a DependencyProperty as the backing store for CameraInfoTopic.  This enables animation, styling, binding, etc...
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.RgbTopic">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.RgbTopic">
             <summary>
             The naem of RGB map topic
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.RgbTopicProperty">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.RgbTopicProperty">
             <summary>
             Using a DependencyProperty as the backing store for RgbTopic.  This enables animation, styling, binding, etc...
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.DisparityTopic">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.DisparityTopic">
             <summary>
             The name of disparity map topic
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.DisparityTopicProperty">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.DisparityTopicProperty">
             <summary>
             Using a DependencyProperty as the backing store for DisparityTopic.  This enables animation, styling, binding, etc...
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.MinimumZ">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.MinimumZ">
             <summary>
             Mininum viewing range
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.MinimumZProperty">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.MinimumZProperty">
             <summary>
             Using a DependencyProperty as the backing store for MinimumZ.  This enables animation, styling, binding, etc...
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.MaximumZ">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.MaximumZ">
             <summary>
             Maximum viewing range
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.MaximumZProperty">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.MaximumZProperty">
             <summary>
             Using a DependencyProperty as the backing store for MaximumZ.  This enables animation, styling, binding, etc...
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.BaseFrame">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.BaseFrame">
             <summary>
             The frame which contains Tf frames and PointCloud as sibling nodes.
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.SceneRoot">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.SceneRoot">
             <summary>
             Main group node of the scene
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.ViewModel">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.ViewModel">
             <summary>
             Implemented pointcloud logic in the model
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.TfTransformModel">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.TFTransformModel">
             <summary>
             ROS Tf transform model
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.Viewport">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.Viewport">
             <summary>
             Main viewport
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.SpaceOfInterestGroup">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.SpaceOfInterestGroup">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.#ctor">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.#ctor">
             <summary>
             Ctro
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.InitalizeScene">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.InitializeScene">
             <summary>
             Initializes scene asets
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.SetFOVs(System.Double,System.Double,System.Double,System.Double,System.Double)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.AddFov(System.Double,System.Double,System.Double,System.Double,System.Double)">
             <summary>
             
             </summary>
@@ -416,265 +416,271 @@
             <param name="fovv"></param>
             <param name="fovh"></param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.InitializePipeLine(System.Boolean,System.Int32)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.InitializePipeline(System.Boolean,System.Int32)">
             <summary>
             Forces pipeline filters to switch to CPU (if possible)
             </summary>
-            <param name="forceCPU"></param>
+            <param name="forceCpu"></param>
             <param name="sectionFilters"></param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloud3DView.InitializeComponent">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.Dispose(System.Boolean)">
             <summary>
-            InitializeComponent
+            
             </summary>
+            <param name="disposing"></param>
         </member>
-        <member name="T:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel">
-            <summary>
-            View model of the point cloud
-            </summary>
-        </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.context">
-            <summary>
-            Context for synchronization (renderer)
-            </summary>
-        </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.imagingPipeline">
-            <summary>
-            Pipeline which transforms image data to point cloud
-            </summary>
-        </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ImagingPipeline">
-            <summary>
-            Imaging pipeline to be rendered in this view model
-            </summary>
-        </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Context">
-            <summary>
-            Synchronization context for 3D scene graph updates
-            </summary>
-        </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SceneLabels">
-            <summary>
-            Model#3D which renders text
-            </summary>
-        </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.exitUpdateThread">
-            <summary>
-            Set to true to stop pointcloud updates
-            </summary>
-        </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.PointCloudGroup">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.Dispose">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ColorSchema">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.Pointcloud3DView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel">
+            <summary>
+            View model of the point cloud
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.context">
+            <summary>
+            Context for synchronization (renderer)
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.imagingPipeline">
+            <summary>
+            Pipeline which transforms image data to point cloud
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.ImagingPipeline">
+            <summary>
+            Imaging pipeline to be rendered in this view model
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.IsUpdating">
+            <summary>
+            Returns true if pc updating thread is actively running
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.Context">
+            <summary>
+            Synchronization context for 3D scene graph updates
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.SceneLabels">
+            <summary>
+            Model#3D which renders text
+            </summary>
+        </member>
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.exitUpdateThread">
+            <summary>
+            Set to true to stop pointcloud updates
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.PointcloudGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.ColorSchema">
             <summary>
             ColorSchema number
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.phase">
-            <summary>
-            For frame rate calculations
-            </summary>
-        </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.FPS">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.Fps">
             <summary>
             Pointcloud update rate
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridMajor">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.GridMajor">
             <summary>
             The Grid
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridMinor">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.GridMinor">
             <summary>
             The Grid
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridLongRange">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.GridLongRange">
             <summary>
             The Grid
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridLongRangeMajor">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.GridLongRangeMajor">
             <summary>
             The Grid
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.XAxis">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.XAxis">
             <summary>
             View x axis
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.YAxis">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.YAxis">
             <summary>
             View y axis
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ZAxis">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.ZAxis">
             <summary>
             View z axis
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Origin">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.Origin">
             <summary>
             Origin of the scene
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.OriginMaterial">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.OriginMaterial">
             <summary>
             Origin material
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.PointCloud">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.Pointcloud">
             <summary>
             Point cloud geometry
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.LineThickness">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.LineThickness">
             <summary>
             Thickness of the Lines of the Grid
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.TriangulationThickness">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.TriangulationThickness">
             <summary>
             Thickness of the Lines of the Triangulated Polygon
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridColor">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.GridColor">
             <summary>
             Color of the Gridlines
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridTransform">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.GridTransform">
             <summary>
             Transform of the Grid
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.GridLRTransform">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.GridLRTransform">
             <summary>
             Transform of the Grid
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ViperBaseTransform">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.ViperBaseTransform">
             <summary>
             Transform of the VIPER camera
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.DirectionalLightDirection">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.DirectionalLightDirection">
             <summary>
             Direction of the directional Light
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.DirectionalLightColor">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.DirectionalLightColor">
             <summary>
             Color of the directional Light
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.AmbientLightColor">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.AmbientLightColor">
             <summary>
             Color of the ambient Light
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.mShowTriangleLines">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.mShowTriangleLines">
             <summary>
             Draw the Triangles or not
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.ShowTriangleLines">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.ShowTriangleLines">
             <summary>
             Accessor to the Boolean
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.mMaterial">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.mMaterial">
             <summary>
             The Polygon-Material
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Material">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.Material">
             <summary>
             Accessor to the Polygon-Material
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.RGBImage">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.RGBImage">
             <summary>
             RGB map
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.DepthMap">
-            <summary>
-            Set Disparity Map
-            </summary>
-        </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.RgbArray">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.RgbArray">
             <summary>
             RGB array
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.DisparityArray">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.DisparityArray">
             <summary>
             Disparity array
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetSize(System.Drawing.Size)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.SetSize(System.Drawing.Size)">
             <summary>
             Sets Pointcloud size (W x H). Reinitializes point cloud
             </summary>
             <param name="newSize"></param>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Size">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.Size">
             <summary>
             Pointcloud size (W x H)
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.PointCount">
+        <member name="P:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.PointCount">
             <summary>
             Number of points in point cloud
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.#ctor(SharpDX.Size2)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.#ctor(SharpDX.Size2)">
             <summary>
             Constructor of the MainViewModel
             Sets up allProperties
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.CreatePlane(SharpDX.Color4,System.Single,System.Single,SharpDX.Vector3)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.CreatePlane(SharpDX.Color4,System.Single,System.Single,SharpDX.Vector3)">
             <summary>
             Creates 3D plane model with specified color, w x h size.
             </summary>
             <param name="planeColor"></param>
-            <param name="w">Width</param>
-            <param name="h">Height</param>
+            <param name="width">Width</param>
+            <param name="height">Height</param>
             <param name="normal">normal of the plane</param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetCvmPosition(System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.SetCvmPosition(System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D)">
             <summary>
             
             </summary>
-            <param name="pos">Position vector</param>
+            <param name="position">Position vector</param>
             <param name="rotations">Rotations around x, y, z axis in angles</param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetCvmPosition(System.Windows.Media.Media3D.Matrix3D)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.SetCvmPosition(System.Windows.Media.Media3D.Matrix3D)">
             <summary>
             Sets CVM node position using transform matrix
             </summary>
-            <param name="m"></param>
+            <param name="transform">Cvm model transformation</param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetOthogonalCamera(System.Boolean)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.SetOrthogonalCamera(System.Boolean)">
             <summary>
             Changes current view camera between perspective and orthogonal
             </summary>
             <param name="ortho"></param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.StopUpdateThread">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.StopUpdateThread">
             <summary>
             Stops render update thread
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.LoadSTLModel(HelixToolkit.Wpf.SharpDX.GroupModel3D,System.Windows.Media.Media3D.Vector3D,HelixToolkit.Wpf.SharpDX.Material)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.LoadSTLModel(HelixToolkit.Wpf.SharpDX.GroupModel3D,System.Windows.Media.Media3D.Vector3D,HelixToolkit.Wpf.SharpDX.Material)">
             <summary>
             Loads STL file into group model
             </summary>
@@ -682,24 +688,24 @@
             <param name="originOffset">offsets the model by given vector (if origin is different than specified in file)</param>
             <param name="overrideMaterial">Override default material with this one. Leave null to keep original</param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SchedulePointcloudUpdate">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.SchedulePointcloudUpdate">
             <summary>
             Informs pc update thread that new data has arrived and needs to be reflected in the pointcloud
             </summary>
         </member>
-        <member name="F:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.frameCount">
+        <member name="F:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.frameCount">
             <summary>
             Used for FPS calculation
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.UpdatePC">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.UpdatePC">
             <summary>
             Performs pointcloud updates
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.SetFOVs(HelixToolkit.Wpf.SharpDX.GroupModel3D,System.Single,System.Single,System.Single,System.Single,System.Single)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.AddFov(HelixToolkit.Wpf.SharpDX.GroupElement3D,System.Single,System.Single,System.Single,System.Single,System.Single)">
             <summary>
-            
+            Adds field of view 3d model to specified group
             </summary>
             <param name="fovGroup"></param>
             <param name="minZ">Minimum range</param>
@@ -708,23 +714,23 @@
             <param name="fovv"></param>
             <param name="fovh"></param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.CreateFOV(System.Single,System.Single,System.Single,System.Single,System.Single)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.CreateFov(System.Single,System.Single,System.Single,System.Single,System.Single)">
             <summary>
             Add FOV volume to the camera model group
             </summary>
             <param name="minZ">Minimum range</param>
             <param name="maxZ">Maximum range</param>
             <param name="baseline">Baseline</param>
-            <param name="fovv"></param>
-            <param name="fovh"></param>
+            <param name="fovv">Vertical field of view</param>
+            <param name="fovh">Horizontal field of view</param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Dispose(System.Boolean)">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.Dispose(System.Boolean)">
             <summary>
             
             </summary>
             <param name="disposing"></param>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.PointCloud.PointCloudViewModel.Dispose">
+        <member name="M:Rubedos.RosToolsApplicationBase.Pointcloud.PointcloudViewModel.Dispose">
             <summary>
             
             </summary>
@@ -1000,9 +1006,9 @@
             Event raised when device info changes
             </summary>
         </member>
-        <member name="P:Rubedos.RosToolsApplicationBase.RosWindowBase.ViperDevice">
+        <member name="P:Rubedos.RosToolsApplicationBase.RosWindowBase.Device">
             -------------------------------------------------------------------------------------------------
-             <summary> Gets or sets the viper device main object </summary>
+             <summary> Gets or sets the device main object </summary>
             
              <value> The viper device. </value>
             -------------------------------------------------------------------------------------------------

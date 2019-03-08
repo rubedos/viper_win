@@ -9,7 +9,7 @@
             Base class for filters running on host cuda
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.CudaFilterBase.cudaKernels">
+        <member name="P:Rubedos.PointcloudProcessing.CudaFilterBase.CudaKernels">
             <summary>
             Collection of currently used cuda kernels. Stored for re-initialzation on cuda context change.
             </summary>
@@ -45,7 +45,7 @@
             Thread on which this cuda context was initialized. Make sure cuda calls happen only on this thread
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.CudaFilterBase.DeviceID">
+        <member name="P:Rubedos.PointcloudProcessing.CudaFilterBase.DeviceId">
             <summary>
             CUDA Device ID
             </summary>
@@ -98,19 +98,31 @@
             <param name="function"></param>
             <returns></returns>
         </member>
-        <member name="T:Rubedos.PointcloudProcessing.CVFuncs">
+        <member name="T:Rubedos.PointcloudProcessing.NativeMethods">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.NativeMethods.DeleteObject(System.IntPtr)">
+            <summary>
+            Converts OpenCV.Net.Mat to BitmapSource representation
+            </summary>
+            <param name="hObject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rubedos.PointcloudProcessing.CVBridge">
             <summary>
             Most popular OpenCV functions exposed for Ros.Net in this class
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.CvMatToBitmap(OpenCV.Net.Mat)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CVMatToBitmap(OpenCV.Net.Mat)">
             <summary>
             Converts OpenCV.Net.Mat array to Bitmap. Only U8x3, S8x1 and F32x1 formats supported
             </summary>
             <param name="input">input array</param>
             <returns>Bitmap representation</returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.MapToByte(System.Single,System.Single,System.Single)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.MapToByte(System.Single,System.Single,System.Single)">
             <summary>
             Maps float value to given min/max range.
             </summary>
@@ -119,35 +131,28 @@
             <param name="val"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.DeleteObject(System.IntPtr)">
-            <summary>
-            Converts OpenCV.Net.Mat to BitmapSource representation
-            </summary>
-            <param name="hObject"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.CvMatToBitmapSource(OpenCV.Net.Mat)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CVMatToBitmapSource(OpenCV.Net.Mat)">
             <summary>
             Converts OpenCV mat to System.Windows.Media.Imaging.BitmapSource
             </summary>
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.GetImageFromImageSource(System.Windows.Media.ImageSource)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.GetImageFromImageSource(System.Windows.Media.ImageSource)">
             <summary>
             Converts ImageSource to Bitmap
             </summary>
             <param name="imageSource"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.NewMat(System.Drawing.Bitmap)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.NewMat(System.Drawing.Bitmap)">
             <summary>
             Creates OpenCV.Net.Mat from Bitmap
             </summary>
             <param name="bmp"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.MatchTemplate(System.Windows.Media.ImageSource,System.Windows.Media.ImageSource,OpenCV.Net.Rect,OpenCV.Net.Rect)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.MatchTemplate(System.Windows.Media.ImageSource,System.Windows.Media.ImageSource,OpenCV.Net.Rect,OpenCV.Net.Rect)">
             <summary>
             Runs OpenCV MatchTemplate function on 2 given ImageSources
             </summary>
@@ -157,46 +162,53 @@
             <param name="searchWindow">Search for match area in target image</param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.CalculateContrast(System.Windows.Media.ImageSource)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CalculateContrast(System.Windows.Media.ImageSource)">
             <summary>
             Calculates contrast of the image
             </summary>
             <param name="source"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.CalculateContrast(OpenCV.Net.Mat)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CalculateContrast(OpenCV.Net.Arr)">
             <summary>
             Calculates contrast of the image. Applieas contrast filter and calculates mean of the resulting constrast map
             </summary>
             <param name="source"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVFuncs.CalculateHistogram(OpenCV.Net.Mat,OpenCV.Net.Rect,System.Int32)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CalculateHistogram(OpenCV.Net.Arr)">
             <summary>
             Calclates normalized histogram of the given area in source image and returns histogram in an array.
             NOTE: image is converted to grayscale
             </summary>
             <param name="source"></param>
-            <param name="targetArea">Rectangle defines area to calculate historgram</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CalculateHistogram(OpenCV.Net.Arr,System.Int32)">
+            <summary>
+            Calclates normalized histogram of the given area in source image and returns histogram in an array.
+            NOTE: image is converted to grayscale
+            </summary>
+            <param name="source"></param>
             <param name="bins">bin count</param>
             <returns></returns>
         </member>
-        <member name="T:Rubedos.PointcloudProcessing.CvMatSink">
+        <member name="T:Rubedos.PointcloudProcessing.CVMatSink">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.CvMatSink.ImageMat">
+        <member name="P:Rubedos.PointcloudProcessing.CVMatSink.ImageMat">
             <summary>
             Cached image in open CV format
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.CvMatSink.ReceivedImage">
+        <member name="P:Rubedos.PointcloudProcessing.CVMatSink.ReceivedImage">
             <summary>
             Last received image
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CvMatSink.Update(System.Byte[],System.Drawing.Size,System.Boolean,System.String)">
+        <member name="M:Rubedos.PointcloudProcessing.CVMatSink.Update(System.Byte[],System.Drawing.Size,System.Boolean,System.String)">
             <summary>
             
             </summary>
@@ -210,12 +222,17 @@
             Enumeration defines which depthmap format should be produced
             </summary>
         </member>
+        <member name="F:Rubedos.PointcloudProcessing.DepthOutputFormat.None">
+            <summary>
+            No output
+            </summary>
+        </member>
         <member name="F:Rubedos.PointcloudProcessing.DepthOutputFormat.DepthMap">
             <summary>
             Depth map only
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DepthOutputFormat.RGBD">
+        <member name="F:Rubedos.PointcloudProcessing.DepthOutputFormat.Rgbd">
             <summary>
             RGB channels + depth map (point cloud)
             </summary>
@@ -378,25 +395,144 @@
             Initializes filter
             </summary>
         </member>
-        <member name="T:Rubedos.PointcloudProcessing.Exp.DetectedPlane">
+        <member name="T:Rubedos.PointcloudProcessing.Exp.SharpDXExt">
+            <summary>
+            SharpDX extensions
+            </summary>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.SharpDXExt.ToPoint3D(SharpDX.Vector3)">
+            <summary>
+            
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Rubedos.PointcloudProcessing.Exp.PCPlane">
+            <summary>
+            PointCloud plane
+            </summary>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.PCPlane.#ctor">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.Exp.DetectedPlane.distance">
+        <member name="P:Rubedos.PointcloudProcessing.Exp.PCPlane.P1">
             <summary>
-            Distance from origin to the plane 
+            
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.Exp.DetectedPlane.PhiAngle">
+        <member name="P:Rubedos.PointcloudProcessing.Exp.PCPlane.P2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.PCPlane.P3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.PCPlane.#ctor(SharpDX.Vector3,SharpDX.Vector3,SharpDX.Vector3)">
+            <summary>
+            Calculates Radius, Phi and Theta when 3 points of the plane are known
+            </summary>
+            <param name="point1"></param>
+            <param name="point2"></param>
+            <param name="point3"></param>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.PCPlane.Normal">
+            <summary>
+            Calculates plane normal
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.PCPlane.ToPlaneSpace(System.Windows.Media.Media3D.Point3D)">
+            <summary>
+            Transforms given point into plane space (X, Y) and Z always set to 0, even if point is not on the plane exactly
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.PCPlane.ToGlobalSpace(System.Windows.Media.Media3D.Point3D)">
+            <summary>
+            Converts point in plane spaace (XY) to 3D space
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.PCPlane.Radius">
+            <summary>
+            Distance from origin to the plane (sphere radius)
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.PCPlane.PhiAngle">
             <summary>
             Angle of the plane normal to the XY plane, degrees
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.Exp.DetectedPlane.ThetaAngle">
+        <member name="P:Rubedos.PointcloudProcessing.Exp.PCPlane.ThetaAngle">
             <summary>
             Angle on the XY plane of the normal projection, degrees
             </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.PCPlane.Boundaries">
+            <summary>
+            Plane boundaries (XY) plane
+            </summary>
+        </member>
+        <member name="T:Rubedos.PointcloudProcessing.Exp.SpaceAxis">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.SpaceAxis.Min">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.SpaceAxis.Max">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.SpaceAxis.Step">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.SpaceAxis.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+            <param name="step"></param>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.SpaceAxis.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.SpaceAxis.InRange(System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.SpaceAxis.ValueToIndex(System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.SpaceAxis.IndexToValue(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
         </member>
         <member name="T:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter">
             <summary>
@@ -408,7 +544,12 @@
             
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Plane">
+        <member name="P:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Plane">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Planes">
             <summary>
             
             </summary>
@@ -431,6 +572,11 @@
             
             </summary>
         </member>
+        <member name="F:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.planeSize">
+            <summary>
+            Extension of the accumulator where each point that fits in stores its position on the plane (XY)
+            </summary>
+        </member>
         <member name="P:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Name">
             <summary>
             
@@ -442,7 +588,47 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.GetAccumulatorIndex(Rubedos.PointcloudProcessing.Exp.PCPlane)">
+            <summary>
+            
+            </summary>
+            <param name="plane"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.GetPlaneFromAccumulatorIndex(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.AccumulatePlane(Rubedos.PointcloudProcessing.Exp.PCPlane)">
+            <summary>
+            Performs plane write into accumulator
+            </summary>
+            <param name="plane"></param>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Bubblewrap">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.Apply">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.rho">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.phi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rubedos.PointcloudProcessing.Exp.FindPlaneFilter.theta">
             <summary>
             
             </summary>
@@ -586,27 +772,27 @@
             Return the list of available filters
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.SetDisparitySink(Rubedos.PointcloudProcessing.CvMatSink)">
+        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.SetDisparitySink(Rubedos.PointcloudProcessing.CVMatSink)">
             <summary>
             Set sink that delivers disparity maps
             </summary>
-            <param name="dispSink"></param>
+            <param name="newDisparitySink"></param>
         </member>
         <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.SetRgbSink(Ros.Net.utilities.ByteArrayImageSink)">
             <summary>
             Sets sink that delivers RGB map
             </summary>
-            <param name="rgbSink"></param>
+            <param name="newRgbSink"></param>
         </member>
         <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.SetCameraInfo(System.Double,System.Double,System.Windows.Vector)">
             <summary>
             Sets camera information
             </summary>
             <param name="baseline">Camera baseline, m</param>
-            <param name="focalpoint">Camera focal point, px</param>
+            <param name="focalPoint">Camera focal point, px</param>
             <param name="principalPoint">Camera principal point (center), px</param>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.OverridePointCloud(OpenCV.Net.Mat,OpenCV.Net.Mat)">
+        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.OverridePointcloud(OpenCV.Net.Mat,OpenCV.Net.Mat)">
             <summary>
             Function to override result of the processing, e.g. for showing pointcloud that was stored somewhere
             </summary>
@@ -633,6 +819,17 @@
             
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.Dispose">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:Rubedos.PointcloudProcessing.ArrayExtensions">
             <summary>
@@ -692,6 +889,27 @@
             <summary>
             Output in RGBD (4 x float channels), i.e. pointcloud with color
             </summary>
+        </member>
+        <member name="T:Rubedos.PointcloudProcessing.FilterCollectionExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.FilterCollectionExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="collection"></param>
+            <param name="items"></param>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.FilterCollectionExtensions.ClearAndAddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Clears collection and adds range of items into it.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="collection"></param>
+            <param name="items"></param>
         </member>
         <member name="T:Rubedos.PointcloudProcessing.IFilter">
             <summary>
@@ -784,7 +1002,7 @@
             </summary>
             <param name="size">New kernel size, must be odd and greater than 0</param>
         </member>
-        <member name="T:Rubedos.PointcloudProcessing.IPointCloudSectionFilter">
+        <member name="T:Rubedos.PointcloudProcessing.IPointcloudSectionFilter">
             <summary>
             Interface defines point cloud sectioning filter. The filter takes RGBD map (pointcloud) as an input
             and then checks each point agains space of interest(-s). If point is inside the space - stencil buffer 
@@ -792,97 +1010,97 @@
             Use the stencil for checking which points are inside specified SoI.
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.IPointCloudSectionFilter.SpacesOfInterest">
+        <member name="P:Rubedos.PointcloudProcessing.IPointcloudSectionFilter.SpacesOfInterest">
             <summary>
             List of SoI to be applied
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.IPointCloudSectionFilter.RgbdInput">
+        <member name="P:Rubedos.PointcloudProcessing.IPointcloudSectionFilter.RgbdInput">
             <summary>
             Input pointcloud
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.IPointCloudSectionFilter.StencilBuffers">
+        <member name="P:Rubedos.PointcloudProcessing.IPointcloudSectionFilter.StencilBuffers">
             <summary>
             Filter result is an array of stencils where each stencil defines input SoI result
             </summary>
         </member>
-        <member name="T:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU">
+        <member name="T:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu">
             <summary>
             Noise removal filter executed on host CPU
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.Name">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.Name">
             <summary>
             Name of the filter
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.IsActive">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.IsActive">
             <summary>
             Activate/deactivate filter
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.ImageSize">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.ImageSize">
             <summary>
             Size of the processed image
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.KernelSize">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.KernelSize">
             <summary>
             Size of the filtering kernel
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.DisparityInput">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.DisparityInput">
             <summary>
             Input: disparity map
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.RgbInput">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.RgbInput">
             <summary>
             Input: Rgb map
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.DisparityOutput">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.DisparityOutput">
             <summary>
             Ouptut: processed disparity map
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.RgbOutput">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.RgbOutput">
             <summary>
             Output: processed rgb map
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.SurvivalCensus">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.SurvivalCensus">
             <summary>
             percent of how many pixels should be within threshold range for the pixel to survive
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.Deviation">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.Deviation">
             <summary>
             Maximum allowed deviation between neighbouring disparity pixels for pass voting
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.CloseRange">
+        <member name="P:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.CloseRange">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.#ctor">
+        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.#ctor">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.Init">
+        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.Init">
             <summary>
             Initializes filter
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.Apply">
+        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.Apply">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.Similarity(System.Drawing.Color,System.Drawing.Color)">
+        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.Similarity(System.Drawing.Color,System.Drawing.Color)">
             <summary>
             Calculate two pixel similarity by evaluating their colors and return probability from range [0;1]
             where 0 mean no similarity and 1 is a perfect match.
@@ -891,13 +1109,13 @@
             <param name="n"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.SetKernelSize(System.Byte)">
+        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.SetKernelSize(System.Byte)">
             <summary>
             Square kernel
             </summary>
             <param name="size"></param>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.GetPixel(System.Int32,System.Int32,System.Byte[])">
+        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.GetPixel(System.Int32,System.Int32,System.Byte[])">
             <summary>
             Gets pixel
             </summary>
@@ -906,7 +1124,7 @@
             <param name="image"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.SetPixel(System.Int32,System.Int32,System.Byte[],System.Drawing.Color)">
+        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.SetPixel(System.Int32,System.Int32,System.Byte[],System.Drawing.Color)">
             <summary>
             Sets pixel
             </summary>
@@ -915,7 +1133,7 @@
             <param name="image"></param>
             <param name="pixel"></param>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCPU.Fallback">
+        <member name="M:Rubedos.PointcloudProcessing.NoiseRemovalFilterCpu.Fallback">
             <summary>
             Not implement
             </summary>
@@ -1035,6 +1253,17 @@
         <member name="P:Rubedos.PointcloudProcessing.PipelineSegment`1.CurrentFilter">
             <inheritdoc/>
         </member>
+        <member name="M:Rubedos.PointcloudProcessing.PipelineSegment`1.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.PipelineSegment`1.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Rubedos.PointcloudProcessing.PipelineSegmentAbstract">
             <summary>
             Specifies filter unit in the pipeline. Each unit can have 3 states:
@@ -1096,186 +1325,208 @@
             Applies filters of this segment on input data to produce output
             </summary>
         </member>
-        <member name="T:Rubedos.PointcloudProcessing.PointCloudSectionFilterCpu">
+        <member name="T:Rubedos.PointcloudProcessing.PointcloudSectionFilterCpu">
             <summary>
             Filter takes point cloud as an input and determines which points are inside specified space of interest(-s) (SoI). The output is a list of stencils
             (count matches input SoI count), where each pixel has value 0 if point is outside SoI and 255 if inside.
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilterCpu.Name">
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilterCpu.Name">
             <inheritdoc/>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilterCpu.#ctor(System.Int32)">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilterCpu.#ctor(System.Int32)">
             <inheritdoc/>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilterCpu.RgbdInput">
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilterCpu.RgbdInput">
             <inheritdoc/>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilterCpu.SpacesOfInterest">
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilterCpu.SpacesOfInterest">
             <inheritdoc/>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilterCpu.StencilBuffers">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilterCpu.SetSpacesOfInterest(System.Collections.ObjectModel.Collection{Rubedos.PointcloudProcessing.SpaceOfInterest})">
+            <summary>
+            Sets a new collection of SoIs
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilterCpu.StencilBuffers">
             <inheritdoc/>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilterCpu.Apply">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilterCpu.Apply">
             <inheritdoc/>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilterCpu.Init">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilterCpu.Init">
             <inheritdoc/>
         </member>
-        <member name="T:Rubedos.PointcloudProcessing.PointCloudSectionFilter">
+        <member name="T:Rubedos.PointcloudProcessing.PointcloudSectionFilter">
             <summary>
             Filter takes point cloud as an input and determines which points are inside specified space of interest(-s) (SoI). The output is a list of stencils
             (count matches input SoI count), where each pixel has value 0 if point is outside SoI and 255 if inside.
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilter.OnLoadKernels">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilter.OnLoadKernels">
             <summary>
             Called by base class when kernels must be loaded
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilter.#ctor(System.Int32)">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilter.#ctor(System.Int32)">
             <summary>
             
             </summary>
             <param name="passCount">How many times filter shall run on input data</param>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilter.RgbdInput">
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilter.RgbdInput">
             <summary>
             Input: pointcloud
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilter.OnContextReinitialized">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilter.OnContextReinitialized">
             <summary>
             Called by base class to perform routines when context is reinitialized
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilter.AddSpaceOfInterest(Rubedos.PointcloudProcessing.SpaceOfInterest)">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilter.AddSpaceOfInterest(Rubedos.PointcloudProcessing.SpaceOfInterest)">
             <summary>
             Adds new SoI
             </summary>
-            <param name="soi"></param>
+            <param name="spaceOfInterest"></param>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilter.SpacesOfInterest">
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilter.SpacesOfInterest">
             <summary>
             Array of space of interests 
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilter.StencilBuffers">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilter.SetSpacesOfInterest(System.Collections.ObjectModel.Collection{Rubedos.PointcloudProcessing.SpaceOfInterest})">
+            <summary>
+            Sets a new collection of SoIs
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilter.StencilBuffers">
             <summary>
             Output: stencil buffers
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilter.SetupKernelGrid(System.Int32,System.Int32)">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilter.SetupKernelGrid(System.Int32,System.Int32)">
             <summary>
             Setups CUDA kernel grid formats
             </summary>
             <param name="w">image width</param>
             <param name="h">image height</param>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilter.Apply">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilter.Apply">
             <summary>
             Runs the filter and transforms inputs to outputs
             </summary>
         </member>
-        <member name="T:Rubedos.PointcloudProcessing.PointCloudSectionFilterVoid">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilter.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilter.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Rubedos.PointcloudProcessing.PointcloudSectionFilterVoid">
             <summary>
             IPointCloudSectionFilter implementation that does nothing (void)
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilterVoid.#ctor(System.Int32)">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilterVoid.#ctor(System.Int32)">
             <summary>
             Ctor
             </summary>
             <param name="passCount">Space of Interest count</param>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilterVoid.Name">
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilterVoid.Name">
             <summary>
             Filter name
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilterVoid.RgbdInput">
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilterVoid.RgbdInput">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilterVoid.SpacesOfInterest">
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilterVoid.SpacesOfInterest">
             <summary>
             Array of space of interests 
             </summary>
         </member>
-        <member name="P:Rubedos.PointcloudProcessing.PointCloudSectionFilterVoid.StencilBuffers">
+        <member name="P:Rubedos.PointcloudProcessing.PointcloudSectionFilterVoid.StencilBuffers">
             <summary>
             Output: stencil buffers
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilterVoid.AddSpaceOfInterest(Rubedos.PointcloudProcessing.SpaceOfInterest)">
-            <summary>
-            Adds new SoI
-            </summary>
-            <param name="soi"></param>
-        </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilterVoid.Apply">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilterVoid.Apply">
             <summary>
             Runs the filter and transforms inputs to outputs
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.PointCloudSectionFilterVoid.Init">
+        <member name="M:Rubedos.PointcloudProcessing.PointcloudSectionFilterVoid.Init">
             <summary>
             Initializes filter
             </summary>
         </member>
-        <member name="T:Rubedos.PointcloudProcessing.DefaultSpacePlanes">
+        <member name="T:Rubedos.PointcloudProcessing.DefaultSpacePlane">
             <summary>
             This enum specifies planes of the space of interest
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.Front">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.Unknown">
+            <summary>
+            Unknown plane
+            </summary>
+        </member>
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.Front">
             <summary>
             Front plane
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.Back">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.Back">
             <summary>
             Back plane
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.Top">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.Top">
             <summary>
             Top plane
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.Bottom">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.Bottom">
             <summary>
             Bottom plane
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.Left">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.Left">
             <summary>
             Left plane
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.Right">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.Right">
             <summary>
             Right plane
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.TopBottom">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.TopBottom">
             <summary>
             Used to specify space between top and bottom
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.FrontBack">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.FrontBack">
             <summary>
             USed to specify space between front and back
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.LeftRight">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.LeftRight">
             <summary>
             Used to specify space between left and right
             </summary>
         </member>
-        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlanes.All">
+        <member name="F:Rubedos.PointcloudProcessing.DefaultSpacePlane.All">
             <summary>
             All planes
             </summary>
@@ -1340,7 +1591,7 @@
             Flag specifies if SoI is actively used by context
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.SpaceOfInterest.GetPlaneNormal(Rubedos.PointcloudProcessing.DefaultSpacePlanes)">
+        <member name="M:Rubedos.PointcloudProcessing.SpaceOfInterest.GetPlaneNormal(Rubedos.PointcloudProcessing.DefaultSpacePlane)">
             <summary>
             Returns normal of a specified plane
             </summary>
@@ -1435,22 +1686,22 @@
             <summary>
             Checks if given point is inside space of interest
             </summary>
-            <param name="p"></param>
+            <param name="point"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.SpaceOfInterest.IsBetweenPlanes(System.Windows.Media.Media3D.Point3D,Rubedos.PointcloudProcessing.DefaultSpacePlanes)">
+        <member name="M:Rubedos.PointcloudProcessing.SpaceOfInterest.IsBetweenPlanes(System.Windows.Media.Media3D.Point3D,Rubedos.PointcloudProcessing.DefaultSpacePlane)">
             <summary>
             
             </summary>
-            <param name="p"></param>
+            <param name="point"></param>
             <param name="space"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.SpaceOfInterest.IsOnPositivePlaneSide(System.Windows.Media.Media3D.Point3D,Rubedos.PointcloudProcessing.DefaultSpacePlanes)">
+        <member name="M:Rubedos.PointcloudProcessing.SpaceOfInterest.IsOnPositivePlaneSide(System.Windows.Media.Media3D.Point3D,Rubedos.PointcloudProcessing.DefaultSpacePlane)">
             <summary>
             Function checks if specified point is on positive or negative side of the plane
             </summary>
-            <param name="p">the point</param>
+            <param name="point">the point</param>
             <param name="plane">Plane of SoI</param>
             <returns>check result</returns>
         </member>
@@ -1458,18 +1709,18 @@
             <summary>
             Function checks if point p is on positive or negative side of plane defined by A, B and C points
             </summary>
-            <param name="p"></param>
+            <param name="point"></param>
             <param name="A"></param>
             <param name="B"></param>
             <param name="C"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.SpaceOfInterest.FindYOnPlane(System.Windows.Media.Media3D.Point3D,Rubedos.PointcloudProcessing.DefaultSpacePlanes)">
+        <member name="M:Rubedos.PointcloudProcessing.SpaceOfInterest.FindYOnPlane(System.Windows.Media.Media3D.Point3D,Rubedos.PointcloudProcessing.DefaultSpacePlane)">
             <summary>
             Function find Y coordinate on the specified plane, when x and z of point p are known
             </summary>
-            <param name="p"></param>
-            <param name="defPlane"></param>
+            <param name="point"></param>
+            <param name="defaultPlane"></param>
             <returns></returns>
         </member>
         <member name="M:Rubedos.PointcloudProcessing.SpaceOfInterest.SetTransform(SharpDX.Vector3,SharpDX.Vector3,System.Single)">

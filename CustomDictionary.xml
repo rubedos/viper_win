@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dictionary>
+  <Words>
+    <Unrecognized>
+      <Word></Word>
+    </Unrecognized>
+    <Recognized>
+      <Word>Rubedos</Word>
+      <Word>Cvm</Word>
+      <Word>Rosout</Word>
+      <Word>ROS</Word>
+      <Word>ms</Word>
+      <Word>Pointcloud</Word>
+      <Word>Cuda</Word>
+      <Word>ptx</Word>
+      <Word>px</Word>
+      <Word>Cpu</Word>
+      <Word>Rgb</Word>
+      <Word>Rgbd</Word>
+      <Word>fovh</Word>
+      <Word>fovv</Word>
+      <Word>fov</Word>
+      <Word>orthogonal</Word>
+    </Recognized>
+    <Deprecated>
+      <Term PreferredAlternate=""></Term>
+    </Deprecated>
+    <Compound>
+      <Term CompoundAlternate=""></Term>
+    </Compound>
+    <DiscreteExceptions>
+      <Term></Term>
+    </DiscreteExceptions>
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <Acronym>TF</Acronym>
+      <Acronym>PTX</Acronym>
+      <Acronym>NHD</Acronym>
+      <Acronym>QVGA</Acronym>
+      <Acronym>RGB</Acronym>
+      <Acronym>RGBD</Acronym>
+      <Acronym>FOV</Acronym>
+      <Acronym>STL</Acronym>
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>

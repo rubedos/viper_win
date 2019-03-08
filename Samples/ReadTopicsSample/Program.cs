@@ -18,7 +18,7 @@ namespace ReadTopicsSample
       try
       {
         // Specify VIPER IP here
-        using (CvmDevice module = new CvmDevice("http://192.168.1.170:11311"))
+        using (CvmDevice module = new CvmDevice("http://192.168.1.157:11311", null))
         {
           module.RosNode = "ReadTopicsSample";
           module.Connect();
@@ -29,7 +29,7 @@ namespace ReadTopicsSample
           // and attach a sink where images must be cached when received. Since there are several image types in .NET, use 
           // a corresponding sink type, e.g. BitmapSink for System.Drawing.Bitmap.
           // One image subscriber can have multiple sinks, if multiple types of the same topic image are needed.
-          foreach (var topic in module.GetListOfImageTopics())
+          foreach (var topic in module.ImageTopics)
           {
             log.InfoFormat("Getting image from topic '{0}'", topic);
             using (ImageSubscriber<ImageHandler> subscriber = new ImageSubscriber<ImageHandler>())

@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:RosAppBase="clr-namespace:Rubedos.RosToolsApplicationBase;assembly=Rubedos.RosToolsApplicationBase"
-        xmlns:RosAppBasePC="clr-namespace:Rubedos.RosToolsApplicationBase.PointCloud;assembly=Rubedos.RosToolsApplicationBase"
+        xmlns:RosAppBasePC="clr-namespace:Rubedos.RosToolsApplicationBase.Pointcloud;assembly=Rubedos.RosToolsApplicationBase"
         xmlns:local="clr-namespace:SceneBoundingBox"
         xmlns:p="clr-namespace:SceneBoundingBox.Properties"
         mc:Ignorable="d"
@@ -15,7 +15,7 @@
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
     <RosAppBase:RosWindowBase x:Name="rosControlBase" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
-    <RosAppBasePC:PointCloud3DView x:Name="PointCloudView" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" 
+    <RosAppBasePC:Pointcloud3DView x:Name="PointCloudView" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" 
                                 PointSize="{Binding ElementName=pointSizeBox, Path=Text}"
                                 CameraInfoTopic="{Binding Source={x:Static p:Settings.Default}, Path=CameraInfoTopic, Mode=TwoWay}"
                                 RgbTopic="{Binding Source={x:Static p:Settings.Default}, Path=RGBImageTopic, Mode=TwoWay}"

@@ -300,34 +300,23 @@
         <member name="M:Rubedos.Viper.Net.DeviceConfigManager.ResetConfiguration">
             <summary> Removes the node configuration described by nodeName. </summary>
         </member>
-        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.SubscribeParameter``1(System.String,System.String,System.Action{``0})">
-            <summary>
-            Subscribe to specific device parameter updates
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="config"></param>
-            <param name="parameter"></param>
-            <param name="cb"></param>
-        </member>
-        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.GetParameter(System.String,System.String,System.String)">
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.GetParameter(System.String,System.String)">
             <summary>
             Gets parameter of specified configuration node
             </summary>
-            <param name="configurableNode_"></param>
+            <param name="configurableNode"></param>
             <param name="parameter"></param>
-            <param name="groupName"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.GetParameterValue(System.String,System.String,System.String)">
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.GetParameterValue(System.String,System.String)">
             <summary>
             Gets specified configuration item
             </summary>
             <param name="configurableNode"></param>
-            <param name="groupName"></param>
             <param name="parameter"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.SetParameterValueSync(System.String,System.String,System.Object,System.TimeSpan,System.String)">
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.SetParameterValueSync(System.String,System.String,System.Object,System.TimeSpan)">
             <summary>
             Sets specified dynamic reconfigure parameter synchronously, i.e. blocks method execution until value is set remotely
             </summary>
@@ -335,14 +324,12 @@
             <param name="parameter">barameter name</param>
             <param name="value">parameter value</param>
             <param name="timeout">Thros TimeoutException if parameter does not change in specified amount of time</param>
-            <param name="groupName">parameter group</param>
         </member>
-        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.SetParameterValue(System.String,System.String,System.Object,System.String)">
+        <member name="M:Rubedos.Viper.Net.DeviceConfigManager.SetParameterValue(System.String,System.String,System.Object)">
             <summary>
             Sets specified parameter of dynamic reconfigure
             </summary>
-            <param name="configurableNode_">The name of the node that needs to be configured</param>
-            <param name="groupName">parameter group</param>
+            <param name="configurableNode">The name of the node that needs to be configured</param>
             <param name="parameter">barameter name</param>
             <param name="value">value</param>
         </member>
@@ -548,6 +535,11 @@
             Publisher for FollowMe target setter functionality.
             </summary>
         </member>
+        <member name="F:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.detectedPersons">
+            <summary>
+            List of detected persons
+            </summary>
+        </member>
         <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnTargetPositionChanged">
             <summary>
             Event is triggered when target (<see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>) position has changed.
@@ -629,11 +621,6 @@
             </summary>
             <param name="device">CVM device</param>
         </member>
-        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Dispose">
-            <summary>
-            Releases resources
-            </summary>
-        </member>
         <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Start">
             <summary>
             Starts detecting persons within field of view.
@@ -698,6 +685,11 @@
             </summary>
             <param name="sender">Sender.</param>
             <param name="e">Args.</param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Dispose">
+            <summary>
+            Disposes this object
+            </summary>
         </member>
         <member name="P:Rubedos.Viper.Net.PerceptionApps.Interfaces.EventArgs.IPersonChangedEventArgs.Person">
             <summary>
@@ -766,28 +758,28 @@
             <see cref="P:Rubedos.Viper.Net.PerceptionApps.Person.Position"/> has to be provided!
             </summary>
         </member>
-        <member name="T:Rubedos.Viper.Net.FilterTopicsOptionsEnum">
+        <member name="T:Rubedos.Viper.Net.FilterTopicsOption">
             <summary> Values that represent filter topics options enums. </summary>
         </member>
-        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.AllTopics">
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOption.AllTopics">
             <summary> An enum constant representing all topics option. </summary>
         </member>
-        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.ExceptDynamicReconfigure">
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOption.ExceptDynamicReconfigure">
             <summary>
             Returns all topics except dynamic reconfigure topics
             </summary>
         </member>
-        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.DynamicReconfigure">
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOption.DynamicReconfigure">
             <summary>
             Returns only Dynamic reongfigure topics
             </summary>
         </member>
-        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.SpecificType">
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOption.SpecificType">
             <summary>
             Filters topics that have specific type
             </summary>
         </member>
-        <member name="F:Rubedos.Viper.Net.FilterTopicsOptionsEnum.ImageType">
+        <member name="F:Rubedos.Viper.Net.FilterTopicsOption.ImageType">
             <summary>
             Filters topics that are images
             </summary>
@@ -825,7 +817,7 @@
             Each CVM instance is uniquely identified by uri. Usuall it has a format like "http://192.168.1.100:11311
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.CvmDevice.ClientIp">
+        <member name="P:Rubedos.Viper.Net.CvmDevice.ClientIP">
             <summary>
             IP address of this machine. If this machine has multiple adapters, specify IP
             of the one that shall be used to communicate with ROS Master
@@ -850,7 +842,7 @@
              <value> The software update manager. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Rubedos.Viper.Net.CvmDevice.GetLicenseInfo">
+        <member name="M:Rubedos.Viper.Net.CvmDevice.ReadLicenseInfo">
             -------------------------------------------------------------------------------------------------
              <summary> Gets device license information. </summary>
             
@@ -928,7 +920,7 @@
             Emitted on each rosout message
             </summary>
         </member>
-        <member name="E:Rubedos.Viper.Net.CvmDevice.DeviceInfoChaged">
+        <member name="E:Rubedos.Viper.Net.CvmDevice.DeviceInfoChanged">
             <summary>
             Event raised when device info changes
             </summary>
@@ -938,14 +930,14 @@
             Constructor
             </summary>
             <param name="uri">Device URI in, e.g. http://192.168.1.100:11311</param>
-            <param name="thisIp">IP address of this machine endpoint, used to communicate with device, e.g. "192.168.1.100"</param>
+            <param name="thisIP">IP address of this machine endpoint, used to communicate with device, e.g. "192.168.1.100"</param>
         </member>
         <member name="M:Rubedos.Viper.Net.CvmDevice.#ctor(System.String,System.String)">
             <summary>
             Constructor
             </summary>
             <param name="uri">Device URI in, e.g. http://192.168.1.100:11311</param>
-            <param name="thisIp">IP address of this machine endpoint, used to communicate with device, e.g. "192.168.1.100"</param>
+            <param name="thisIP">IP address of this machine endpoint, used to communicate with device, e.g. "192.168.1.100"</param>
         </member>
         <member name="M:Rubedos.Viper.Net.CvmDevice.#ctor">
             <summary> Default constructor. </summary>
@@ -961,7 +953,7 @@
             <summary>
             Sends log message to /rosout log
             </summary>
-            <param name="msg"></param>
+            <param name="message"></param>
         </member>
         <member name="M:Rubedos.Viper.Net.CvmDevice.FetchTopic``1(System.String,System.TimeSpan)">
             <summary>
@@ -973,7 +965,7 @@
             <exception cref="T:System.TimeoutException">Thrown if topic does not arrive in specified amount of time</exception>
             <exception cref="T:System.InvalidOperationException">Thrown if not connected or handle not initialized</exception>
         </member>
-        <member name="M:Rubedos.Viper.Net.CvmDevice.GetListOfImageTopics">
+        <member name="P:Rubedos.Viper.Net.CvmDevice.ImageTopics">
             -------------------------------------------------------------------------------------------------
              <summary> Gets the list of image topics provided by device</summary>
             
@@ -982,7 +974,7 @@
              </returns>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Rubedos.Viper.Net.CvmDevice.GetPerceptionApps">
+        <member name="P:Rubedos.Viper.Net.CvmDevice.PerceptionApps">
             -------------------------------------------------------------------------------------------------
              <summary> Gets the perception apps in this collection. </summary>
             
@@ -991,13 +983,12 @@
              </returns>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Rubedos.Viper.Net.CvmDevice.FilterTopics(System.Collections.Generic.IEnumerable{Ros.Net.TopicInfo},Rubedos.Viper.Net.FilterTopicsOptionsEnum,System.String)">
+        <member name="M:Rubedos.Viper.Net.CvmDevice.FilterTopics(System.Collections.Generic.IEnumerable{Ros.Net.TopicInfo},Rubedos.Viper.Net.FilterTopicsOption)">
             <summary>
             Filters topic list
             </summary>
-            <param name="filter"></param>
-            <param name="msgType"></param>
-            <param name="topics"></param>
+            <param name="filter">Filtering policy</param>
+            <param name="topics">topics to filter</param>
             <returns></returns>
         </member>
         <member name="M:Rubedos.Viper.Net.CvmDevice.Connect(System.Uri,System.String)">
@@ -1006,7 +997,7 @@
             
              <param name="cvmUri"> Each CVM instance is uniquely identified by uri. Usuall it has a format
                                    like "http://192.168.1.100:11311. </param>
-             <param name="thisIp"> (Optional) IP address of this machine endpoint, used to communicate with
+             <param name="thisIP"> (Optional) IP address of this machine endpoint, used to communicate with
                                    device, e.g. "192.168.1.100". </param>
             -------------------------------------------------------------------------------------------------
         </member>
@@ -1203,43 +1194,43 @@
              <seealso cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(XmlWriter)"/>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="T:Rubedos.Viper.Net.Tf.TfFrame">
+        <member name="T:Rubedos.Viper.Net.TF.TFFrame">
             <summary>
             ROS Tf frame
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.Tf.TfFrame.FrameId">
+        <member name="P:Rubedos.Viper.Net.TF.TFFrame.FrameId">
             <summary>
             Id of this frame
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.Tf.TfFrame.ParentFrame">
+        <member name="P:Rubedos.Viper.Net.TF.TFFrame.ParentFrame">
             <summary>
             Parent frame back reference
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.Tf.TfFrame.ChildFrames">
+        <member name="P:Rubedos.Viper.Net.TF.TFFrame.ChildFrames">
             <summary>
             Collection of Child frames
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.Tf.TfFrame.lastMessage">
+        <member name="P:Rubedos.Viper.Net.TF.TFFrame.LastMessage">
             <summary>
             Last message received from ROS master associated with this frame
             </summary>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.#ctor">
+        <member name="M:Rubedos.Viper.Net.TF.TFFrame.#ctor">
             <summary>
             Ctor
             </summary>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.GetTransformMatrix">
+        <member name="P:Rubedos.Viper.Net.TF.TFFrame.TransformMatrix">
             <summary>
             Gets transformation matrix of this frame
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.FindTransformRecursively(System.Windows.Media.Media3D.Matrix3D,System.String)">
+        <member name="M:Rubedos.Viper.Net.TF.TFFrame.FindTransformRecursively(System.Windows.Media.Media3D.Matrix3D,System.String)">
             <summary>
             Traverse tree of tf's and concatenate transformation matrix
             </summary>
@@ -1247,84 +1238,90 @@
             <param name="targetFrame"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.FindFrame(System.String)">
+        <member name="M:Rubedos.Viper.Net.TF.TFFrame.FindFrame(System.String)">
             <summary>
             Recursivelly finds specified frame
             </summary>
             <param name="frameId"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.ToString">
+        <member name="M:Rubedos.Viper.Net.TF.TFFrame.ToString">
             <summary>
             
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfFrame.ToTreeString">
+        <member name="M:Rubedos.Viper.Net.TF.TFFrame.ToTreeString">
             <summary>
             Returns tree structure of the frames in string representation
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Rubedos.Viper.Net.Tf.TfManager">
+        <member name="T:Rubedos.Viper.Net.TF.TFManager">
             <summary>
             This class serves as an interface to ROS Tf transforms mechanisms - finds transform topics, lookups transforms
             publishes transforms etc.
             </summary>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfManager.#ctor">
+        <member name="M:Rubedos.Viper.Net.TF.TFManager.#ctor">
             <summary>
             Ctor
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.Tf.TfManager.TfTransformer">
-            <summary>
-            ROS Tf Transformer class
-            </summary>
-        </member>
-        <member name="P:Rubedos.Viper.Net.Tf.TfManager.RootFrame">
+        <member name="P:Rubedos.Viper.Net.TF.TFManager.RootFrame">
             <summary>
             The root frame of the scene
             </summary>
         </member>
-        <member name="E:Rubedos.Viper.Net.Tf.TfManager.FramesUpdated">
+        <member name="E:Rubedos.Viper.Net.TF.TFManager.FramesUpdated">
             <summary>
             Emitted when frames are updated - either added/removed or transformation changed
             </summary>
         </member>
-        <member name="E:Rubedos.Viper.Net.Tf.TfManager.FrameTreeChanged">
+        <member name="E:Rubedos.Viper.Net.TF.TFManager.FrameTreeChanged">
             <summary>
             Raised when new frames in the tree are inserted or deleted
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.Tf.TfManager.Frames">
+        <member name="P:Rubedos.Viper.Net.TF.TFManager.Frames">
             <summary>
             Returns an array of frames that have been published in ROS
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.Tf.TfManager.CvmTransform">
+        <member name="P:Rubedos.Viper.Net.TF.TFManager.CvmTransform">
             <summary>
             Gets transformaction of this camera
             </summary>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfManager.GetTransform(System.String)">
+        <member name="M:Rubedos.Viper.Net.TF.TFManager.GetTransform(System.String)">
             <summary>
             Gets transformation for the specified frame
             </summary>
             <param name="frame">name of the frame</param>
             <returns>Transformation message as received from ROS</returns>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfManager.GetTransformBetweenFrames(System.String,System.String)">
+        <member name="M:Rubedos.Viper.Net.TF.TFManager.GetTransformBetweenFrames(System.String,System.String)">
             <summary>
             Calculates transformation between two specified frames
             </summary>
-            <param name="f1">ancestor frame</param>
-            <param name="f2">child (or descendant) frame</param>
+            <param name="parentFrame">ancestor frame</param>
+            <param name="childFrame">child (or descendant) frame</param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.Viper.Net.Tf.TfManager.Initialize">
+        <member name="M:Rubedos.Viper.Net.TF.TFManager.Initialize">
             <summary>
             Initialization routines after ROS has been connected
+            </summary>
+        </member>
+        <member name="M:Rubedos.Viper.Net.TF.TFManager.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Rubedos.Viper.Net.TF.TFManager.Dispose">
+            <summary>
+            
             </summary>
         </member>
     </members>
