@@ -8,7 +8,7 @@
         xmlns:local="clr-namespace:Wpf3dPointCloud"
         xmlns:p="clr-namespace:Wpf3dPointCloud.Properties"
         mc:Ignorable="d"
-        Title="WPF 3D PointCloud sample" Height="800" Width="1200">
+        Title="WPF 3D PointCloud sample" Height="800" Width="1200" Closing="MainWindow_Closing">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />

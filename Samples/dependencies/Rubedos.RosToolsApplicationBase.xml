@@ -1062,6 +1062,17 @@
             </summary>
             <param name="pause"></param>
         </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Rubedos.RosToolsApplicationBase.RosWindowBase.InitializeComponent">
             <summary>
             InitializeComponent

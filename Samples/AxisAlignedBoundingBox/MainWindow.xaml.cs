@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 using HelixToolkit.Wpf.SharpDX;
 using SharpDX;
 
-namespace SceneBoundingBox
+namespace HumanDetector
 {
   /// <summary>
   /// This sample requires VIPER to be hanged vertically above flat scene of observation. Objects placed inside the scene are 
@@ -29,7 +29,7 @@ namespace SceneBoundingBox
     /// <summary>
     /// View model of PointClout
     /// </summary>
-    private PointcloudViewModel pointcloudViewModel;
+    private PointcloudViewModel pointCloudViewModel;
 
     /// <summary>
     /// Distance from camera to the ground
@@ -81,10 +81,10 @@ namespace SceneBoundingBox
     public void InitializeBusinessLogic()
     {
       ConfigurationHelper.RegisterSettings(Properties.Settings.Default);
-      pointcloudViewModel = new PointcloudViewModel(new SharpDX.Size2(0, 0));
-      PointCloudView.ViewModel = pointcloudViewModel;
+      pointCloudViewModel = new PointcloudViewModel(new SharpDX.Size2(0, 0));
+      PointCloudView.ViewModel = pointCloudViewModel;
       PointCloudView.InitializeScene();
-      DataContext = pointcloudViewModel;
+      DataContext = pointCloudViewModel;
 
       // Moving Camera vertically up and turning it to look down
       PointCloudView.ViewModel.SetCvmPosition(new System.Windows.Media.Media3D.Vector3D(0, 0, groundZ), 
@@ -118,11 +118,15 @@ namespace SceneBoundingBox
     /// </summary>
     public void Dispose()
     {
-      rosControlBase.RosConnected -= RosControlBase_RosConnected;
-      rosControlBase.RosDisconnected -= RosControlBase_RosDisconnected;
-      rosControlBase.CvmDeviceInfoChaged -= RosControlBase_CvmDeviceInfoChaged;
-      pointcloudViewModel.Dispose();
-      rosControlBase.Device.Dispose();
+      if (rosControlBase != null)
+      {
+        rosControlBase.RosConnected -= RosControlBase_RosConnected;
+        rosControlBase.RosDisconnected -= RosControlBase_RosDisconnected;
+        rosControlBase.CvmDeviceInfoChaged -= RosControlBase_CvmDeviceInfoChaged;
+        rosControlBase.Device.Dispose();
+      }
+      if (pointCloudViewModel != null)
+        pointCloudViewModel.Dispose();
     }
 
     #endregion
@@ -139,9 +143,9 @@ namespace SceneBoundingBox
       double f = rosControlBase.Device.DeviceInfo.FocalPoint;
       double B = rosControlBase.Device.DeviceInfo.Baseline;
 
-      if (pointcloudViewModel.ImagingPipeline != null)
+      if (pointCloudViewModel.ImagingPipeline != null)
       {
-        pointcloudViewModel.ImagingPipeline.SetCameraInfo(B, f, rosControlBase.Device.DeviceInfo.PrincipalPoint);
+        pointCloudViewModel.ImagingPipeline.SetCameraInfo(B, f, rosControlBase.Device.DeviceInfo.PrincipalPoint);
       }
       PointCloudView.AddFov(rosControlBase.Device.DeviceInfo.FovV, rosControlBase.Device.DeviceInfo.FovH, 1f, 10f, rosControlBase.Device.DeviceInfo.Baseline);
     }
@@ -159,10 +163,10 @@ namespace SceneBoundingBox
         PointCloudView.InitializePipeline(Properties.Settings.Default.ForceCpuFiltering, 1);
         if (rosControlBase.Device.DeviceInfo != null)
         {
-          pointcloudViewModel.ImagingPipeline.SetCameraInfo(rosControlBase.Device.DeviceInfo.Baseline, 
+          pointCloudViewModel.ImagingPipeline.SetCameraInfo(rosControlBase.Device.DeviceInfo.Baseline, 
             rosControlBase.Device.DeviceInfo.FocalPoint, rosControlBase.Device.DeviceInfo.PrincipalPoint);
         }
-        pointcloudViewModel.ImagingPipeline.ImageDataProcessed += ImagingPipeline_ImageDataProcessed;
+        pointCloudViewModel.ImagingPipeline.ImageDataProcessed += ImagingPipeline_ImageDataProcessed;
       }
       catch (Exception ex)
       {
@@ -198,7 +202,7 @@ namespace SceneBoundingBox
     /// <param name="e"></param>
     private void ImagingPipeline_ImageDataProcessed(object sender, Rubedos.PointcloudProcessing.ImagingPipelineProcessedEventArgs e)
     {
-      var rgbd = pointcloudViewModel.ImagingPipeline.RgbdOut;
+      var rgbd = pointCloudViewModel.ImagingPipeline.RgbdOut;
       if (points == null)
       {
         points = new float[rgbd.Cols * rgbd.Rows * rgbd.Channels];
@@ -227,7 +231,7 @@ namespace SceneBoundingBox
         maxX, minX, maxY, minY, groundZ, minZ);
 
       // Synchronizing with 3D rendering thread
-      pointcloudViewModel.Context.Send((o) =>
+      pointCloudViewModel.Context.Send((o) =>
       {
         boundingBoxGroup.Children.Clear();
         MeshBuilder mb = new MeshBuilder();

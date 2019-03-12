@@ -15,7 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf3dPointCloud", "Wpf3dPoi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFollowMe", "WpfFollowMe\WpfFollowMe.csproj", "{A83EE51C-21E1-4280-92C9-B27B5F6FADE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SceneBoundingBox", "SceneBoundingBox\SceneBoundingBox.csproj", "{70E810E8-6B3C-4903-99D3-B7926843CDC3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxisAlignedBoundingBox", "AxisAlignedBoundingBox\AxisAlignedBoundingBox.csproj", "{70E810E8-6B3C-4903-99D3-B7926843CDC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{6A8D7CE1-6BE6-4D95-AFA2-BF040B9534C0}"
+	ProjectSection(SolutionItems) = preProject
+		OrientedBoundingBox\log4net.config = OrientedBoundingBox\log4net.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +59,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{08E7C7BA-FE71-4684-92BD-9433349677D2} = {6A8D7CE1-6BE6-4D95-AFA2-BF040B9534C0}
+		{C0E9E9DD-E147-4A43-AD1A-8A569B5769EC} = {6A8D7CE1-6BE6-4D95-AFA2-BF040B9534C0}
+		{A83EE51C-21E1-4280-92C9-B27B5F6FADE1} = {6A8D7CE1-6BE6-4D95-AFA2-BF040B9534C0}
+		{70E810E8-6B3C-4903-99D3-B7926843CDC3} = {6A8D7CE1-6BE6-4D95-AFA2-BF040B9534C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D4F3C78-EAD6-42F0-BF8A-B2CF7890EB88}

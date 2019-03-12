@@ -22,6 +22,7 @@ namespace Wpf3dPointCloud
   /// </summary>
   public partial class MainWindow : Window
   {
+
     #region Constructor / Initialization
 
     /// <summary>
@@ -29,8 +30,7 @@ namespace Wpf3dPointCloud
     /// </summary>
     public MainWindow()
     {
-      Closing += MainWindow_Closing;
-
+      log.Info("MainWindow starting...");
       InitializeComponent();
       InitializeBusinessLogic();
     }
@@ -60,6 +60,7 @@ namespace Wpf3dPointCloud
     /// </summary>
     private PointcloudViewModel pointcloudViewModel;
 
+    private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
     #endregion
 
     #region Methods
@@ -69,10 +70,14 @@ namespace Wpf3dPointCloud
     /// </summary>
     public void Dispose()
     {
-      rosControlBase.RosConnected -= RosControlBase_RosConnected;
-      rosControlBase.RosDisconnected -= RosControlBase_RosDisconnected;
-      rosControlBase.CvmDeviceInfoChaged -= RosControlBase_CvmDeviceInfoChaged;
-      pointcloudViewModel.Dispose();
+      if (rosControlBase != null)
+      {
+        rosControlBase.RosConnected -= RosControlBase_RosConnected;
+        rosControlBase.RosDisconnected -= RosControlBase_RosDisconnected;
+        rosControlBase.CvmDeviceInfoChaged -= RosControlBase_CvmDeviceInfoChaged;
+        rosControlBase.Device.Dispose();
+      }
+      if (pointcloudViewModel != null) pointcloudViewModel.Dispose();
     }
 
     #endregion
