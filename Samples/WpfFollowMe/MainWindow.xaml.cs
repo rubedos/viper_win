@@ -81,6 +81,7 @@ namespace WpfFollowMe
 
       // Enabling button
       enableDisableFollowMeButton.IsEnabled = true;
+      followMeApp.Activate(true);
 
       dispatcherTimer.Start();
     }

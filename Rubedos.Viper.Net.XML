@@ -673,18 +673,11 @@
             </summary>
             <param name="boundingBox">Bounding boxes</param>
         </member>
-        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnTargetDistanceReceived(Ros.Net.Messages.geometry_msgs.Point)">
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnTargetDistanceReceived(Ros.Net.Messages.geometry_msgs.PointStamped)">
             <summary>
-            Invoked when received <see cref="T:Ros.Net.Messages.geometry_msgs.Point"/> for targeted <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>. 
+            Invoked when received <see cref="T:Ros.Net.Messages.geometry_msgs.PointStamped"/> for targeted <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>. 
             </summary>
             <param name="targetPosition">Position from which distance can be extracted.</param>
-        </member>
-        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.CvmDevice_OnConnected(System.Object,System.EventArgs)">
-            <summary>
-            NodeHandle can only be created when connected to <see cref="F:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.cvmDevice"/>.
-            </summary>
-            <param name="sender">Sender.</param>
-            <param name="e">Args.</param>
         </member>
         <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Dispose">
             <summary>
