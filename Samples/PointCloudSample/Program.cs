@@ -14,7 +14,7 @@ namespace PointCloudSample
   /// Following sample shows how to read point cloud from camera. The received data frame is described in ROS documentation:
   /// http://docs.ros.org/melodic/api/sensor_msgs/html/msg/PointCloud2.html
   ///
-  /// This sample saves first frame to file that can be opened for viewing with RosTools PointcloudViewer
+  /// This sample exports first frame of the pointcloud into text file that can be opened and viewed with RosTools PointCloudViewer application.
   /// </summary>
   class Program
   {
@@ -43,16 +43,16 @@ namespace PointCloudSample
               return;
             if (firstFrame)
             {
-                firstFrame = false;
-                log.InfoFormat("Received point cloud {0} x {1}", msg.width, msg.height);
-                log.InfoFormat("Is dense: {0}", msg.is_dense ? "Yes" : "No");
-                log.InfoFormat("Point step: {0}", msg.point_step);
-                log.InfoFormat("Is bigendian: {0}", msg.is_bigendian ? "Yes" : "No");
-                log.InfoFormat("Row step: {0}", msg.row_step);
-                log.InfoFormat("Total data: {0}", msg.data.Length);
-                // More information about PointField structure: http://docs.ros.org/melodic/api/sensor_msgs/html/msg/PointField.html
-                foreach (var field in msg.fields)
-                  log.InfoFormat("{0} @ {1} x {3}, type id {2}", field.name, field.offset, field.datatype, field.count);
+              firstFrame = false;
+              log.InfoFormat("Received point cloud {0} x {1}", msg.width, msg.height);
+              log.InfoFormat("Is dense: {0}", msg.is_dense ? "Yes" : "No");
+              log.InfoFormat("Point step: {0}", msg.point_step);
+              log.InfoFormat("Is bigendian: {0}", msg.is_bigendian ? "Yes" : "No");
+              log.InfoFormat("Row step: {0}", msg.row_step);
+              log.InfoFormat("Total data: {0}", msg.data.Length);
+              // More information about PointField structure: http://docs.ros.org/melodic/api/sensor_msgs/html/msg/PointField.html
+              foreach (var field in msg.fields)
+                log.InfoFormat("{0} @ {1} x {3}, type id {2}", field.name, field.offset, field.datatype, field.count);
 
               using (System.IO.StreamWriter writer = new System.IO.StreamWriter(fi.FullName))
               {
@@ -70,14 +70,14 @@ namespace PointCloudSample
                     byte r = msg.data[ix + 16];
                     byte g = msg.data[ix + 17];
                     byte b = msg.data[ix + 18];
-
-                    if (float.IsNaN(x))
+                    
+                    if (float.IsNaN(x) || x < 0)
                     {
-                      writer.WriteLine(@"0.000; 0.000;  0.000;  0;  0;  0;");
+                      writer.WriteLine(String.Format(System.Globalization.CultureInfo.InvariantCulture, @"{0:0.000}; {1:0.000};  {2:0.000};  {3};  {4};  {5};", 0, 0, 0, 0, 0, 0));
                     }
                     else
                       // NOTE: coordinates are in ROS space. Converting to VIPER space using transform: X->Z, Y->Z, Z->Y
-                      writer.WriteLine(@"{0:0.000}; {1:0.000};  {2:0.000};  {3};  {4};  {5};", y, z, x, r, g, b);
+                      writer.WriteLine(String.Format(System.Globalization.CultureInfo.InvariantCulture, @"{0:0.000}; {1:0.000};  {2:0.000};  {3};  {4};  {5};", y, z, x, r, g, b));
                   }
               }
             }
