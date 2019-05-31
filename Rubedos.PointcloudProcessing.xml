@@ -105,7 +105,7 @@
         </member>
         <member name="M:Rubedos.PointcloudProcessing.NativeMethods.DeleteObject(System.IntPtr)">
             <summary>
-            Converts OpenCV.Net.Mat to BitmapSource representation
+            Converts Emgu.CV.Mat to BitmapSource representation
             </summary>
             <param name="hObject"></param>
             <returns></returns>
@@ -115,44 +115,70 @@
             Most popular OpenCV functions exposed for Ros.Net in this class
             </summary>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CVMatToBitmap(OpenCV.Net.Mat)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.ToBitmapSource(System.Drawing.Bitmap)">
             <summary>
-            Converts OpenCV.Net.Mat array to Bitmap. Only U8x3, S8x1 and F32x1 formats supported
+            Converts Bitmap to BitmapSource (WPF)
+            </summary>
+            <param name="bitmap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.ToBitmap(Emgu.CV.Mat)">
+            <summary>
+            Converts Emgu.CV.Mat array to Bitmap. Only U8x3, S8x1 and F32x1 formats supported
             </summary>
             <param name="input">input array</param>
             <returns>Bitmap representation</returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVBridge.MapToByte(System.Single,System.Single,System.Single)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.ToBitmapSource(Emgu.CV.Mat)">
             <summary>
-            Maps float value to given min/max range.
-            </summary>
-            <param name="min"></param>
-            <param name="max"></param>
-            <param name="val"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CVMatToBitmapSource(OpenCV.Net.Mat)">
-            <summary>
-            Converts OpenCV mat to System.Windows.Media.Imaging.BitmapSource
+            Converts Emgu.CV mat to System.Windows.Media.Imaging.BitmapSource
             </summary>
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVBridge.GetImageFromImageSource(System.Windows.Media.ImageSource)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.ToBitmap(System.Windows.Media.ImageSource)">
             <summary>
-            Converts ImageSource to Bitmap
+            Converts BitmapSource(WPF) to Bitmap
             </summary>
             <param name="imageSource"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVBridge.NewMat(System.Drawing.Bitmap)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.ToImage(System.Drawing.Bitmap)">
             <summary>
-            Creates OpenCV.Net.Mat from Bitmap
+            Converts bitmap to Emgu Image
             </summary>
-            <param name="bmp"></param>
+            <param name="bitmap"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVBridge.MatchTemplate(System.Windows.Media.ImageSource,System.Windows.Media.ImageSource,OpenCV.Net.Rect,OpenCV.Net.Rect)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.ToImageGray(System.Drawing.Bitmap)">
+            <summary>
+            Conerts bitmap to grayscale Emgu Image
+            </summary>
+            <param name="bitmap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.ToImage(System.Windows.Media.ImageSource)">
+            <summary>
+            Converts image source to emgu image.
+            </summary>
+            <param name="imageSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.ToArray(Emgu.CV.Image{Emgu.CV.Structure.Gray,System.Byte})">
+            <summary>
+            Converts grayscale Emgu image to byte array
+            </summary>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.ToArray(Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte})">
+            <summary>
+            Converts color Emgu image to byte array
+            </summary>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.MatchTemplate(System.Windows.Media.ImageSource,System.Windows.Media.ImageSource,System.Drawing.Rectangle,System.Drawing.Rectangle)">
             <summary>
             Runs OpenCV MatchTemplate function on 2 given ImageSources
             </summary>
@@ -169,22 +195,14 @@
             <param name="source"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CalculateContrast(OpenCV.Net.Arr)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CalculateContrast(Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte})">
             <summary>
             Calculates contrast of the image. Applieas contrast filter and calculates mean of the resulting constrast map
             </summary>
             <param name="source"></param>
             <returns></returns>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CalculateHistogram(OpenCV.Net.Arr)">
-            <summary>
-            Calclates normalized histogram of the given area in source image and returns histogram in an array.
-            NOTE: image is converted to grayscale
-            </summary>
-            <param name="source"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CalculateHistogram(OpenCV.Net.Arr,System.Int32)">
+        <member name="M:Rubedos.PointcloudProcessing.CVBridge.CalculateHistogram(Emgu.CV.Image{Emgu.CV.Structure.Rgb,System.Byte},System.Int32)">
             <summary>
             Calclates normalized histogram of the given area in source image and returns histogram in an array.
             NOTE: image is converted to grayscale
@@ -229,7 +247,7 @@
         </member>
         <member name="F:Rubedos.PointcloudProcessing.DepthOutputFormat.DepthMap">
             <summary>
-            Depth map only
+            DepthType map only
             </summary>
         </member>
         <member name="F:Rubedos.PointcloudProcessing.DepthOutputFormat.Rgbd">
@@ -244,7 +262,7 @@
         </member>
         <member name="T:Rubedos.PointcloudProcessing.DisparityToDepthMap">
             <summary>
-            CUDA based filter which produces Depth Map or point cloud from disparity and RGB data
+            CUDA based filter which produces DepthType Map or point cloud from disparity and RGB data
             </summary>
         </member>
         <member name="P:Rubedos.PointcloudProcessing.DisparityToDepthMap.OutputFormat">
@@ -322,7 +340,7 @@
         </member>
         <member name="T:Rubedos.PointcloudProcessing.DisparityToDepthMapCpu">
             <summary>
-            CPU based filter which produces Depth Map or point cloud from disparity and RGB data
+            CPU based filter which produces DepthType Map or point cloud from disparity and RGB data
             </summary>
         </member>
         <member name="P:Rubedos.PointcloudProcessing.DisparityToDepthMapCpu.Name">
@@ -708,7 +726,7 @@
         </member>
         <member name="P:Rubedos.PointcloudProcessing.ImagingPipeline.DepthMapOut">
             <summary>
-            Resulting Depth map after imaging pipeline processed
+            Resulting DepthType map after imaging pipeline processed
             </summary>
         </member>
         <member name="P:Rubedos.PointcloudProcessing.ImagingPipeline.RgbdOut">
@@ -799,7 +817,7 @@
             <param name="focalPoint">Camera focal point, px</param>
             <param name="principalPoint">Camera principal point (center), px</param>
         </member>
-        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.OverridePointcloud(OpenCV.Net.Mat,OpenCV.Net.Mat)">
+        <member name="M:Rubedos.PointcloudProcessing.ImagingPipeline.OverridePointcloud(Emgu.CV.Mat,Emgu.CV.Mat)">
             <summary>
             Function to override result of the processing, e.g. for showing pointcloud that was stored somewhere
             </summary>
@@ -950,7 +968,7 @@
         </member>
         <member name="P:Rubedos.PointcloudProcessing.ImagingPipelineProcessedEventArgs.DepthMapOut">
             <summary>
-            Resulting Depth map after imaging pipeline processed
+            Resulting DepthType map after imaging pipeline processed
             </summary>
         </member>
         <member name="P:Rubedos.PointcloudProcessing.ImagingPipelineProcessedEventArgs.RgbdOut">

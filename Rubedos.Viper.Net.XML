@@ -493,12 +493,17 @@
             </summary>
             <param name="device">CvmDevice</param>
         </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.CoreApp.AppId">
+            <summary>
+            Application Id, used to query application info
+            </summary>
+        </member>
         <member name="P:Rubedos.Viper.Net.PerceptionApps.CoreApp.Description">
             <summary>
             App description
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.PerceptionApps.CoreApp.IsActivated">
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.CoreApp.IsActivated">
             <summary>
             True if activated on device
             </summary>
@@ -508,11 +513,12 @@
             App name
             </summary>
         </member>
-        <member name="M:Rubedos.Viper.Net.PerceptionApps.CoreApp.Activate(System.Boolean)">
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.CoreApp.Activate(System.Boolean,System.Boolean)">
             <summary>
             Activate/deactivate the app
             </summary>
-            <param name="activate"></param>
+            <param name="activate"> True to activate. </param>
+            <param name="extRosMaster"> True to if external ROS master used. </param>
         </member>
         <member name="T:Rubedos.Viper.Net.PerceptionApps.FollowMeApp">
             <summary> 
@@ -540,32 +546,22 @@
             List of detected persons
             </summary>
         </member>
-        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnTargetPositionChanged">
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.TargetPositionChanged">
             <summary>
             Event is triggered when target (<see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>) position has changed.
             </summary>
         </member>
-        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnTargetDistanceChanged">
-            <summary>
-            Event is triggered when target (<see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>) distance has changed.
-            </summary>
-        </member>
-        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnPersonPositionChanged">
-            <summary>
-            Event is triggered when position for <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> has changed.
-            </summary>
-        </member>
-        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnPersonDetected">
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Detected">
             <summary>
             Event is triggered when new <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> has been detected.
             </summary>
         </member>
-        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnStarted">
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.DetectionStarted">
             <summary>
             Event is triggered when FollowMe application has started detecting people.
             </summary>
         </member>
-        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.OnStopped">
+        <member name="E:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.DetectionStopped">
             <summary>
             Event is triggered when FollowMe application has stopped detecting people.
             </summary>
@@ -575,11 +571,11 @@
             Gets a value indicating tracked target - <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>.
             </summary>
         </member>
-        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.IsActivated">
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.IsActivated">
             <summary>
-            Gets a value indicating whether the perception application is activated.
+            Read from device value indicating whether the perception application is activated.
             <value> True if activated, false if not. </value>
-            <seealso cref="P:Rubedos.Viper.Net.Iface.IPerceptionApp.IsActivated"/>
+            <seealso cref="M:Rubedos.Viper.Net.Iface.IPerceptionApp.IsActivated"/>
             </summary>
         </member>
         <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.IsEnabled">
@@ -615,20 +611,20 @@
             Gets a value indicating application type name.
             </summary>
         </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.AppId">
+            <summary>
+            Application Id, used to query application info
+            </summary>
+        </member>
         <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.#ctor(Rubedos.Viper.Net.CvmDevice)">
             <summary>
             Constructor
             </summary>
             <param name="device">CVM device</param>
         </member>
-        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Start">
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Enable(System.Boolean)">
             <summary>
             Starts detecting persons within field of view.
-            </summary>
-        </member>
-        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Stop">
-            <summary>
-            Stops detecting persons within field of view.
             </summary>
         </member>
         <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.StartTracking(Rubedos.Viper.Net.PerceptionApps.Person)">
@@ -642,11 +638,12 @@
             Stops tracking a <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/>.
             </summary>
         </member>
-        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Activate(System.Boolean)">
+        <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Activate(System.Boolean,System.Boolean)">
             <summary> 
             Activates the application. 
-            <param name="activate">True to activate or False to deactivate. </param>
-            <seealso cref="M:Rubedos.Viper.Net.Iface.IPerceptionApp.Activate(System.Boolean)"/>
+            <param name="activate"> True to activate. </param>
+            <param name="extRosMaster"> True to if external ROS master used. </param>
+            <seealso cref="M:Rubedos.Viper.Net.Iface.IPerceptionApp.Activate(System.Boolean,System.Boolean)"/>
             </summary>
         </member>
         <member name="M:Rubedos.Viper.Net.PerceptionApps.FollowMeApp.Validate">
@@ -699,30 +696,14 @@
             Person
             </summary>
         </member>
-        <member name="T:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonDistanceChangedEventArgs">
-            <summary>
-            Event arguments when <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> distance has changed.
-            </summary>
-        </member>
-        <member name="P:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonDistanceChangedEventArgs.Distance">
-            <summary>
-            Gets a value indicating <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> distance from <see cref="T:Rubedos.Viper.Net.CvmDevice"/>.
-            Returns '-1' if distance is not set!
-            </summary>
-        </member>
-        <member name="T:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonPositionChangedEventArgs">
-            <summary>
-            Event arguments of <see cref="T:Rubedos.Viper.Net.PerceptionApps.Person"/> when it's 2D position has changed.
-            </summary>
-        </member>
-        <member name="P:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonPositionChangedEventArgs.Position">
-            <summary>
-            Gets a value indicating 2D position and rectangle height / width of person.
-            </summary>
-        </member>
-        <member name="T:Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonDetectedEventArgs">
+        <member name="T:Rubedos.Viper.Net.PerceptionApps.EventArgs.DetectedEventArgs">
             <summary>
             New person detected event arguments.
+            </summary>
+        </member>
+        <member name="P:Rubedos.Viper.Net.PerceptionApps.EventArgs.DetectedEventArgs.DetectedPersons">
+            <summary>
+            A list of persons that have been detected
             </summary>
         </member>
         <member name="T:Rubedos.Viper.Net.PerceptionApps.Person">
@@ -747,7 +728,7 @@
         </member>
         <member name="P:Rubedos.Viper.Net.PerceptionApps.Person.Distance">
             <summary>
-            Distance of person.
+            Distance of person from camera
             <see cref="P:Rubedos.Viper.Net.PerceptionApps.Person.Position"/> has to be provided!
             </summary>
         </member>

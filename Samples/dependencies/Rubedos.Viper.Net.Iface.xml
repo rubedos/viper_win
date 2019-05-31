@@ -195,6 +195,11 @@
              <remarks> HSI, 2018.10.18. </remarks>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="P:Rubedos.Viper.Net.Iface.IPerceptionApp.AppId">
+            <summary>
+            Application Id, used to query application info
+            </summary>
+        </member>
         <member name="P:Rubedos.Viper.Net.Iface.IPerceptionApp.Name">
             -------------------------------------------------------------------------------------------------
              <summary> Gets the name. </summary>
@@ -209,18 +214,19 @@
              <value> The description. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Rubedos.Viper.Net.Iface.IPerceptionApp.IsActivated">
+        <member name="M:Rubedos.Viper.Net.Iface.IPerceptionApp.IsActivated">
             -------------------------------------------------------------------------------------------------
              <summary> Gets a value indicating whether the perception application is activated. </summary>
             
              <value> True if activated, false if not. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Rubedos.Viper.Net.Iface.IPerceptionApp.Activate(System.Boolean)">
+        <member name="M:Rubedos.Viper.Net.Iface.IPerceptionApp.Activate(System.Boolean,System.Boolean)">
             -------------------------------------------------------------------------------------------------
              <summary> Activates the application. </summary>
             
              <param name="activate"> True to activate. </param>
+             <param name="extRosMaster"> True to if external ROS master used. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Rubedos.Viper.Net.Iface.ISoftwareUpdateManager">

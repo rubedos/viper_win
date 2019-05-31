@@ -147,7 +147,7 @@
         </member>
         <member name="T:Rubedos.RosToolsApplicationBase.CvMatView">
             <summary>
-            Class for displaying OpenCV.Net.Mat 
+            Class for displaying Emgu.CV.Mat 
             </summary>
             <summary>
             CvMatView
@@ -158,7 +158,7 @@
             Ctor
             </summary>
         </member>
-        <member name="M:Rubedos.RosToolsApplicationBase.CvMatView.SetMatImage(OpenCV.Net.Mat)">
+        <member name="M:Rubedos.RosToolsApplicationBase.CvMatView.SetMatImage(Emgu.CV.Mat)">
             <summary>
             Set image to display
             </summary>

@@ -205,11 +205,11 @@ namespace HumanDetector
       var rgbd = pointCloudViewModel.ImagingPipeline.RgbdOut;
       if (points == null)
       {
-        points = new float[rgbd.Cols * rgbd.Rows * rgbd.Channels];
+        points = new float[rgbd.Cols * rgbd.Rows * rgbd.NumberOfChannels];
       }
       int w = rgbd.Cols, h = rgbd.Rows;
       // hint: working with data buffer is much faster than accessing individual points in Cv.Mat
-      System.Runtime.InteropServices.Marshal.Copy(rgbd.Data, points, 0, points.Length);
+      System.Runtime.InteropServices.Marshal.Copy(rgbd.DataPointer, points, 0, points.Length);
 
       float minZ = groundZ,
         maxX = -groundW, minX = groundW, minY = groundD, maxY = -groundD;

@@ -20,7 +20,9 @@
       <Word>fovh</Word>
       <Word>fovv</Word>
       <Word>fov</Word>
+      <Word>CV</Word>
       <Word>orthogonal</Word>
+      <Word>Emgu</Word>
     </Recognized>
     <Deprecated>
       <Term PreferredAlternate=""></Term>
@@ -42,6 +44,7 @@
       <Acronym>RGBD</Acronym>
       <Acronym>FOV</Acronym>
       <Acronym>STL</Acronym>
+      <Acronym>CV</Acronym>
     </CasingExceptions>
   </Acronyms>
 </Dictionary>

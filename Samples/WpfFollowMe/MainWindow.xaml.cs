@@ -34,7 +34,7 @@ namespace WpfFollowMe
       DataContext = this;
       followMeApp = new FollowMeApp(rosControlBase.Device);
       
-      followMeApp.OnTargetDistanceChanged += FollowMeApp_OnTargetDistanceChanged;
+      followMeApp.TargetPositionChanged += FollowMeApp_OnTargetDistanceChanged;
 
       rosControlBase.RosConnected += RosControlBase_RosConnected;
       rosControlBase.RosDisconnecting += RosControlBase_RosDisconnecting;
@@ -81,7 +81,7 @@ namespace WpfFollowMe
 
       // Enabling button
       enableDisableFollowMeButton.IsEnabled = true;
-      followMeApp.Activate(true);
+      followMeApp.Enable(true);
 
       dispatcherTimer.Start();
     }
@@ -155,7 +155,7 @@ namespace WpfFollowMe
     {
       if (followMeApp.IsEnabled)
       {
-        followMeApp.Stop();
+        followMeApp.Enable(false);
         enableDisableFollowMeButton.Content = "Start";
 
         allDetections.Children.Clear();
@@ -167,7 +167,7 @@ namespace WpfFollowMe
         return;
       }
 
-      followMeApp.Start();
+      followMeApp.Enable(true);
       enableDisableFollowMeButton.Content = "Stop";
     }
 
@@ -176,11 +176,11 @@ namespace WpfFollowMe
     /// </summary>
     /// <param name="sender">Sender.</param>
     /// <param name="e">Arguments.</param>
-    private void FollowMeApp_OnTargetDistanceChanged(object sender, Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonDistanceChangedEventArgs e)
+    private void FollowMeApp_OnTargetDistanceChanged(object sender, Rubedos.Viper.Net.PerceptionApps.EventArgs.PersonChangedEventArgs e)
     {
       Dispatcher.Invoke(new Action(() =>
       {
-        targetLabel.Content = string.Format("Distance: {0:0.00} m", e.Distance);
+        targetLabel.Content = string.Format("Distance: {0:0.00} m", e.Person.Rectangle.Depth);
       }));
     }
 
@@ -200,7 +200,7 @@ namespace WpfFollowMe
       rosControlBase.RosDisconnecting -= RosControlBase_RosDisconnecting;
       if (DetectionImage != null && DetectionImage.ImageSink != null) DetectionImage.ImageSink.Updated -= ImageSink_Updated;
 
-      followMeApp.OnTargetDistanceChanged -= FollowMeApp_OnTargetDistanceChanged;
+      followMeApp.TargetPositionChanged -= FollowMeApp_OnTargetDistanceChanged;
       followMeApp.Dispose();
     }
 
